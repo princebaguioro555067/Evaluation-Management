@@ -1,0 +1,23 @@
+G:\vs code projects\FINAL_PROJECT\bin\Debug\net9.0-windows\Evaluation Management.exe
+G:\vs code projects\FINAL_PROJECT\bin\Debug\net9.0-windows\Evaluation Management.deps.json
+G:\vs code projects\FINAL_PROJECT\bin\Debug\net9.0-windows\Evaluation Management.runtimeconfig.json
+G:\vs code projects\FINAL_PROJECT\bin\Debug\net9.0-windows\Evaluation Management.dll
+G:\vs code projects\FINAL_PROJECT\bin\Debug\net9.0-windows\Evaluation Management.pdb
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation_Management.Login_Form.resources
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation_Management.RegisterForm.resources
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation Management.csproj.GenerateResource.cache
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation Management.GeneratedMSBuildEditorConfig.editorconfig
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation Management.AssemblyInfoInputs.cache
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation Management.AssemblyInfo.cs
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation Management.csproj.CoreCompileInputs.cache
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation Management.sourcelink.json
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation Management.dll
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\refint\Evaluation Management.dll
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation Management.pdb
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation Management.genruntimeconfig.cache
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\ref\Evaluation Management.dll
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation_Management.Properties.Resources.resources
+G:\vs code projects\FINAL_PROJECT\bin\Debug\net9.0-windows\MaterialSkin.dll
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation Management.csproj.AssemblyReference.cache
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluati.54D1ABC9.Up2Date
+G:\vs code projects\FINAL_PROJECT\obj\Debug\net9.0-windows\Evaluation_Management.StaffPage.resources

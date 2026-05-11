@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\vs code projects\\FINAL_PROJECT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|g:\\vs code projects\\final_project\\staffpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|solutionrelative:staffpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|g:\\vs code projects\\final_project\\staffpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|solutionrelative:staffpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|g:\\vs code projects\\final_project\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|solutionrelative:registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|g:\\vs code projects\\final_project\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|solutionrelative:login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|g:\\vs code projects\\final_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|G:\\vs code projects\\FINAL_PROJECT\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|solutionrelative:login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|g:\\vs code projects\\final_project\\staffpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|solutionrelative:staffpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|G:\\vs code projects\\FINAL_PROJECT\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|solutionrelative:registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|g:\\vs code projects\\final_project\\login_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6581CC82-A945-B7BA-F523-ADF92CEC5E16}|Evaluation Management.csproj|solutionrelative:login_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StaffPage.cs [Design]",
+              "DocumentMoniker": "G:\\vs code projects\\FINAL_PROJECT\\StaffPage.cs",
+              "RelativeDocumentMoniker": "StaffPage.cs",
+              "ToolTip": "G:\\vs code projects\\FINAL_PROJECT\\StaffPage.cs [Design] [Read Only]",
+              "RelativeToolTip": "StaffPage.cs [Design] [Read Only]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T14:08:41.359Z",
+              "EditorCaption": " [Design] [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StaffPage.cs",
+              "DocumentMoniker": "G:\\vs code projects\\FINAL_PROJECT\\StaffPage.cs",
+              "RelativeDocumentMoniker": "StaffPage.cs",
+              "ToolTip": "G:\\vs code projects\\FINAL_PROJECT\\StaffPage.cs",
+              "RelativeToolTip": "StaffPage.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAF8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T14:09:06.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterForm.cs",
+              "DocumentMoniker": "G:\\vs code projects\\FINAL_PROJECT\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "RegisterForm.cs",
+              "ToolTip": "G:\\vs code projects\\FINAL_PROJECT\\RegisterForm.cs",
+              "RelativeToolTip": "RegisterForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T13:05:41.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login_Form.cs",
+              "DocumentMoniker": "G:\\vs code projects\\FINAL_PROJECT\\Login_Form.cs",
+              "RelativeDocumentMoniker": "Login_Form.cs",
+              "ToolTip": "G:\\vs code projects\\FINAL_PROJECT\\Login_Form.cs",
+              "RelativeToolTip": "Login_Form.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T12:05:43.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login_Form.cs [Design]",
+              "DocumentMoniker": "G:\\vs code projects\\FINAL_PROJECT\\Login_Form.cs",
+              "RelativeDocumentMoniker": "Login_Form.cs",
+              "ToolTip": "G:\\vs code projects\\FINAL_PROJECT\\Login_Form.cs [Design]",
+              "RelativeToolTip": "Login_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T13:40:18.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\vs code projects\\FINAL_PROJECT\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "G:\\vs code projects\\FINAL_PROJECT\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:17:03.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StaffPage.Designer.cs",
+              "DocumentMoniker": "G:\\vs code projects\\FINAL_PROJECT\\StaffPage.Designer.cs",
+              "RelativeDocumentMoniker": "StaffPage.Designer.cs",
+              "ToolTip": "G:\\vs code projects\\FINAL_PROJECT\\StaffPage.Designer.cs",
+              "RelativeToolTip": "StaffPage.Designer.cs",
+              "ViewState": "AgIAAAkEAAAAAAAAAAAiwDkEAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T05:41:50.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterForm.cs [Design]",
+              "DocumentMoniker": "G:\\vs code projects\\FINAL_PROJECT\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "RegisterForm.cs",
+              "ToolTip": "G:\\vs code projects\\FINAL_PROJECT\\RegisterForm.cs [Design]",
+              "RelativeToolTip": "RegisterForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T12:12:46.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login_Form.Designer.cs",
+              "DocumentMoniker": "G:\\vs code projects\\FINAL_PROJECT\\Login_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Login_Form.Designer.cs",
+              "ToolTip": "G:\\vs code projects\\FINAL_PROJECT\\Login_Form.Designer.cs",
+              "RelativeToolTip": "Login_Form.Designer.cs",
+              "ViewState": "AgIAANEAAAAAAAAAAAASwOcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T13:40:39.407Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

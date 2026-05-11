@@ -33,3 +33,21 @@ C:\Users\USER\source\repos\FINAL PROJECT COMPILATION REAL\EvaluationInfrastructu
 C:\Users\USER\source\repos\FINAL PROJECT COMPILATION REAL\EvaluationInfrastructure\obj\Debug\net9.0\EvaluationInfrastructure.pdb
 C:\Users\USER\source\repos\FINAL PROJECT COMPILATION REAL\EvaluationInfrastructure\obj\Debug\net9.0\EvaluationInfrastructure.genruntimeconfig.cache
 C:\Users\USER\source\repos\FINAL PROJECT COMPILATION REAL\EvaluationInfrastructure\obj\Debug\net9.0\ref\EvaluationInfrastructure.dll
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\bin\Debug\net9.0\EvaluationInfrastructure.deps.json
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\bin\Debug\net9.0\EvaluationInfrastructure.runtimeconfig.json
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\bin\Debug\net9.0\EvaluationInfrastructure.dll
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\bin\Debug\net9.0\EvaluationInfrastructure.pdb
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\bin\Debug\net9.0\EvaluationDomain.dll
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\bin\Debug\net9.0\EvaluationDomain.pdb
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\obj\Debug\net9.0\EvaluationInfrastructure.csproj.AssemblyReference.cache
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\obj\Debug\net9.0\EvaluationInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\obj\Debug\net9.0\EvaluationInfrastructure.AssemblyInfoInputs.cache
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\obj\Debug\net9.0\EvaluationInfrastructure.AssemblyInfo.cs
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\obj\Debug\net9.0\EvaluationInfrastructure.csproj.CoreCompileInputs.cache
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\obj\Debug\net9.0\EvaluationInfrastructure.sourcelink.json
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\obj\Debug\net9.0\Evaluati.6A747724.Up2Date
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\obj\Debug\net9.0\EvaluationInfrastructure.dll
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\obj\Debug\net9.0\refint\EvaluationInfrastructure.dll
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\obj\Debug\net9.0\EvaluationInfrastructure.pdb
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\obj\Debug\net9.0\EvaluationInfrastructure.genruntimeconfig.cache
+G:\vs code projects\FINAL_PROJECT\EvaluationInfrastructure\obj\Debug\net9.0\ref\EvaluationInfrastructure.dll

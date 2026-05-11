@@ -25,3 +25,17 @@ C:\Users\USER\source\repos\FINAL PROJECT COMPILATION REAL\EvaluationDomain\obj\D
 C:\Users\USER\source\repos\FINAL PROJECT COMPILATION REAL\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.pdb
 C:\Users\USER\source\repos\FINAL PROJECT COMPILATION REAL\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.genruntimeconfig.cache
 C:\Users\USER\source\repos\FINAL PROJECT COMPILATION REAL\EvaluationDomain\obj\Debug\net9.0\ref\EvaluationDomain.dll
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\bin\Debug\net9.0\EvaluationDomain.deps.json
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\bin\Debug\net9.0\EvaluationDomain.runtimeconfig.json
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\bin\Debug\net9.0\EvaluationDomain.dll
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\bin\Debug\net9.0\EvaluationDomain.pdb
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.GeneratedMSBuildEditorConfig.editorconfig
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.AssemblyInfoInputs.cache
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.AssemblyInfo.cs
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.csproj.CoreCompileInputs.cache
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.sourcelink.json
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.dll
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\obj\Debug\net9.0\refint\EvaluationDomain.dll
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.pdb
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.genruntimeconfig.cache
+G:\vs code projects\FINAL_PROJECT\EvaluationDomain\obj\Debug\net9.0\ref\EvaluationDomain.dll
