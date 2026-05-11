@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="../EvaluationDomain/EvaluationDomain.csproj" Id="d5a5dac3-0f15-497b-bc1a-81754a169475" />
-  <Project Path="../EvaluationInfrastructure/EvaluationInfrastructure.csproj" Id="2dcc92b0-f496-4030-ac4d-1c70bd50532e" />
+  <Project Path="../EvaluationDomain/EvaluationDomain.csproj" />
+  <Project Path="../EvaluationInfrastructure/EvaluationInfrastructure.csproj" />
   <Project Path="Evaluation Management.csproj" />
 </Solution>
