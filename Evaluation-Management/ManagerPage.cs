@@ -1,4 +1,6 @@
-﻿using MaterialSkin;
+﻿using EvaluationDomain.Models;
+using EvaluationInfrastructure.Repositories;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -14,13 +16,87 @@ namespace Evaluation_Management
 {
     public partial class ManagerPage : MaterialForm
     {
-        public ManagerPage()
+        private readonly Employee _loggedInEmployee;
+        private readonly KpmScoreRepository _kpmRepo = new KpmScoreRepository();
+        private readonly EvaluationPeriodRepository _periodRepo = new EvaluationPeriodRepository();
+        private readonly EmployeeRepository _employeeRepo = new EmployeeRepository();
+
+        public ManagerPage(Employee employee)
         {
             InitializeComponent();
+            _loggedInEmployee = employee;
             Theme();
             BackColorAdjustments();
             ForeColorAdjustments();
         }
+
+        private void ManagerPage_Load(object sender, EventArgs e)
+        {
+            LoadManagerInfo();
+            LoadManagerStats();
+        }
+
+        private void LoadManagerInfo()
+        {
+            materialLabel7.Text = _loggedInEmployee.Name;
+            materialLabel18.Text = _loggedInEmployee.RoleDisplay;
+            materialLabel9.Text = _loggedInEmployee.Designation;
+            materialLabel10.Text = _loggedInEmployee.GroupLabel;
+            materialLabel8.Text = $"As of {DateTime.Now:MMMM yyyy}";
+
+            if (_loggedInEmployee.Role == EmployeeRole.Supervisor)
+            {
+                var staffList = _employeeRepo.GetStaffUnderSupervisor(_loggedInEmployee.Id);
+                materialLabel4.Text = staffList.Count.ToString();
+            }
+            else if (_loggedInEmployee.Role == EmployeeRole.AAM)
+            {
+                var allStaff = _employeeRepo.GetByRole(EmployeeRole.Staff);
+                materialLabel4.Text = allStaff.Count.ToString();
+            }
+        }
+
+        private void LoadManagerStats()
+        {
+            var now = DateTime.Now;
+            var period = _periodRepo.GetByMonthYear(now.Month, now.Year);
+
+            if (period == null)
+            {
+                materialLabel2.Text = "0 pts";
+                materialLabel5.Text = "0";
+                materialLabel3.Text = "0%";
+                materialLabel6.Text = "0 pts avg";
+                return;
+            }
+
+            List<KpmScore> scores;
+
+            if (_loggedInEmployee.Role == EmployeeRole.AAM)
+                scores = _kpmRepo.GetAllForPeriod(period.Id);
+            else
+                scores = _kpmRepo.GetForGroup(_loggedInEmployee.GroupNumber, period.Id);
+
+            decimal myPoints = _kpmRepo.GetTotalPoints(_loggedInEmployee.Id, period.Id);
+            materialLabel2.Text = $"{myPoints:F2} pts";
+
+            materialLabel5.Text = scores.Count.ToString();
+
+            int metTarget = scores.Count(s => s.Actual.HasValue && s.Actual >= s.Target);
+            decimal approvalRate = scores.Count > 0
+                ? Math.Round((decimal)metTarget / scores.Count * 100, 1) : 0;
+            materialLabel3.Text = $"{approvalRate}%";
+
+            var employeesWithScores = scores
+                .GroupBy(s => s.EmployeeId)
+                .Select(g => g.Sum(s => s.Points ?? 0))
+                .ToList();
+            decimal avgScore = employeesWithScores.Count > 0
+                ? Math.Round(employeesWithScores.Average(), 2) : 0;
+            materialLabel6.Text = $"{avgScore:F2} pts avg";
+        }
+
+
         private void Theme()
         {
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -97,5 +173,6 @@ namespace Evaluation_Management
             materialLabel16.ForeColor = Color.Gray;
             materialLabel17.ForeColor = Color.Gray;
         }
+
     }
 }

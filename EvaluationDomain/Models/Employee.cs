@@ -23,6 +23,14 @@ namespace EvaluationDomain.Models
         // Group number (1–5) 
         public int GroupNumber { get; set; }
 
+        //Login Credentials
+        [Required]
+        public string Username { get; set; } = string.Empty;
+
+        [Required]
+        public string Password { get; set; } = string.Empty;
+
+
         // ForeignKey to the supervisor
         public int? SupervisorId { get; set; }
 
@@ -54,5 +62,8 @@ namespace EvaluationDomain.Models
         public string GroupLabel => Role == EmployeeRole.Staff
             ? $"{GroupNumber}|STAFF"
             : $"{GroupNumber}|SUPER";
+
+        [NotMapped]
+        public bool IsManager => Role == EmployeeRole.AAM || Role == EmployeeRole.Supervisor;
     }
 }

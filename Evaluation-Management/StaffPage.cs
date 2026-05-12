@@ -1,4 +1,6 @@
-﻿using MaterialSkin;
+﻿using EvaluationDomain.Models;
+using EvaluationInfrastructure.Repositories;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -16,12 +18,83 @@ namespace Evaluation_Management
 {
     public partial class StaffPage : MaterialForm
     {
-        public StaffPage()
+
+        private readonly Employee _loggedInEmployee;
+        private readonly KpmScoreRepository _kpmRepo = new KpmScoreRepository();
+        private readonly EvaluationPeriodRepository _periodRepo = new EvaluationPeriodRepository();
+        private readonly EmployeeRepository _employeeRepo = new EmployeeRepository();
+
+        public StaffPage(Employee employee)
         {
             InitializeComponent();
+            _loggedInEmployee = employee;
             Theme();
             BackColorAdjustments();
             ForeColorAdjustments();
+        }
+
+        private void StaffPage_Load(object sender, EventArgs e)
+        {
+            LoadEmployeeInfo();
+            LoadDashboardStats();
+        }
+
+        private void LoadEmployeeInfo()
+        {
+            lblEpt.Text = _loggedInEmployee.Name;
+            lblNpu.Text = _loggedInEmployee.RoleDisplay;
+            lblNpuDes.Text = _loggedInEmployee.Designation;
+            labelM.Text = _loggedInEmployee.GroupLabel;
+            lblDos.Text = $"As of {DateTime.Now:MMMM yyyy}";
+            lblCom.Text = "Payable Section";
+
+            if (_loggedInEmployee.Supervisor != null)
+                lblSp.Text = $"Supervisor: {_loggedInEmployee.Supervisor.Name}";
+            else
+                lblSp.Text = string.Empty;
+        }
+
+        private void LoadDashboardStats()
+        {
+            var now = DateTime.Now;
+            var period = _periodRepo.GetByMonthYear(now.Month, now.Year);
+
+            if (period == null)
+            {
+                lblTotalSubmissionNum.Text = "0";
+                lblApprovalRateNum.Text = "0%";
+                lblKis.Text = "—";
+                lblKisDes.Text = "No evaluation period for this month.";
+                lblSa.Text = "—";
+                lblSaDes.Text = "—";
+                materialLabel2.Text = "0 pts";
+                return;
+            }
+
+            var scores = _kpmRepo.GetForEmployee(_loggedInEmployee.Id, period.Id);
+
+            int totalSubmissions = scores.Count;
+            lblTotalSubmissionNum.Text = totalSubmissions.ToString();
+
+            int metTarget = scores.Count(s => s.Actual.HasValue && s.Actual >= s.Target);
+            decimal approvalRate = totalSubmissions > 0
+                ? Math.Round((decimal)metTarget / totalSubmissions * 100, 1) : 0;
+            lblApprovalRateNum.Text = $"{approvalRate}%";
+
+            decimal totalPoints = _kpmRepo.GetTotalPoints(_loggedInEmployee.Id, period.Id);
+            materialLabel2.Text = $"{totalPoints:F2} pts";
+
+            var bestKpm = scores.Where(s => s.Points.HasValue)
+                .OrderByDescending(s => s.Points).FirstOrDefault();
+            lblKis.Text = bestKpm != null ? $"{bestKpm.Points:F2} pts" : "—";
+            lblKisDes.Text = bestKpm != null ? bestKpm.KpmLabel : "No scores yet";
+
+            var lowestKpm = scores.Where(s => s.Points.HasValue)
+                .OrderBy(s => s.Points).FirstOrDefault();
+            lblSa.Text = lowestKpm != null ? $"{lowestKpm.Points:F2} pts" : "—";
+            lblSaDes.Text = lowestKpm != null ? lowestKpm.KpmLabel : "No scores yet";
+
+            lblFdSg.Text = period.Display;
         }
 
         private void Theme()
@@ -85,7 +158,7 @@ namespace Evaluation_Management
             panel12.BackColor = Color.LightCoral;
 
             materialLabel7.BackColor = Color.LightCoral;
-            materialLabel5.BackColor = Color.White; 
+            materialLabel5.BackColor = Color.White;
 
         }
         private void ForeColorAdjustments()
@@ -119,7 +192,6 @@ namespace Evaluation_Management
             materialLabel7.ForeColor = Color.White;
         }
 
-        
     }
 
 }

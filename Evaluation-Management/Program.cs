@@ -1,3 +1,6 @@
+using EvaluationInfrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Evaluation_Management
 {
     internal static class Program
@@ -8,8 +11,11 @@ namespace Evaluation_Management
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            using (var db = new AppDbContext())
+            {
+                db.Database.Migrate();
+            }
+
             ApplicationConfiguration.Initialize();
             Application.Run(new Login_Form());
         }

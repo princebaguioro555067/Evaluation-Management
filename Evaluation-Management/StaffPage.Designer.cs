@@ -1346,7 +1346,7 @@ namespace Evaluation_Management
             imageList1.Images.SetKeyName(0, "3-removebg-preview (1).png");
             imageList1.Images.SetKeyName(1, "1-removebg-preview(1).png");
             // 
-            // AdminPage
+            // StaffPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -1356,10 +1356,11 @@ namespace Evaluation_Management
             DrawerShowIconsWhenHidden = true;
             DrawerTabControl = materialTabControl1;
             FormStyle = FormStyles.ActionBar_None;
-            Name = "AdminPage";
+            Name = "StaffPage";
             Padding = new Padding(0, 24, 3, 3);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Welcome!";
+            Load += StaffPage_Load;
             materialTabControl1.ResumeLayout(false);
             tpSubmitReport.ResumeLayout(false);
             panel1.ResumeLayout(false);

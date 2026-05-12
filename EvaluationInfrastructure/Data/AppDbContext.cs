@@ -28,6 +28,11 @@ namespace EvaluationInfrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Unique username
+            modelBuilder.Entity<Employee>()
+                .HasIndex(e => e.Username)
+                .IsUnique();
+
             // Employee self-referencing relationship
             modelBuilder.Entity<Employee>()
                 .HasOne(e => e.Supervisor)

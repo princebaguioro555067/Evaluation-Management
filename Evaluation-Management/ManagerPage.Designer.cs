@@ -1024,6 +1024,7 @@
             Padding = new Padding(0, 24, 3, 3);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += ManagerPage_Load;
             materialTabControl1.ResumeLayout(false);
             tpPerformanceList.ResumeLayout(false);
             panel2.ResumeLayout(false);

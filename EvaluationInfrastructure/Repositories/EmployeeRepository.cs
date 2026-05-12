@@ -27,6 +27,26 @@ namespace EvaluationInfrastructure.Repositories
                 .FirstOrDefault(e => e.Id == id);
         }
 
+        public Employee? GetByUsername(string username)
+        {
+            return _context.Employees
+                .Include(e => e.Supervisor)
+                .FirstOrDefault(e => e.Username == username);
+        }
+
+        public Employee? Login(string username, string password)
+        {
+            var employee = _context.Employees
+                .Include(e => e.Supervisor)
+                .FirstOrDefault(e => e.Username == username);
+
+            if (employee == null) return null;
+
+            bool passwordMatches = BCrypt.Net.BCrypt.Verify(password, employee.Password);
+
+            return passwordMatches ? employee : null;
+        }
+
         public List<Employee> GetByRole(EmployeeRole role)
         {
             return _context.Employees
@@ -68,6 +88,12 @@ namespace EvaluationInfrastructure.Repositories
                 .FirstOrDefault(e => e.Role == EmployeeRole.AAM);
         }
 
+        public bool UsernameExists(string username, int? excludeId = null)
+        {
+            return _context.Employees
+                .Any(e => e.Username == username && e.Id != excludeId);
+        }
+
         public bool NameExists(string name, int? excludeId = null)
         {
             return _context.Employees
@@ -79,8 +105,14 @@ namespace EvaluationInfrastructure.Repositories
             if (string.IsNullOrWhiteSpace(employee.Name))
                 throw new ArgumentException("Employee name is required.");
 
-            if (NameExists(employee.Name))
-                throw new ArgumentException($"An employee named '{employee.Name}' already exists.");
+            if (string.IsNullOrWhiteSpace(employee.Username))
+                throw new ArgumentException("Username is required.");
+
+            if (UsernameExists(employee.Username))
+                throw new ArgumentException($"Username '{employee.Username}' is already taken.");
+
+            // Hash the password before saving
+            employee.Password = BCrypt.Net.BCrypt.HashPassword(employee.Password);
 
             _context.Employees.Add(employee);
             _context.SaveChanges();
@@ -91,10 +123,19 @@ namespace EvaluationInfrastructure.Repositories
             if (string.IsNullOrWhiteSpace(employee.Name))
                 throw new ArgumentException("Employee name is required.");
 
-            if (NameExists(employee.Name, employee.Id))
-                throw new ArgumentException($"Another employee named '{employee.Name}' already exists.");
+            if (UsernameExists(employee.Username, employee.Id))
+                throw new ArgumentException($"Username '{employee.Username}' is already taken.");
 
             _context.Employees.Update(employee);
+            _context.SaveChanges();
+        }
+
+        public void UpdatePassword(int employeeId, string newPlainPassword)
+        {
+            var employee = _context.Employees.Find(employeeId);
+            if (employee == null) throw new ArgumentException("Employee not found.");
+
+            employee.Password = BCrypt.Net.BCrypt.HashPassword(newPlainPassword);
             _context.SaveChanges();
         }
 
@@ -106,7 +147,6 @@ namespace EvaluationInfrastructure.Repositories
 
             if (employee == null) return false;
 
-            // Detach subordinates before delete to avoid FK violations
             foreach (var sub in employee.Subordinates)
                 sub.SupervisorId = null;
 

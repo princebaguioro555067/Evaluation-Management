@@ -38,14 +38,14 @@
             label4 = new Label();
             panel5 = new Panel();
             label3 = new Label();
-            textBox3 = new TextBox();
+            txtConfirmPasswordRegister = new TextBox();
             CheckBoxRegisterShowPass = new CheckBox();
             panel3 = new Panel();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtUsernameRegister = new TextBox();
             panel4 = new Panel();
             label1 = new Label();
-            textBox2 = new TextBox();
+            txtPasswordRegister = new TextBox();
             btnSignUp = new Button();
             pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
@@ -147,7 +147,7 @@
             panel5.BackColor = Color.LavenderBlush;
             panel5.BorderStyle = BorderStyle.FixedSingle;
             panel5.Controls.Add(label3);
-            panel5.Controls.Add(textBox3);
+            panel5.Controls.Add(txtConfirmPasswordRegister);
             panel5.Location = new Point(54, 243);
             panel5.Name = "panel5";
             panel5.Size = new Size(297, 42);
@@ -165,15 +165,15 @@
             label3.TabIndex = 2;
             label3.Text = "Confirm Password:";
             // 
-            // textBox3
+            // txtConfirmPasswordRegister
             // 
-            textBox3.BackColor = Color.LavenderBlush;
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.ForeColor = SystemColors.Info;
-            textBox3.Location = new Point(8, 20);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(280, 16);
-            textBox3.TabIndex = 12;
+            txtConfirmPasswordRegister.BackColor = Color.LavenderBlush;
+            txtConfirmPasswordRegister.BorderStyle = BorderStyle.None;
+            txtConfirmPasswordRegister.ForeColor = SystemColors.ControlText;
+            txtConfirmPasswordRegister.Location = new Point(8, 20);
+            txtConfirmPasswordRegister.Name = "txtConfirmPasswordRegister";
+            txtConfirmPasswordRegister.Size = new Size(280, 16);
+            txtConfirmPasswordRegister.TabIndex = 12;
             // 
             // CheckBoxRegisterShowPass
             // 
@@ -186,13 +186,14 @@
             CheckBoxRegisterShowPass.TabIndex = 7;
             CheckBoxRegisterShowPass.Text = "Show password";
             CheckBoxRegisterShowPass.UseVisualStyleBackColor = false;
+            CheckBoxRegisterShowPass.CheckedChanged += CheckBoxRegisterShowPass_CheckedChanged;
             // 
             // panel3
             // 
             panel3.BackColor = Color.LavenderBlush;
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(label2);
-            panel3.Controls.Add(textBox1);
+            panel3.Controls.Add(txtUsernameRegister);
             panel3.Location = new Point(53, 127);
             panel3.Name = "panel3";
             panel3.Size = new Size(297, 42);
@@ -210,22 +211,22 @@
             label2.TabIndex = 2;
             label2.Text = "Username:";
             // 
-            // textBox1
+            // txtUsernameRegister
             // 
-            textBox1.BackColor = Color.LavenderBlush;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.ForeColor = SystemColors.Info;
-            textBox1.Location = new Point(8, 20);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(280, 16);
-            textBox1.TabIndex = 12;
+            txtUsernameRegister.BackColor = Color.LavenderBlush;
+            txtUsernameRegister.BorderStyle = BorderStyle.None;
+            txtUsernameRegister.ForeColor = SystemColors.ControlText;
+            txtUsernameRegister.Location = new Point(8, 20);
+            txtUsernameRegister.Name = "txtUsernameRegister";
+            txtUsernameRegister.Size = new Size(280, 16);
+            txtUsernameRegister.TabIndex = 12;
             // 
             // panel4
             // 
             panel4.BackColor = Color.LavenderBlush;
             panel4.BorderStyle = BorderStyle.FixedSingle;
             panel4.Controls.Add(label1);
-            panel4.Controls.Add(textBox2);
+            panel4.Controls.Add(txtPasswordRegister);
             panel4.Location = new Point(53, 185);
             panel4.Name = "panel4";
             panel4.Size = new Size(297, 42);
@@ -243,15 +244,15 @@
             label1.TabIndex = 2;
             label1.Text = "Password:";
             // 
-            // textBox2
+            // txtPasswordRegister
             // 
-            textBox2.BackColor = Color.LavenderBlush;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.ForeColor = SystemColors.Info;
-            textBox2.Location = new Point(8, 20);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(280, 16);
-            textBox2.TabIndex = 12;
+            txtPasswordRegister.BackColor = Color.LavenderBlush;
+            txtPasswordRegister.BorderStyle = BorderStyle.None;
+            txtPasswordRegister.ForeColor = SystemColors.ControlText;
+            txtPasswordRegister.Location = new Point(8, 20);
+            txtPasswordRegister.Name = "txtPasswordRegister";
+            txtPasswordRegister.Size = new Size(280, 16);
+            txtPasswordRegister.TabIndex = 12;
             // 
             // btnSignUp
             // 
@@ -290,6 +291,7 @@
             Name = "RegisterForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "RegisterForm";
+            Load += RegisterForm_Load;
             panel1.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel6.ResumeLayout(false);
@@ -315,14 +317,14 @@
         private Label label4;
         private Panel panel5;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox txtConfirmPasswordRegister;
         private CheckBox CheckBoxRegisterShowPass;
         private Panel panel3;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtUsernameRegister;
         private Panel panel4;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox txtPasswordRegister;
         private Button btnSignUp;
     }
 }

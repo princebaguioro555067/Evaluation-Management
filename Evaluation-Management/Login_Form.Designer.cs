@@ -39,10 +39,10 @@
             CheckBoxRegisterShowPass = new CheckBox();
             panel3 = new Panel();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtUsernameLogin = new TextBox();
             panel4 = new Panel();
             label1 = new Label();
-            textBox2 = new TextBox();
+            txtPasswordLogin = new TextBox();
             btnLogin = new Button();
             pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
@@ -147,13 +147,14 @@
             CheckBoxRegisterShowPass.TabIndex = 7;
             CheckBoxRegisterShowPass.Text = "Show password";
             CheckBoxRegisterShowPass.UseVisualStyleBackColor = false;
+            CheckBoxRegisterShowPass.CheckedChanged += CheckBoxRegisterShowPass_CheckedChanged;
             // 
             // panel3
             // 
             panel3.BackColor = Color.LavenderBlush;
             panel3.BorderStyle = BorderStyle.FixedSingle;
             panel3.Controls.Add(label2);
-            panel3.Controls.Add(textBox1);
+            panel3.Controls.Add(txtUsernameLogin);
             panel3.Location = new Point(53, 155);
             panel3.Name = "panel3";
             panel3.Size = new Size(297, 42);
@@ -171,22 +172,22 @@
             label2.TabIndex = 2;
             label2.Text = "Username:";
             // 
-            // textBox1
+            // txtUsernameLogin
             // 
-            textBox1.BackColor = Color.LavenderBlush;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.ForeColor = SystemColors.Info;
-            textBox1.Location = new Point(8, 20);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(280, 16);
-            textBox1.TabIndex = 12;
+            txtUsernameLogin.BackColor = Color.LavenderBlush;
+            txtUsernameLogin.BorderStyle = BorderStyle.None;
+            txtUsernameLogin.ForeColor = SystemColors.ControlText;
+            txtUsernameLogin.Location = new Point(8, 20);
+            txtUsernameLogin.Name = "txtUsernameLogin";
+            txtUsernameLogin.Size = new Size(280, 16);
+            txtUsernameLogin.TabIndex = 12;
             // 
             // panel4
             // 
             panel4.BackColor = Color.LavenderBlush;
             panel4.BorderStyle = BorderStyle.FixedSingle;
             panel4.Controls.Add(label1);
-            panel4.Controls.Add(textBox2);
+            panel4.Controls.Add(txtPasswordLogin);
             panel4.Location = new Point(53, 213);
             panel4.Name = "panel4";
             panel4.Size = new Size(297, 42);
@@ -204,15 +205,15 @@
             label1.TabIndex = 2;
             label1.Text = "Password:";
             // 
-            // textBox2
+            // txtPasswordLogin
             // 
-            textBox2.BackColor = Color.LavenderBlush;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.ForeColor = SystemColors.Info;
-            textBox2.Location = new Point(8, 20);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(280, 16);
-            textBox2.TabIndex = 12;
+            txtPasswordLogin.BackColor = Color.LavenderBlush;
+            txtPasswordLogin.BorderStyle = BorderStyle.None;
+            txtPasswordLogin.ForeColor = SystemColors.ControlText;
+            txtPasswordLogin.Location = new Point(8, 20);
+            txtPasswordLogin.Name = "txtPasswordLogin";
+            txtPasswordLogin.Size = new Size(280, 16);
+            txtPasswordLogin.TabIndex = 12;
             // 
             // btnLogin
             // 
@@ -251,6 +252,7 @@
             Name = "Login_Form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Login_Form_Load;
             panel1.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel6.ResumeLayout(false);
@@ -275,10 +277,10 @@
         private CheckBox CheckBoxRegisterShowPass;
         private Panel panel3;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtUsernameLogin;
         private Panel panel4;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox txtPasswordLogin;
         private Button btnLogin;
         private PictureBox pictureBox2;
     }
