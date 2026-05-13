@@ -120,6 +120,8 @@ namespace Evaluation_Management
             panel8.BackColor = Color.White;
             panel5.BackColor = Color.White;
             panel6.BackColor = Color.White;
+            panel3.BackColor = Color.White;
+            panel9.BackColor = Color.White;
 
 
             materialLabel1.BackColor = Color.White;
@@ -140,6 +142,40 @@ namespace Evaluation_Management
             materialLabel10.BackColor = Color.White;
             materialLabel9.BackColor = Color.White;
 
+            materialLabel27.BackColor = Color.White;
+            materialLabel28.BackColor = Color.White;
+            materialLabel20.BackColor = Color.White;
+            materialLabel19.BackColor = Color.White;
+
+            materialLabel35.BackColor = Color.White;
+            materialLabel34.BackColor = Color.White;
+            materialLabel29.BackColor = Color.White;
+            materialLabel33.BackColor = Color.White;
+            materialLabel30.BackColor = Color.White;
+
+            materialLabel31.BackColor = Color.White;
+            materialLabel39.BackColor = Color.White;
+
+            materialLabel37.BackColor = Color.White;
+            materialLabel38.BackColor = Color.White;
+
+            materialLabel41.BackColor = Color.White;
+            materialLabel32.BackColor = Color.White;
+            materialLabel40.BackColor = Color.White;
+
+            materialLabel43.BackColor = Color.White;
+            materialLabel44.BackColor = Color.White;
+            materialLabel45.BackColor = Color.White;
+
+            materialLabel49.BackColor = Color.White;
+            materialLabel50.BackColor = Color.White;
+
+            materialLabel47.BackColor = Color.White;
+            materialLabel48.BackColor = Color.White;
+
+
+
+
         }
         private void ForeColorAdjustments()
         {
@@ -153,9 +189,9 @@ namespace Evaluation_Management
             materialLabel24.ForeColor = Color.Gray;
             materialLabel12.ForeColor = Color.Gray;
             materialLabel23.ForeColor = Color.Gray;
+            materialLabel28.ForeColor = myDrakGray;
 
             materialLabel7.ForeColor = myCrimson;
-            materialLabel18.ForeColor = myCrimson;
 
             materialLabel5.ForeColor = myDrakGray;
             materialLabel4.ForeColor = myCrimson;
@@ -172,7 +208,26 @@ namespace Evaluation_Management
             materialLabel15.ForeColor = Color.Gray;
             materialLabel16.ForeColor = Color.Gray;
             materialLabel17.ForeColor = Color.Gray;
+
+            materialLabel20.ForeColor = myCrimson;
+            materialLabel19.ForeColor = Color.Gray;
+
+            materialLabel34.ForeColor = myDrakGray;
+            materialLabel29.ForeColor = myDrakGray;
+            materialLabel33.ForeColor = myDrakGray;
+            materialLabel30.ForeColor = myDrakGray;
+
+            materialLabel37.ForeColor = myDrakGray;
+            materialLabel38.ForeColor = myDrakGray;
+
+            materialLabel41.ForeColor = myDrakGray;
+            materialLabel32.ForeColor = myDrakGray;
+            materialLabel40.ForeColor = myDrakGray;
+
+            materialLabel49.ForeColor = myDrakGray;
+            materialLabel50.ForeColor = myDrakGray;
         }
+
 
     }
 }
