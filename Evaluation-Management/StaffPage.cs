@@ -42,6 +42,7 @@ namespace Evaluation_Management
         private void LoadEmployeeInfo()
         {
             lblEpt.Text = _loggedInEmployee.Name;
+            lblSp.Text = "Staff Portal";
             lblNpu.Text = _loggedInEmployee.RoleDisplay;
             lblNpuDes.Text = _loggedInEmployee.Designation;
             labelM.Text = _loggedInEmployee.GroupLabel;
@@ -49,9 +50,7 @@ namespace Evaluation_Management
             lblCom.Text = "Payable Section";
 
             if (_loggedInEmployee.Supervisor != null)
-                lblSp.Text = $"Supervisor: {_loggedInEmployee.Supervisor.Name}";
-            else
-                lblSp.Text = string.Empty;
+                lblFdSg.Text = $"Supervisor: {_loggedInEmployee.Supervisor.Name}";
         }
 
         private void LoadDashboardStats()
@@ -61,40 +60,74 @@ namespace Evaluation_Management
 
             if (period == null)
             {
+                // No period yet — show zeroes and N/A
                 lblTotalSubmissionNum.Text = "0";
                 lblApprovalRateNum.Text = "0%";
-                lblKis.Text = "—";
-                lblKisDes.Text = "No evaluation period for this month.";
-                lblSa.Text = "—";
-                lblSaDes.Text = "—";
-                materialLabel2.Text = "0 pts";
+                SetEvaluationLevel(0);
                 return;
             }
 
             var scores = _kpmRepo.GetForEmployee(_loggedInEmployee.Id, period.Id);
 
-            int totalSubmissions = scores.Count;
-            lblTotalSubmissionNum.Text = totalSubmissions.ToString();
+            // --- Total Submissions ---
+            lblTotalSubmissionNum.Text = scores.Count.ToString();
 
+            // --- Approval Rate (% of KPMs that met or exceeded target) ---
             int metTarget = scores.Count(s => s.Actual.HasValue && s.Actual >= s.Target);
-            decimal approvalRate = totalSubmissions > 0
-                ? Math.Round((decimal)metTarget / totalSubmissions * 100, 1) : 0;
+            decimal approvalRate = scores.Count > 0
+                ? Math.Round((decimal)metTarget / scores.Count * 100, 1) : 0;
             lblApprovalRateNum.Text = $"{approvalRate}%";
 
+            // --- Total KPM Score out of 100 ---
             decimal totalPoints = _kpmRepo.GetTotalPoints(_loggedInEmployee.Id, period.Id);
-            materialLabel2.Text = $"{totalPoints:F2} pts";
 
-            var bestKpm = scores.Where(s => s.Points.HasValue)
-                .OrderByDescending(s => s.Points).FirstOrDefault();
-            lblKis.Text = bestKpm != null ? $"{bestKpm.Points:F2} pts" : "—";
-            lblKisDes.Text = bestKpm != null ? bestKpm.KpmLabel : "No scores yet";
+            // --- Evaluation Level based on total points ---
+            SetEvaluationLevel(totalPoints);
+        }
 
-            var lowestKpm = scores.Where(s => s.Points.HasValue)
-                .OrderBy(s => s.Points).FirstOrDefault();
-            lblSa.Text = lowestKpm != null ? $"{lowestKpm.Points:F2} pts" : "—";
-            lblSaDes.Text = lowestKpm != null ? lowestKpm.KpmLabel : "No scores yet";
+        private void SetEvaluationLevel(decimal totalPoints)
+        {
+            string level;
+            Color badgeColor;
+            Color textColor = Color.White;
 
-            lblFdSg.Text = period.Display;
+            if (totalPoints >= 95)
+            {
+                level = "Excellent";
+                badgeColor = Color.FromArgb(0, 150, 80);      // Green
+            }
+            else if (totalPoints >= 85)
+            {
+                level = "Great";
+                badgeColor = Color.FromArgb(30, 130, 200);    // Blue
+            }
+            else if (totalPoints >= 75)
+            {
+                level = "Good";
+                badgeColor = Color.FromArgb(255, 165, 0);     // Orange
+                textColor = Color.White;
+            }
+            else if (totalPoints >= 65)
+            {
+                level = "Fair";
+                badgeColor = Color.FromArgb(220, 120, 20);    // Dark Orange
+            }
+            else if (totalPoints > 0)
+            {
+                level = "Needs Improvement";
+                badgeColor = Color.FromArgb(200, 30, 30);     // Red
+            }
+            else
+            {
+                level = "No Data";
+                badgeColor = Color.Gray;
+            }
+
+            // Update the status badge label and its background panel
+            materialLabel7.Text = level;
+            materialLabel7.ForeColor = textColor;
+            panel12.BackColor = badgeColor;
+            materialLabel7.BackColor = badgeColor;
         }
 
         private void Theme()
@@ -149,15 +182,11 @@ namespace Evaluation_Management
             materialLabel2.BackColor = Color.White;
 
             materialLabel11.BackColor = Color.White;
-
+            
             materialLabel3.BackColor = Color.White;
             materialLabel6.BackColor = Color.White;
             materialLabel8.BackColor = Color.White;
             materialLabel4.BackColor = Color.White;
-
-            panel12.BackColor = Color.LightCoral;
-
-            materialLabel7.BackColor = Color.LightCoral;
             materialLabel5.BackColor = Color.White;
 
         }
@@ -165,6 +194,7 @@ namespace Evaluation_Management
         {
             Color myCrimson = Color.FromArgb(220, 20, 60);
             Color myDrakGray = Color.FromArgb(64, 64, 64);
+
             lblEpt.ForeColor = myCrimson;
             lblMsDes.ForeColor = Color.Gray;
             lblSp.ForeColor = Color.Gray;
@@ -189,7 +219,7 @@ namespace Evaluation_Management
             materialLabel6.ForeColor = myDrakGray;
             materialLabel8.ForeColor = myDrakGray;
 
-            materialLabel7.ForeColor = Color.White;
+            
         }
 
     }

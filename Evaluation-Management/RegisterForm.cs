@@ -1,18 +1,43 @@
 ﻿using EvaluationDomain.Models;
 using EvaluationInfrastructure.Repositories;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Evaluation_Management
 {
     public partial class RegisterForm : Form
     {
         private readonly EmployeeRepository _employeeRepo = new EmployeeRepository();
+        private List<Employee> _supervisors = new List<Employee>();
 
         public RegisterForm()
         {
             InitializeComponent();
         }
 
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+            txtPasswordRegister.PasswordChar = '*';
+            LoadTeams();
+        }
+
+        private void LoadTeams()
+        {
+            _supervisors = _employeeRepo.GetByRole(EmployeeRole.Supervisor);
+
+            cmbTeamNumber.Items.Clear();
+            cmbTeamNumber.Items.Add("-- Select your Team --");
+
+            for (int i = 1; i <= 5; i++)
+            {
+                var supervisor = _supervisors.FirstOrDefault(s => s.GroupNumber == i);
+                string display = supervisor != null
+                    ? $"Team {i}  —  Supervisor: {supervisor.Name}"
+                    : $"Team {i}  —  No Supervisor Yet";
+
+                cmbTeamNumber.Items.Add(display);
+            }
+
+            cmbTeamNumber.SelectedIndex = 0;
+        }
 
         private void lblRegisterClose_Click(object sender, EventArgs e)
         {
@@ -23,7 +48,6 @@ namespace Evaluation_Management
         {
             string username = txtUsernameRegister.Text.Trim();
             string password = txtPasswordRegister.Text;
-            string confirmPassword = txtConfirmPasswordRegister.Text;
 
             if (string.IsNullOrWhiteSpace(username))
             {
@@ -39,17 +63,16 @@ namespace Evaluation_Management
                 return;
             }
 
-            if (password != confirmPassword)
-            {
-                MessageBox.Show("Passwords do not match.", "Sign Up",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtConfirmPasswordRegister.Clear();
-                return;
-            }
-
             if (password.Length < 6)
             {
                 MessageBox.Show("Password must be at least 6 characters.", "Sign Up",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (cmbTeamNumber.SelectedIndex <= 0)
+            {
+                MessageBox.Show("Please select your team.", "Sign Up",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -63,22 +86,30 @@ namespace Evaluation_Management
 
             try
             {
-                // New accounts are Staff by default.
-                // A Supervisor or AAM can update the role later.
+                int groupNumber = cmbTeamNumber.SelectedIndex; // index 1 = Team 1, etc.
+
+                var supervisor = _supervisors.FirstOrDefault(s => s.GroupNumber == groupNumber);
+
                 var newEmployee = new Employee
                 {
                     Username = username,
-                    Password = password,
+                    Password = password,       // hashed inside repo.Add()
                     Name = username,
                     Designation = "Staff",
                     Role = EmployeeRole.Staff,
-                    GroupNumber = 0
+                    GroupNumber = groupNumber,
+                    SupervisorId = supervisor?.Id
                 };
 
                 _employeeRepo.Add(newEmployee);
 
-                MessageBox.Show("Account created successfully! You can now log in.", "Sign Up",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string teamInfo = supervisor != null
+                    ? $"You have been assigned to Team {groupNumber} under {supervisor.Name}."
+                    : $"You have been assigned to Team {groupNumber}. A supervisor will be assigned later.";
+
+                MessageBox.Show(
+                    $"Account created successfully!\n\n{teamInfo}\n\nYou can now log in.",
+                    "Sign Up", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Login_Form loginForm = new Login_Form();
                 loginForm.Show();
@@ -90,10 +121,10 @@ namespace Evaluation_Management
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void CheckBoxRegisterShowPass_CheckedChanged(object sender, EventArgs e)
         {
             txtPasswordRegister.PasswordChar = CheckBoxRegisterShowPass.Checked ? '\0' : '*';
-            txtConfirmPasswordRegister.PasswordChar = CheckBoxRegisterShowPass.Checked ? '\0' : '*';
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -101,12 +132,6 @@ namespace Evaluation_Management
             Login_Form loginForm = new Login_Form();
             loginForm.Show();
             this.Hide();
-        }
-
-        private void RegisterForm_Load(object sender, EventArgs e)
-        {
-            txtPasswordRegister.PasswordChar = '*';
-            txtConfirmPasswordRegister.PasswordChar = '*';
         }
     }
 }

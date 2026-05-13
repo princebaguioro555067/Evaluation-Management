@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\source\\repos\\Test\\EvaluationDomain\\EvaluationDomain.csproj": {}
+    "C:\\Users\\USER\\source\\repos\\Evaluation-Management\\EvaluationDomain\\EvaluationDomain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\source\\repos\\Test\\EvaluationDomain\\EvaluationDomain.csproj": {
+    "C:\\Users\\USER\\source\\repos\\Evaluation-Management\\EvaluationDomain\\EvaluationDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\Test\\EvaluationDomain\\EvaluationDomain.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\Evaluation-Management\\EvaluationDomain\\EvaluationDomain.csproj",
         "projectName": "EvaluationDomain",
-        "projectPath": "C:\\Users\\USER\\source\\repos\\Test\\EvaluationDomain\\EvaluationDomain.csproj",
+        "projectPath": "C:\\Users\\USER\\source\\repos\\Evaluation-Management\\EvaluationDomain\\EvaluationDomain.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\source\\repos\\Test\\EvaluationDomain\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Source\\Repos\\Evaluation-Management\\EvaluationDomain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -73,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

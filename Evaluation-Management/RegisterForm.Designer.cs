@@ -37,8 +37,8 @@
             label5 = new Label();
             label4 = new Label();
             panel5 = new Panel();
+            cmbTeamNumber = new ComboBox();
             label3 = new Label();
-            txtConfirmPasswordRegister = new TextBox();
             CheckBoxRegisterShowPass = new CheckBox();
             panel3 = new Panel();
             label2 = new Label();
@@ -146,12 +146,20 @@
             // 
             panel5.BackColor = Color.LavenderBlush;
             panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Controls.Add(cmbTeamNumber);
             panel5.Controls.Add(label3);
-            panel5.Controls.Add(txtConfirmPasswordRegister);
             panel5.Location = new Point(54, 243);
             panel5.Name = "panel5";
             panel5.Size = new Size(297, 42);
             panel5.TabIndex = 14;
+            // 
+            // cmbTeamNumber
+            // 
+            cmbTeamNumber.FormattingEnabled = true;
+            cmbTeamNumber.Location = new Point(0, 18);
+            cmbTeamNumber.Name = "cmbTeamNumber";
+            cmbTeamNumber.Size = new Size(296, 23);
+            cmbTeamNumber.TabIndex = 3;
             // 
             // label3
             // 
@@ -163,17 +171,7 @@
             label3.Name = "label3";
             label3.Size = new Size(295, 17);
             label3.TabIndex = 2;
-            label3.Text = "Confirm Password:";
-            // 
-            // txtConfirmPasswordRegister
-            // 
-            txtConfirmPasswordRegister.BackColor = Color.LavenderBlush;
-            txtConfirmPasswordRegister.BorderStyle = BorderStyle.None;
-            txtConfirmPasswordRegister.ForeColor = SystemColors.ControlText;
-            txtConfirmPasswordRegister.Location = new Point(8, 20);
-            txtConfirmPasswordRegister.Name = "txtConfirmPasswordRegister";
-            txtConfirmPasswordRegister.Size = new Size(280, 16);
-            txtConfirmPasswordRegister.TabIndex = 12;
+            label3.Text = "Team Number:";
             // 
             // CheckBoxRegisterShowPass
             // 
@@ -297,7 +295,6 @@
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
@@ -317,7 +314,6 @@
         private Label label4;
         private Panel panel5;
         private Label label3;
-        private TextBox txtConfirmPasswordRegister;
         private CheckBox CheckBoxRegisterShowPass;
         private Panel panel3;
         private Label label2;
@@ -326,5 +322,6 @@
         private Label label1;
         private TextBox txtPasswordRegister;
         private Button btnSignUp;
+        private ComboBox cmbTeamNumber;
     }
 }

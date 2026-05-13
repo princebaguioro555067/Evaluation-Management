@@ -53,3 +53,17 @@ C:\Users\USER\source\repos\Test\EvaluationDomain\obj\Debug\net9.0\refint\Evaluat
 C:\Users\USER\source\repos\Test\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.pdb
 C:\Users\USER\source\repos\Test\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.genruntimeconfig.cache
 C:\Users\USER\source\repos\Test\EvaluationDomain\obj\Debug\net9.0\ref\EvaluationDomain.dll
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\bin\Debug\net9.0\EvaluationDomain.deps.json
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\bin\Debug\net9.0\EvaluationDomain.runtimeconfig.json
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\bin\Debug\net9.0\EvaluationDomain.dll
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\bin\Debug\net9.0\EvaluationDomain.pdb
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.AssemblyInfoInputs.cache
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.AssemblyInfo.cs
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.csproj.CoreCompileInputs.cache
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.sourcelink.json
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.dll
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\refint\EvaluationDomain.dll
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.pdb
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.genruntimeconfig.cache
+C:\Users\USER\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\ref\EvaluationDomain.dll
