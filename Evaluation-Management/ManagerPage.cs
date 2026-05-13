@@ -2,15 +2,7 @@
 using EvaluationInfrastructure.Repositories;
 using MaterialSkin;
 using MaterialSkin.Controls;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Evaluation_Management
 {
@@ -32,68 +24,24 @@ namespace Evaluation_Management
 
         private void ManagerPage_Load(object sender, EventArgs e)
         {
+
             LoadManagerInfo();
             LoadManagerStats();
         }
 
         private void LoadManagerInfo()
         {
-            materialLabel7.Text = _loggedInEmployee.Name;
-            materialLabel18.Text = _loggedInEmployee.RoleDisplay;
-            materialLabel9.Text = _loggedInEmployee.Designation;
-            materialLabel10.Text = _loggedInEmployee.GroupLabel;
-            materialLabel8.Text = $"As of {DateTime.Now:MMMM yyyy}";
-
-            if (_loggedInEmployee.Role == EmployeeRole.Supervisor)
-            {
-                var staffList = _employeeRepo.GetStaffUnderSupervisor(_loggedInEmployee.Id);
-                materialLabel4.Text = staffList.Count.ToString();
-            }
-            else if (_loggedInEmployee.Role == EmployeeRole.AAM)
-            {
-                var allStaff = _employeeRepo.GetByRole(EmployeeRole.Staff);
-                materialLabel4.Text = allStaff.Count.ToString();
-            }
+            lblEpt.Text = "Employee Performance Tracker";
+            lblEpt2.Text = "Employee Performance Tracker";
+            lblEpt3.Text = "Employee Performance Tracker";
+            lblManagerName.Text = _loggedInEmployee.Name;
+            lblManagerName2.Text = _loggedInEmployee.Name;
         }
 
         private void LoadManagerStats()
         {
             var now = DateTime.Now;
             var period = _periodRepo.GetByMonthYear(now.Month, now.Year);
-
-            if (period == null)
-            {
-                materialLabel2.Text = "0 pts";
-                materialLabel5.Text = "0";
-                materialLabel3.Text = "0%";
-                materialLabel6.Text = "0 pts avg";
-                return;
-            }
-
-            List<KpmScore> scores;
-
-            if (_loggedInEmployee.Role == EmployeeRole.AAM)
-                scores = _kpmRepo.GetAllForPeriod(period.Id);
-            else
-                scores = _kpmRepo.GetForGroup(_loggedInEmployee.GroupNumber, period.Id);
-
-            decimal myPoints = _kpmRepo.GetTotalPoints(_loggedInEmployee.Id, period.Id);
-            materialLabel2.Text = $"{myPoints:F2} pts";
-
-            materialLabel5.Text = scores.Count.ToString();
-
-            int metTarget = scores.Count(s => s.Actual.HasValue && s.Actual >= s.Target);
-            decimal approvalRate = scores.Count > 0
-                ? Math.Round((decimal)metTarget / scores.Count * 100, 1) : 0;
-            materialLabel3.Text = $"{approvalRate}%";
-
-            var employeesWithScores = scores
-                .GroupBy(s => s.EmployeeId)
-                .Select(g => g.Sum(s => s.Points ?? 0))
-                .ToList();
-            decimal avgScore = employeesWithScores.Count > 0
-                ? Math.Round(employeesWithScores.Average(), 2) : 0;
-            materialLabel6.Text = $"{avgScore:F2} pts avg";
         }
 
 
@@ -125,26 +73,23 @@ namespace Evaluation_Management
 
 
             materialLabel1.BackColor = Color.White;
-            materialLabel2.BackColor = Color.White;
+            lblEpt2.BackColor = Color.White;
 
             materialLabel11.BackColor = Color.White;
 
-            materialLabel3.BackColor = Color.White;
-            materialLabel6.BackColor = Color.White;
+            lblEvaluationResult.BackColor = Color.White;
 
-            materialLabel4.BackColor = Color.White;
+            lblEmployeeName.BackColor = Color.White;
 
-            materialLabel18.BackColor = Color.White;
+            lblEPercentage.BackColor = Color.White;
+            lblEvaluationlvl.BackColor = Color.White;
 
-            materialLabel7.BackColor = Color.White;
-            materialLabel5.BackColor = Color.White;
-
-            materialLabel10.BackColor = Color.White;
+            lblEpt.BackColor = Color.White;
             materialLabel9.BackColor = Color.White;
 
             materialLabel27.BackColor = Color.White;
             materialLabel28.BackColor = Color.White;
-            materialLabel20.BackColor = Color.White;
+            lblEpt3.BackColor = Color.White;
             materialLabel19.BackColor = Color.White;
 
             materialLabel35.BackColor = Color.White;
@@ -163,15 +108,15 @@ namespace Evaluation_Management
             materialLabel32.BackColor = Color.White;
             materialLabel40.BackColor = Color.White;
 
-            materialLabel43.BackColor = Color.White;
-            materialLabel44.BackColor = Color.White;
-            materialLabel45.BackColor = Color.White;
+            lblLastNameCNM.BackColor = Color.White;
+            lblFirstNameCNM.BackColor = Color.White;
+            lblUsernameCNM.BackColor = Color.White;
 
             materialLabel49.BackColor = Color.White;
             materialLabel50.BackColor = Color.White;
 
-            materialLabel47.BackColor = Color.White;
-            materialLabel48.BackColor = Color.White;
+            lblPasswordCNM.BackColor = Color.White;
+            lblTeamCNM.BackColor = Color.White;
 
 
 
@@ -182,34 +127,31 @@ namespace Evaluation_Management
             Color myCrimson = Color.FromArgb(220, 20, 60);
             Color myDrakGray = Color.FromArgb(64, 64, 64);
 
-            materialLabel2.ForeColor = myCrimson;
+            lblEpt2.ForeColor = myCrimson;
             materialLabel1.ForeColor = Color.Gray;
 
             materialLabel25.ForeColor = Color.Gray;
-            materialLabel24.ForeColor = Color.Gray;
+            lblManagerName2.ForeColor = Color.Gray;
             materialLabel12.ForeColor = Color.Gray;
             materialLabel23.ForeColor = Color.Gray;
             materialLabel28.ForeColor = myDrakGray;
 
-            materialLabel7.ForeColor = myCrimson;
+            lblEPercentage.ForeColor = myCrimson;
 
-            materialLabel5.ForeColor = myDrakGray;
-            materialLabel4.ForeColor = myCrimson;
+            lblEvaluationlvl.ForeColor = myDrakGray;
+            lblEvaluationResult.ForeColor = myCrimson;
 
-            materialLabel3.ForeColor = myDrakGray;
-            materialLabel6.ForeColor = myDrakGray;
-
-            materialLabel10.ForeColor = myCrimson;
+            lblEpt.ForeColor = myCrimson;
 
             materialLabel9.ForeColor = Color.Gray;
             materialLabel8.ForeColor = Color.Gray;
 
-            materialLabel14.ForeColor = Color.Gray;
+            lblManagerName.ForeColor = Color.Gray;
             materialLabel15.ForeColor = Color.Gray;
             materialLabel16.ForeColor = Color.Gray;
             materialLabel17.ForeColor = Color.Gray;
 
-            materialLabel20.ForeColor = myCrimson;
+            lblEpt3.ForeColor = myCrimson;
             materialLabel19.ForeColor = Color.Gray;
 
             materialLabel34.ForeColor = myDrakGray;
@@ -228,6 +170,61 @@ namespace Evaluation_Management
             materialLabel50.ForeColor = myDrakGray;
         }
 
+        private void btnCreateAccountCNM_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUsernameMD.Text) ||
+                 txtPasswordCNM.Text != txtConfirmPasswordCNM.Text)
+            {
+                MessageBox.Show("Please ensure all fields are filled and passwords match.", "Validation Error");
+                return;
+            }
 
+            try
+            {
+                // 2. Create the Employee object
+                var newManager = new Employee
+                {
+                    Username = txtUsernameMD.Text.Trim(),
+                    Password = txtPasswordCNM.Text, // Repository usually handles hashing
+                    Name = $"{txtFirstNameMD.Text.Trim()} {txtLastNameMD.Text.Trim()}",
+                    Designation = "Manager",
+                    Role = EmployeeRole.Supervisor,
+                    GroupNumber = cmbTeamCNM.SelectedIndex + 1 // Index 0 = Team 1
+                };
+
+                // 3. Save to Database
+                _employeeRepo.Add(newManager);
+
+                // 4. Update the "Tuhod" Summary Labels
+                lblUsernameCNM.Text = newManager.Username;
+                lblFirstNameCNM.Text = txtFirstNameMD.Text.Trim();
+                lblLastNameCNM.Text = txtLastNameMD.Text.Trim();
+                lblPasswordCNM.Text = "********"; // Security: show masked or use txtPasswordCNM.Text
+                lblTeamCNM.Text = $"Team {newManager.GroupNumber}";
+
+                MessageBox.Show("Manager account created and assigned successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error creating account: {ex.Message}");
+            }
+        }
+
+        private void btnClearCNM_Click(object sender, EventArgs e)
+        {
+            txtUsernameMD.Clear();
+            txtFirstNameMD.Clear();
+            txtLastNameMD.Clear();
+            txtPasswordCNM.Clear();
+            txtConfirmPasswordCNM.Clear();
+            cmbTeamCNM.SelectedIndex = -1;
+
+            // Reset Summary Labels to placeholder state
+            lblUsernameCNM.Text = "Username";
+            lblFirstNameCNM.Text = "First Name";
+            lblLastNameCNM.Text = "Last Name";
+            lblPasswordCNM.Text = "Password";
+            lblTeamCNM.Text = "Team";
+        }
     }
 }

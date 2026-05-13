@@ -35,6 +35,8 @@ namespace Evaluation_Management
 
         private void StaffPage_Load(object sender, EventArgs e)
         {
+            lblEpt.Text = "Employee Performance Tracker";
+            lblEpt2.Text = "Employee Performance Tracker";
             LoadEmployeeInfo();
             LoadDashboardStats();
         }
@@ -179,7 +181,7 @@ namespace Evaluation_Management
             lblApprovalRateNum.BackColor = Color.White;
 
             materialLabel1.BackColor = Color.White;
-            materialLabel2.BackColor = Color.White;
+            lblEpt2.BackColor = Color.White;
 
             materialLabel11.BackColor = Color.White;
             
@@ -212,7 +214,7 @@ namespace Evaluation_Management
             lblAr.ForeColor = myDrakGray;
             lblTs.ForeColor = myDrakGray;
 
-            materialLabel2.ForeColor = myCrimson;
+            lblEpt2.ForeColor = myCrimson;
             materialLabel1.ForeColor = Color.Gray;
 
             materialLabel3.ForeColor = myDrakGray;

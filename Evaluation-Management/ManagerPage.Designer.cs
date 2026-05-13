@@ -38,7 +38,7 @@
             materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
             materialTextBox3 = new MaterialSkin.Controls.MaterialTextBox();
             materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
+            lblManagerName = new MaterialSkin.Controls.MaterialLabel();
             pictureBox3 = new PictureBox();
             materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel22 = new MaterialSkin.Controls.MaterialLabel();
@@ -56,12 +56,12 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
+            lblEpt = new MaterialSkin.Controls.MaterialLabel();
             tpEvaluation = new TabPage();
             panel4 = new Panel();
             panel7 = new Panel();
             materialLabel23 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel24 = new MaterialSkin.Controls.MaterialLabel();
+            lblManagerName2 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel25 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
             pictureBox7 = new PictureBox();
@@ -70,16 +70,16 @@
             materialMultiLineTextBox1 = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             materialLabel28 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel27 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel18 = new MaterialSkin.Controls.MaterialLabel();
-            materialButton2 = new MaterialSkin.Controls.MaterialButton();
-            materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            lblEmployeeName = new MaterialSkin.Controls.MaterialLabel();
+            btnReject = new MaterialSkin.Controls.MaterialButton();
+            btnApprovebtn = new MaterialSkin.Controls.MaterialButton();
+            lblEvaluationResult = new MaterialSkin.Controls.MaterialLabel();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            lblEPercentage = new MaterialSkin.Controls.MaterialLabel();
+            lblEvaluationlvl = new MaterialSkin.Controls.MaterialLabel();
             pictureBox6 = new PictureBox();
-            materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            lblSubmitDate = new MaterialSkin.Controls.MaterialLabel();
+            lblNameEmployee = new MaterialSkin.Controls.MaterialLabel();
             materialDivider10 = new MaterialSkin.Controls.MaterialDivider();
             materialDivider9 = new MaterialSkin.Controls.MaterialDivider();
             materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
@@ -102,30 +102,30 @@
             panel5 = new Panel();
             pictureBox2 = new PictureBox();
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            lblEpt2 = new MaterialSkin.Controls.MaterialLabel();
             taNewManager = new TabPage();
             panel10 = new Panel();
             materialCard5 = new MaterialSkin.Controls.MaterialCard();
             materialCard10 = new MaterialSkin.Controls.MaterialCard();
             materialLabel32 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel40 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel45 = new MaterialSkin.Controls.MaterialLabel();
+            lblUsernameCNM = new MaterialSkin.Controls.MaterialLabel();
             materialLabel41 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel44 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel43 = new MaterialSkin.Controls.MaterialLabel();
+            lblFirstNameCNM = new MaterialSkin.Controls.MaterialLabel();
+            lblLastNameCNM = new MaterialSkin.Controls.MaterialLabel();
             materialCard6 = new MaterialSkin.Controls.MaterialCard();
             materialLabel50 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel47 = new MaterialSkin.Controls.MaterialLabel();
+            lblPasswordCNM = new MaterialSkin.Controls.MaterialLabel();
             materialLabel49 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel48 = new MaterialSkin.Controls.MaterialLabel();
+            lblTeamCNM = new MaterialSkin.Controls.MaterialLabel();
             materialLabel31 = new MaterialSkin.Controls.MaterialLabel();
             pictureBox10 = new PictureBox();
             materialDivider12 = new MaterialSkin.Controls.MaterialDivider();
-            materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            materialButton3 = new MaterialSkin.Controls.MaterialButton();
+            btnClearCNM = new MaterialSkin.Controls.MaterialButton();
+            btnCreateAccountCNM = new MaterialSkin.Controls.MaterialButton();
             pictureBox9 = new PictureBox();
-            materialTextBox6 = new MaterialSkin.Controls.MaterialTextBox();
-            materialTextBox7 = new MaterialSkin.Controls.MaterialTextBox();
+            txtConfirmPasswordCNM = new MaterialSkin.Controls.MaterialTextBox();
+            txtPasswordCNM = new MaterialSkin.Controls.MaterialTextBox();
             materialLabel37 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel38 = new MaterialSkin.Controls.MaterialLabel();
             materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
@@ -134,12 +134,12 @@
             pictureBox5 = new PictureBox();
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
             materialLabel30 = new MaterialSkin.Controls.MaterialLabel();
-            materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
+            txtLastNameMD = new MaterialSkin.Controls.MaterialTextBox();
             materialLabel29 = new MaterialSkin.Controls.MaterialLabel();
-            materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
+            cmbTeamCNM = new MaterialSkin.Controls.MaterialComboBox();
             pictureBox8 = new PictureBox();
-            materialTextBox4 = new MaterialSkin.Controls.MaterialTextBox();
-            materialTextBox5 = new MaterialSkin.Controls.MaterialTextBox();
+            txtFirstNameMD = new MaterialSkin.Controls.MaterialTextBox();
+            txtUsernameMD = new MaterialSkin.Controls.MaterialTextBox();
             materialLabel33 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel34 = new MaterialSkin.Controls.MaterialLabel();
             materialDivider15 = new MaterialSkin.Controls.MaterialDivider();
@@ -152,7 +152,7 @@
             panel3 = new Panel();
             pictureBox4 = new PictureBox();
             materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel20 = new MaterialSkin.Controls.MaterialLabel();
+            lblEpt3 = new MaterialSkin.Controls.MaterialLabel();
             imageList1 = new ImageList(components);
             materialTabControl1.SuspendLayout();
             tpPerformanceList.SuspendLayout();
@@ -247,7 +247,7 @@
             panel2.Controls.Add(materialLabel17);
             panel2.Controls.Add(materialTextBox3);
             panel2.Controls.Add(materialLabel8);
-            panel2.Controls.Add(materialLabel14);
+            panel2.Controls.Add(lblManagerName);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(materialLabel15);
             panel2.Controls.Add(materialLabel22);
@@ -305,19 +305,19 @@
             materialLabel8.Text = "Name of Team";
             materialLabel8.UseMnemonic = false;
             // 
-            // materialLabel14
+            // lblManagerName
             // 
-            materialLabel14.Depth = 0;
-            materialLabel14.FlatStyle = FlatStyle.System;
-            materialLabel14.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel14.ForeColor = Color.Gray;
-            materialLabel14.Location = new Point(109, 54);
-            materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel14.Name = "materialLabel14";
-            materialLabel14.Size = new Size(238, 19);
-            materialLabel14.TabIndex = 47;
-            materialLabel14.Text = "Name of Manager";
-            materialLabel14.UseMnemonic = false;
+            lblManagerName.Depth = 0;
+            lblManagerName.FlatStyle = FlatStyle.System;
+            lblManagerName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lblManagerName.ForeColor = Color.Gray;
+            lblManagerName.Location = new Point(109, 54);
+            lblManagerName.MouseState = MaterialSkin.MouseState.HOVER;
+            lblManagerName.Name = "lblManagerName";
+            lblManagerName.Size = new Size(238, 19);
+            lblManagerName.TabIndex = 47;
+            lblManagerName.Text = "Name of Manager";
+            lblManagerName.UseMnemonic = false;
             // 
             // pictureBox3
             // 
@@ -467,7 +467,7 @@
             panel1.BackColor = Color.White;
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(materialLabel9);
-            panel1.Controls.Add(materialLabel10);
+            panel1.Controls.Add(lblEpt);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -500,20 +500,20 @@
             materialLabel9.TabIndex = 6;
             materialLabel9.Text = "Manager Portal";
             // 
-            // materialLabel10
+            // lblEpt
             // 
-            materialLabel10.Depth = 0;
-            materialLabel10.FlatStyle = FlatStyle.System;
-            materialLabel10.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel10.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel10.ForeColor = Color.Crimson;
-            materialLabel10.Location = new Point(95, 12);
-            materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel10.Name = "materialLabel10";
-            materialLabel10.Size = new Size(317, 25);
-            materialLabel10.TabIndex = 1;
-            materialLabel10.Text = "Employee Performance Tracker";
-            materialLabel10.UseAccent = true;
+            lblEpt.Depth = 0;
+            lblEpt.FlatStyle = FlatStyle.System;
+            lblEpt.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblEpt.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            lblEpt.ForeColor = Color.Crimson;
+            lblEpt.Location = new Point(95, 12);
+            lblEpt.MouseState = MaterialSkin.MouseState.HOVER;
+            lblEpt.Name = "lblEpt";
+            lblEpt.Size = new Size(317, 25);
+            lblEpt.TabIndex = 1;
+            lblEpt.Text = "Employee Performance Tracker";
+            lblEpt.UseAccent = true;
             // 
             // tpEvaluation
             // 
@@ -543,7 +543,7 @@
             // 
             panel7.BackColor = Color.White;
             panel7.Controls.Add(materialLabel23);
-            panel7.Controls.Add(materialLabel24);
+            panel7.Controls.Add(lblManagerName2);
             panel7.Controls.Add(materialLabel25);
             panel7.Controls.Add(materialLabel12);
             panel7.Controls.Add(pictureBox7);
@@ -571,19 +571,19 @@
             materialLabel23.Text = "Name of Team";
             materialLabel23.UseMnemonic = false;
             // 
-            // materialLabel24
+            // lblManagerName2
             // 
-            materialLabel24.Depth = 0;
-            materialLabel24.FlatStyle = FlatStyle.System;
-            materialLabel24.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel24.ForeColor = Color.Gray;
-            materialLabel24.Location = new Point(110, 54);
-            materialLabel24.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel24.Name = "materialLabel24";
-            materialLabel24.Size = new Size(238, 19);
-            materialLabel24.TabIndex = 43;
-            materialLabel24.Text = "Name of Manager";
-            materialLabel24.UseMnemonic = false;
+            lblManagerName2.Depth = 0;
+            lblManagerName2.FlatStyle = FlatStyle.System;
+            lblManagerName2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lblManagerName2.ForeColor = Color.Gray;
+            lblManagerName2.Location = new Point(110, 54);
+            lblManagerName2.MouseState = MaterialSkin.MouseState.HOVER;
+            lblManagerName2.Name = "lblManagerName2";
+            lblManagerName2.Size = new Size(238, 19);
+            lblManagerName2.TabIndex = 43;
+            lblManagerName2.Text = "Name of Manager";
+            lblManagerName2.UseMnemonic = false;
             // 
             // materialLabel25
             // 
@@ -632,14 +632,14 @@
             materialCard3.Controls.Add(materialCard9);
             materialCard3.Controls.Add(materialLabel28);
             materialCard3.Controls.Add(materialLabel27);
-            materialCard3.Controls.Add(materialLabel18);
-            materialCard3.Controls.Add(materialButton2);
-            materialCard3.Controls.Add(materialButton1);
-            materialCard3.Controls.Add(materialLabel4);
+            materialCard3.Controls.Add(lblEmployeeName);
+            materialCard3.Controls.Add(btnReject);
+            materialCard3.Controls.Add(btnApprovebtn);
+            materialCard3.Controls.Add(lblEvaluationResult);
             materialCard3.Controls.Add(materialCard1);
             materialCard3.Controls.Add(pictureBox6);
-            materialCard3.Controls.Add(materialLabel6);
-            materialCard3.Controls.Add(materialLabel3);
+            materialCard3.Controls.Add(lblSubmitDate);
+            materialCard3.Controls.Add(lblNameEmployee);
             materialCard3.Controls.Add(materialDivider10);
             materialCard3.Controls.Add(materialDivider9);
             materialCard3.Controls.Add(materialLabel11);
@@ -709,79 +709,79 @@
             materialLabel27.TabIndex = 49;
             materialLabel27.Text = "Date goes Here";
             // 
-            // materialLabel18
+            // lblEmployeeName
             // 
-            materialLabel18.Depth = 0;
-            materialLabel18.FlatStyle = FlatStyle.System;
-            materialLabel18.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel18.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            materialLabel18.ForeColor = Color.FromArgb(64, 64, 64);
-            materialLabel18.Location = new Point(156, 65);
-            materialLabel18.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel18.Name = "materialLabel18";
-            materialLabel18.Size = new Size(134, 20);
-            materialLabel18.TabIndex = 48;
-            materialLabel18.Text = "Name goes Here";
+            lblEmployeeName.Depth = 0;
+            lblEmployeeName.FlatStyle = FlatStyle.System;
+            lblEmployeeName.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblEmployeeName.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            lblEmployeeName.ForeColor = Color.FromArgb(64, 64, 64);
+            lblEmployeeName.Location = new Point(156, 65);
+            lblEmployeeName.MouseState = MaterialSkin.MouseState.HOVER;
+            lblEmployeeName.Name = "lblEmployeeName";
+            lblEmployeeName.Size = new Size(134, 20);
+            lblEmployeeName.TabIndex = 48;
+            lblEmployeeName.Text = "Name goes Here";
             // 
-            // materialButton2
+            // btnReject
             // 
-            materialButton2.AutoSize = false;
-            materialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton2.Depth = 0;
-            materialButton2.HighEmphasis = true;
-            materialButton2.Icon = null;
-            materialButton2.Location = new Point(13, 306);
-            materialButton2.Margin = new Padding(4, 6, 4, 6);
-            materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton2.Name = "materialButton2";
-            materialButton2.NoAccentTextColor = Color.Empty;
-            materialButton2.Size = new Size(158, 36);
-            materialButton2.TabIndex = 47;
-            materialButton2.Text = "Reject";
-            materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
-            materialButton2.UseAccentColor = false;
-            materialButton2.UseVisualStyleBackColor = true;
+            btnReject.AutoSize = false;
+            btnReject.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnReject.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnReject.Depth = 0;
+            btnReject.HighEmphasis = true;
+            btnReject.Icon = null;
+            btnReject.Location = new Point(13, 306);
+            btnReject.Margin = new Padding(4, 6, 4, 6);
+            btnReject.MouseState = MaterialSkin.MouseState.HOVER;
+            btnReject.Name = "btnReject";
+            btnReject.NoAccentTextColor = Color.Empty;
+            btnReject.Size = new Size(158, 36);
+            btnReject.TabIndex = 47;
+            btnReject.Text = "Reject";
+            btnReject.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            btnReject.UseAccentColor = false;
+            btnReject.UseVisualStyleBackColor = true;
             // 
-            // materialButton1
+            // btnApprovebtn
             // 
-            materialButton1.AutoSize = false;
-            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton1.Depth = 0;
-            materialButton1.HighEmphasis = true;
-            materialButton1.Icon = null;
-            materialButton1.Location = new Point(216, 306);
-            materialButton1.Margin = new Padding(4, 6, 4, 6);
-            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton1.Name = "materialButton1";
-            materialButton1.NoAccentTextColor = Color.Empty;
-            materialButton1.Size = new Size(158, 36);
-            materialButton1.TabIndex = 46;
-            materialButton1.Text = "Approve";
-            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton1.UseAccentColor = false;
-            materialButton1.UseVisualStyleBackColor = true;
+            btnApprovebtn.AutoSize = false;
+            btnApprovebtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnApprovebtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnApprovebtn.Depth = 0;
+            btnApprovebtn.HighEmphasis = true;
+            btnApprovebtn.Icon = null;
+            btnApprovebtn.Location = new Point(216, 306);
+            btnApprovebtn.Margin = new Padding(4, 6, 4, 6);
+            btnApprovebtn.MouseState = MaterialSkin.MouseState.HOVER;
+            btnApprovebtn.Name = "btnApprovebtn";
+            btnApprovebtn.NoAccentTextColor = Color.Empty;
+            btnApprovebtn.Size = new Size(158, 36);
+            btnApprovebtn.TabIndex = 46;
+            btnApprovebtn.Text = "Approve";
+            btnApprovebtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnApprovebtn.UseAccentColor = false;
+            btnApprovebtn.UseVisualStyleBackColor = true;
             // 
-            // materialLabel4
+            // lblEvaluationResult
             // 
-            materialLabel4.Depth = 0;
-            materialLabel4.FlatStyle = FlatStyle.System;
-            materialLabel4.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            materialLabel4.ForeColor = Color.Crimson;
-            materialLabel4.Location = new Point(13, 379);
-            materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel4.Name = "materialLabel4";
-            materialLabel4.Size = new Size(361, 20);
-            materialLabel4.TabIndex = 45;
-            materialLabel4.Text = "Evaluation Results:";
+            lblEvaluationResult.Depth = 0;
+            lblEvaluationResult.FlatStyle = FlatStyle.System;
+            lblEvaluationResult.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblEvaluationResult.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            lblEvaluationResult.ForeColor = Color.Crimson;
+            lblEvaluationResult.Location = new Point(13, 379);
+            lblEvaluationResult.MouseState = MaterialSkin.MouseState.HOVER;
+            lblEvaluationResult.Name = "lblEvaluationResult";
+            lblEvaluationResult.Size = new Size(361, 20);
+            lblEvaluationResult.TabIndex = 45;
+            lblEvaluationResult.Text = "Evaluation Results:";
             // 
             // materialCard1
             // 
             materialCard1.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard1.Controls.Add(materialLabel7);
-            materialCard1.Controls.Add(materialLabel5);
+            materialCard1.Controls.Add(lblEPercentage);
+            materialCard1.Controls.Add(lblEvaluationlvl);
             materialCard1.Depth = 0;
             materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard1.Location = new Point(13, 402);
@@ -792,34 +792,34 @@
             materialCard1.Size = new Size(361, 100);
             materialCard1.TabIndex = 44;
             // 
-            // materialLabel7
+            // lblEPercentage
             // 
-            materialLabel7.Depth = 0;
-            materialLabel7.FlatStyle = FlatStyle.System;
-            materialLabel7.Font = new Font("Roboto", 48F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel7.FontType = MaterialSkin.MaterialSkinManager.fontType.H3;
-            materialLabel7.ForeColor = Color.Crimson;
-            materialLabel7.Location = new Point(187, 14);
-            materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel7.Name = "materialLabel7";
-            materialLabel7.Size = new Size(157, 72);
-            materialLabel7.TabIndex = 47;
-            materialLabel7.Text = "Num%";
-            materialLabel7.TextAlign = ContentAlignment.MiddleRight;
+            lblEPercentage.Depth = 0;
+            lblEPercentage.FlatStyle = FlatStyle.System;
+            lblEPercentage.Font = new Font("Roboto", 48F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblEPercentage.FontType = MaterialSkin.MaterialSkinManager.fontType.H3;
+            lblEPercentage.ForeColor = Color.Crimson;
+            lblEPercentage.Location = new Point(187, 14);
+            lblEPercentage.MouseState = MaterialSkin.MouseState.HOVER;
+            lblEPercentage.Name = "lblEPercentage";
+            lblEPercentage.Size = new Size(157, 72);
+            lblEPercentage.TabIndex = 47;
+            lblEPercentage.Text = "Num%";
+            lblEPercentage.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // materialLabel5
+            // lblEvaluationlvl
             // 
-            materialLabel5.Depth = 0;
-            materialLabel5.FlatStyle = FlatStyle.System;
-            materialLabel5.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel5.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            materialLabel5.ForeColor = Color.FromArgb(64, 64, 64);
-            materialLabel5.Location = new Point(17, 24);
-            materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel5.Name = "materialLabel5";
-            materialLabel5.Size = new Size(121, 53);
-            materialLabel5.TabIndex = 46;
-            materialLabel5.Text = "Evaluation Level: Excellent Great Good Or Whatever";
+            lblEvaluationlvl.Depth = 0;
+            lblEvaluationlvl.FlatStyle = FlatStyle.System;
+            lblEvaluationlvl.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblEvaluationlvl.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            lblEvaluationlvl.ForeColor = Color.FromArgb(64, 64, 64);
+            lblEvaluationlvl.Location = new Point(17, 24);
+            lblEvaluationlvl.MouseState = MaterialSkin.MouseState.HOVER;
+            lblEvaluationlvl.Name = "lblEvaluationlvl";
+            lblEvaluationlvl.Size = new Size(121, 53);
+            lblEvaluationlvl.TabIndex = 46;
+            lblEvaluationlvl.Text = "Evaluation Level: Excellent Great Good Or Whatever";
             // 
             // pictureBox6
             // 
@@ -832,33 +832,33 @@
             pictureBox6.TabIndex = 13;
             pictureBox6.TabStop = false;
             // 
-            // materialLabel6
+            // lblSubmitDate
             // 
-            materialLabel6.Depth = 0;
-            materialLabel6.FlatStyle = FlatStyle.System;
-            materialLabel6.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel6.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            materialLabel6.ForeColor = Color.FromArgb(64, 64, 64);
-            materialLabel6.Location = new Point(16, 98);
-            materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel6.Name = "materialLabel6";
-            materialLabel6.Size = new Size(132, 20);
-            materialLabel6.TabIndex = 32;
-            materialLabel6.Text = "Date of Submission:";
+            lblSubmitDate.Depth = 0;
+            lblSubmitDate.FlatStyle = FlatStyle.System;
+            lblSubmitDate.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblSubmitDate.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            lblSubmitDate.ForeColor = Color.FromArgb(64, 64, 64);
+            lblSubmitDate.Location = new Point(16, 98);
+            lblSubmitDate.MouseState = MaterialSkin.MouseState.HOVER;
+            lblSubmitDate.Name = "lblSubmitDate";
+            lblSubmitDate.Size = new Size(132, 20);
+            lblSubmitDate.TabIndex = 32;
+            lblSubmitDate.Text = "Date of Submission:";
             // 
-            // materialLabel3
+            // lblNameEmployee
             // 
-            materialLabel3.Depth = 0;
-            materialLabel3.FlatStyle = FlatStyle.System;
-            materialLabel3.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel3.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            materialLabel3.ForeColor = Color.FromArgb(64, 64, 64);
-            materialLabel3.Location = new Point(16, 65);
-            materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel3.Name = "materialLabel3";
-            materialLabel3.Size = new Size(134, 20);
-            materialLabel3.TabIndex = 30;
-            materialLabel3.Text = "Name of Employee:";
+            lblNameEmployee.Depth = 0;
+            lblNameEmployee.FlatStyle = FlatStyle.System;
+            lblNameEmployee.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblNameEmployee.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            lblNameEmployee.ForeColor = Color.FromArgb(64, 64, 64);
+            lblNameEmployee.Location = new Point(16, 65);
+            lblNameEmployee.MouseState = MaterialSkin.MouseState.HOVER;
+            lblNameEmployee.Name = "lblNameEmployee";
+            lblNameEmployee.Size = new Size(134, 20);
+            lblNameEmployee.TabIndex = 30;
+            lblNameEmployee.Text = "Name of Employee:";
             // 
             // materialDivider10
             // 
@@ -1057,7 +1057,7 @@
             panel5.BackColor = Color.White;
             panel5.Controls.Add(pictureBox2);
             panel5.Controls.Add(materialLabel1);
-            panel5.Controls.Add(materialLabel2);
+            panel5.Controls.Add(lblEpt2);
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
@@ -1090,20 +1090,20 @@
             materialLabel1.TabIndex = 6;
             materialLabel1.Text = "Manager Portal";
             // 
-            // materialLabel2
+            // lblEpt2
             // 
-            materialLabel2.Depth = 0;
-            materialLabel2.FlatStyle = FlatStyle.System;
-            materialLabel2.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel2.ForeColor = Color.Crimson;
-            materialLabel2.Location = new Point(95, 12);
-            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(317, 25);
-            materialLabel2.TabIndex = 1;
-            materialLabel2.Text = "Employee Performance Tracker";
-            materialLabel2.UseAccent = true;
+            lblEpt2.Depth = 0;
+            lblEpt2.FlatStyle = FlatStyle.System;
+            lblEpt2.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblEpt2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            lblEpt2.ForeColor = Color.Crimson;
+            lblEpt2.Location = new Point(95, 12);
+            lblEpt2.MouseState = MaterialSkin.MouseState.HOVER;
+            lblEpt2.Name = "lblEpt2";
+            lblEpt2.Size = new Size(317, 25);
+            lblEpt2.TabIndex = 1;
+            lblEpt2.Text = "Employee Performance Tracker";
+            lblEpt2.UseAccent = true;
             // 
             // taNewManager
             // 
@@ -1141,11 +1141,11 @@
             materialCard5.Controls.Add(materialLabel31);
             materialCard5.Controls.Add(pictureBox10);
             materialCard5.Controls.Add(materialDivider12);
-            materialCard5.Controls.Add(materialButton4);
-            materialCard5.Controls.Add(materialButton3);
+            materialCard5.Controls.Add(btnClearCNM);
+            materialCard5.Controls.Add(btnCreateAccountCNM);
             materialCard5.Controls.Add(pictureBox9);
-            materialCard5.Controls.Add(materialTextBox6);
-            materialCard5.Controls.Add(materialTextBox7);
+            materialCard5.Controls.Add(txtConfirmPasswordCNM);
+            materialCard5.Controls.Add(txtPasswordCNM);
             materialCard5.Controls.Add(materialLabel37);
             materialCard5.Controls.Add(materialLabel38);
             materialCard5.Controls.Add(materialDivider2);
@@ -1166,10 +1166,10 @@
             materialCard10.BackColor = Color.FromArgb(255, 255, 255);
             materialCard10.Controls.Add(materialLabel32);
             materialCard10.Controls.Add(materialLabel40);
-            materialCard10.Controls.Add(materialLabel45);
+            materialCard10.Controls.Add(lblUsernameCNM);
             materialCard10.Controls.Add(materialLabel41);
-            materialCard10.Controls.Add(materialLabel44);
-            materialCard10.Controls.Add(materialLabel43);
+            materialCard10.Controls.Add(lblFirstNameCNM);
+            materialCard10.Controls.Add(lblLastNameCNM);
             materialCard10.Depth = 0;
             materialCard10.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard10.Location = new Point(14, 330);
@@ -1208,19 +1208,19 @@
             materialLabel40.TabIndex = 41;
             materialLabel40.Text = "First Name:";
             // 
-            // materialLabel45
+            // lblUsernameCNM
             // 
-            materialLabel45.Depth = 0;
-            materialLabel45.FlatStyle = FlatStyle.System;
-            materialLabel45.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel45.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            materialLabel45.ForeColor = Color.FromArgb(64, 64, 64);
-            materialLabel45.Location = new Point(121, 14);
-            materialLabel45.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel45.Name = "materialLabel45";
-            materialLabel45.Size = new Size(169, 20);
-            materialLabel45.TabIndex = 49;
-            materialLabel45.Text = "Tuhod";
+            lblUsernameCNM.Depth = 0;
+            lblUsernameCNM.FlatStyle = FlatStyle.System;
+            lblUsernameCNM.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblUsernameCNM.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            lblUsernameCNM.ForeColor = Color.FromArgb(64, 64, 64);
+            lblUsernameCNM.Location = new Point(121, 14);
+            lblUsernameCNM.MouseState = MaterialSkin.MouseState.HOVER;
+            lblUsernameCNM.Name = "lblUsernameCNM";
+            lblUsernameCNM.Size = new Size(169, 20);
+            lblUsernameCNM.TabIndex = 49;
+            lblUsernameCNM.Text = "Tuhod";
             // 
             // materialLabel41
             // 
@@ -1236,41 +1236,41 @@
             materialLabel41.TabIndex = 41;
             materialLabel41.Text = "Last Name:";
             // 
-            // materialLabel44
+            // lblFirstNameCNM
             // 
-            materialLabel44.Depth = 0;
-            materialLabel44.FlatStyle = FlatStyle.System;
-            materialLabel44.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel44.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            materialLabel44.ForeColor = Color.FromArgb(64, 64, 64);
-            materialLabel44.Location = new Point(121, 43);
-            materialLabel44.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel44.Name = "materialLabel44";
-            materialLabel44.Size = new Size(169, 20);
-            materialLabel44.TabIndex = 48;
-            materialLabel44.Text = "Tuhod";
+            lblFirstNameCNM.Depth = 0;
+            lblFirstNameCNM.FlatStyle = FlatStyle.System;
+            lblFirstNameCNM.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblFirstNameCNM.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            lblFirstNameCNM.ForeColor = Color.FromArgb(64, 64, 64);
+            lblFirstNameCNM.Location = new Point(121, 43);
+            lblFirstNameCNM.MouseState = MaterialSkin.MouseState.HOVER;
+            lblFirstNameCNM.Name = "lblFirstNameCNM";
+            lblFirstNameCNM.Size = new Size(169, 20);
+            lblFirstNameCNM.TabIndex = 48;
+            lblFirstNameCNM.Text = "Tuhod";
             // 
-            // materialLabel43
+            // lblLastNameCNM
             // 
-            materialLabel43.Depth = 0;
-            materialLabel43.FlatStyle = FlatStyle.System;
-            materialLabel43.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel43.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            materialLabel43.ForeColor = Color.FromArgb(64, 64, 64);
-            materialLabel43.Location = new Point(121, 72);
-            materialLabel43.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel43.Name = "materialLabel43";
-            materialLabel43.Size = new Size(169, 20);
-            materialLabel43.TabIndex = 47;
-            materialLabel43.Text = "Tuhod";
+            lblLastNameCNM.Depth = 0;
+            lblLastNameCNM.FlatStyle = FlatStyle.System;
+            lblLastNameCNM.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblLastNameCNM.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            lblLastNameCNM.ForeColor = Color.FromArgb(64, 64, 64);
+            lblLastNameCNM.Location = new Point(121, 72);
+            lblLastNameCNM.MouseState = MaterialSkin.MouseState.HOVER;
+            lblLastNameCNM.Name = "lblLastNameCNM";
+            lblLastNameCNM.Size = new Size(169, 20);
+            lblLastNameCNM.TabIndex = 47;
+            lblLastNameCNM.Text = "Tuhod";
             // 
             // materialCard6
             // 
             materialCard6.BackColor = Color.FromArgb(255, 255, 255);
             materialCard6.Controls.Add(materialLabel50);
-            materialCard6.Controls.Add(materialLabel47);
+            materialCard6.Controls.Add(lblPasswordCNM);
             materialCard6.Controls.Add(materialLabel49);
-            materialCard6.Controls.Add(materialLabel48);
+            materialCard6.Controls.Add(lblTeamCNM);
             materialCard6.Depth = 0;
             materialCard6.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard6.Location = new Point(321, 330);
@@ -1295,19 +1295,19 @@
             materialLabel50.TabIndex = 50;
             materialLabel50.Text = "Password:";
             // 
-            // materialLabel47
+            // lblPasswordCNM
             // 
-            materialLabel47.Depth = 0;
-            materialLabel47.FlatStyle = FlatStyle.System;
-            materialLabel47.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel47.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            materialLabel47.ForeColor = Color.FromArgb(64, 64, 64);
-            materialLabel47.Location = new Point(89, 20);
-            materialLabel47.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel47.Name = "materialLabel47";
-            materialLabel47.Size = new Size(162, 20);
-            materialLabel47.TabIndex = 53;
-            materialLabel47.Text = "Tuhod";
+            lblPasswordCNM.Depth = 0;
+            lblPasswordCNM.FlatStyle = FlatStyle.System;
+            lblPasswordCNM.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblPasswordCNM.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            lblPasswordCNM.ForeColor = Color.FromArgb(64, 64, 64);
+            lblPasswordCNM.Location = new Point(89, 20);
+            lblPasswordCNM.MouseState = MaterialSkin.MouseState.HOVER;
+            lblPasswordCNM.Name = "lblPasswordCNM";
+            lblPasswordCNM.Size = new Size(162, 20);
+            lblPasswordCNM.TabIndex = 53;
+            lblPasswordCNM.Text = "Tuhod";
             // 
             // materialLabel49
             // 
@@ -1323,19 +1323,19 @@
             materialLabel49.TabIndex = 51;
             materialLabel49.Text = "Team:";
             // 
-            // materialLabel48
+            // lblTeamCNM
             // 
-            materialLabel48.Depth = 0;
-            materialLabel48.FlatStyle = FlatStyle.System;
-            materialLabel48.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel48.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            materialLabel48.ForeColor = Color.FromArgb(64, 64, 64);
-            materialLabel48.Location = new Point(89, 49);
-            materialLabel48.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel48.Name = "materialLabel48";
-            materialLabel48.Size = new Size(162, 20);
-            materialLabel48.TabIndex = 52;
-            materialLabel48.Text = "Tuhod";
+            lblTeamCNM.Depth = 0;
+            lblTeamCNM.FlatStyle = FlatStyle.System;
+            lblTeamCNM.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblTeamCNM.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            lblTeamCNM.ForeColor = Color.FromArgb(64, 64, 64);
+            lblTeamCNM.Location = new Point(89, 49);
+            lblTeamCNM.MouseState = MaterialSkin.MouseState.HOVER;
+            lblTeamCNM.Name = "lblTeamCNM";
+            lblTeamCNM.Size = new Size(162, 20);
+            lblTeamCNM.TabIndex = 52;
+            lblTeamCNM.Text = "Tuhod";
             // 
             // materialLabel31
             // 
@@ -1373,44 +1373,46 @@
             materialDivider12.TabIndex = 39;
             materialDivider12.Text = "materialDivider12";
             // 
-            // materialButton4
+            // btnClearCNM
             // 
-            materialButton4.AutoSize = false;
-            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton4.Depth = 0;
-            materialButton4.HighEmphasis = true;
-            materialButton4.Icon = null;
-            materialButton4.Location = new Point(246, 201);
-            materialButton4.Margin = new Padding(4, 6, 4, 6);
-            materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton4.Name = "materialButton4";
-            materialButton4.NoAccentTextColor = Color.Empty;
-            materialButton4.Size = new Size(147, 36);
-            materialButton4.TabIndex = 38;
-            materialButton4.Text = "Clear";
-            materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
-            materialButton4.UseAccentColor = false;
-            materialButton4.UseVisualStyleBackColor = true;
+            btnClearCNM.AutoSize = false;
+            btnClearCNM.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnClearCNM.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnClearCNM.Depth = 0;
+            btnClearCNM.HighEmphasis = true;
+            btnClearCNM.Icon = null;
+            btnClearCNM.Location = new Point(246, 201);
+            btnClearCNM.Margin = new Padding(4, 6, 4, 6);
+            btnClearCNM.MouseState = MaterialSkin.MouseState.HOVER;
+            btnClearCNM.Name = "btnClearCNM";
+            btnClearCNM.NoAccentTextColor = Color.Empty;
+            btnClearCNM.Size = new Size(147, 36);
+            btnClearCNM.TabIndex = 38;
+            btnClearCNM.Text = "Clear";
+            btnClearCNM.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            btnClearCNM.UseAccentColor = false;
+            btnClearCNM.UseVisualStyleBackColor = true;
+            btnClearCNM.Click += btnClearCNM_Click;
             // 
-            // materialButton3
+            // btnCreateAccountCNM
             // 
-            materialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton3.Depth = 0;
-            materialButton3.HighEmphasis = true;
-            materialButton3.Icon = null;
-            materialButton3.Location = new Point(425, 201);
-            materialButton3.Margin = new Padding(4, 6, 4, 6);
-            materialButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton3.Name = "materialButton3";
-            materialButton3.NoAccentTextColor = Color.Empty;
-            materialButton3.Size = new Size(147, 36);
-            materialButton3.TabIndex = 37;
-            materialButton3.Text = "Create Account";
-            materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton3.UseAccentColor = false;
-            materialButton3.UseVisualStyleBackColor = true;
+            btnCreateAccountCNM.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnCreateAccountCNM.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnCreateAccountCNM.Depth = 0;
+            btnCreateAccountCNM.HighEmphasis = true;
+            btnCreateAccountCNM.Icon = null;
+            btnCreateAccountCNM.Location = new Point(425, 201);
+            btnCreateAccountCNM.Margin = new Padding(4, 6, 4, 6);
+            btnCreateAccountCNM.MouseState = MaterialSkin.MouseState.HOVER;
+            btnCreateAccountCNM.Name = "btnCreateAccountCNM";
+            btnCreateAccountCNM.NoAccentTextColor = Color.Empty;
+            btnCreateAccountCNM.Size = new Size(147, 36);
+            btnCreateAccountCNM.TabIndex = 37;
+            btnCreateAccountCNM.Text = "Create Account";
+            btnCreateAccountCNM.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnCreateAccountCNM.UseAccentColor = false;
+            btnCreateAccountCNM.UseVisualStyleBackColor = true;
+            btnCreateAccountCNM.Click += btnCreateAccountCNM_Click;
             // 
             // pictureBox9
             // 
@@ -1423,39 +1425,39 @@
             pictureBox9.TabIndex = 13;
             pictureBox9.TabStop = false;
             // 
-            // materialTextBox6
+            // txtConfirmPasswordCNM
             // 
-            materialTextBox6.AnimateReadOnly = false;
-            materialTextBox6.BorderStyle = BorderStyle.None;
-            materialTextBox6.Depth = 0;
-            materialTextBox6.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox6.LeadingIcon = null;
-            materialTextBox6.Location = new Point(305, 116);
-            materialTextBox6.MaxLength = 50;
-            materialTextBox6.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox6.Multiline = false;
-            materialTextBox6.Name = "materialTextBox6";
-            materialTextBox6.Size = new Size(268, 50);
-            materialTextBox6.TabIndex = 36;
-            materialTextBox6.Text = "";
-            materialTextBox6.TrailingIcon = null;
+            txtConfirmPasswordCNM.AnimateReadOnly = false;
+            txtConfirmPasswordCNM.BorderStyle = BorderStyle.None;
+            txtConfirmPasswordCNM.Depth = 0;
+            txtConfirmPasswordCNM.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtConfirmPasswordCNM.LeadingIcon = null;
+            txtConfirmPasswordCNM.Location = new Point(305, 116);
+            txtConfirmPasswordCNM.MaxLength = 50;
+            txtConfirmPasswordCNM.MouseState = MaterialSkin.MouseState.OUT;
+            txtConfirmPasswordCNM.Multiline = false;
+            txtConfirmPasswordCNM.Name = "txtConfirmPasswordCNM";
+            txtConfirmPasswordCNM.Size = new Size(268, 50);
+            txtConfirmPasswordCNM.TabIndex = 36;
+            txtConfirmPasswordCNM.Text = "";
+            txtConfirmPasswordCNM.TrailingIcon = null;
             // 
-            // materialTextBox7
+            // txtPasswordCNM
             // 
-            materialTextBox7.AnimateReadOnly = false;
-            materialTextBox7.BorderStyle = BorderStyle.None;
-            materialTextBox7.Depth = 0;
-            materialTextBox7.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox7.LeadingIcon = null;
-            materialTextBox7.Location = new Point(14, 116);
-            materialTextBox7.MaxLength = 50;
-            materialTextBox7.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox7.Multiline = false;
-            materialTextBox7.Name = "materialTextBox7";
-            materialTextBox7.Size = new Size(268, 50);
-            materialTextBox7.TabIndex = 35;
-            materialTextBox7.Text = "";
-            materialTextBox7.TrailingIcon = null;
+            txtPasswordCNM.AnimateReadOnly = false;
+            txtPasswordCNM.BorderStyle = BorderStyle.None;
+            txtPasswordCNM.Depth = 0;
+            txtPasswordCNM.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtPasswordCNM.LeadingIcon = null;
+            txtPasswordCNM.Location = new Point(14, 116);
+            txtPasswordCNM.MaxLength = 50;
+            txtPasswordCNM.MouseState = MaterialSkin.MouseState.OUT;
+            txtPasswordCNM.Multiline = false;
+            txtPasswordCNM.Name = "txtPasswordCNM";
+            txtPasswordCNM.Size = new Size(268, 50);
+            txtPasswordCNM.TabIndex = 35;
+            txtPasswordCNM.Text = "";
+            txtPasswordCNM.TrailingIcon = null;
             // 
             // materialLabel37
             // 
@@ -1537,12 +1539,12 @@
             // 
             materialCard2.BackColor = Color.FromArgb(255, 255, 255);
             materialCard2.Controls.Add(materialLabel30);
-            materialCard2.Controls.Add(materialTextBox1);
+            materialCard2.Controls.Add(txtLastNameMD);
             materialCard2.Controls.Add(materialLabel29);
-            materialCard2.Controls.Add(materialComboBox1);
+            materialCard2.Controls.Add(cmbTeamCNM);
             materialCard2.Controls.Add(pictureBox8);
-            materialCard2.Controls.Add(materialTextBox4);
-            materialCard2.Controls.Add(materialTextBox5);
+            materialCard2.Controls.Add(txtFirstNameMD);
+            materialCard2.Controls.Add(txtUsernameMD);
             materialCard2.Controls.Add(materialLabel33);
             materialCard2.Controls.Add(materialLabel34);
             materialCard2.Controls.Add(materialDivider15);
@@ -1572,22 +1574,22 @@
             materialLabel30.TabIndex = 40;
             materialLabel30.Text = "Team:";
             // 
-            // materialTextBox1
+            // txtLastNameMD
             // 
-            materialTextBox1.AnimateReadOnly = false;
-            materialTextBox1.BorderStyle = BorderStyle.None;
-            materialTextBox1.Depth = 0;
-            materialTextBox1.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox1.LeadingIcon = null;
-            materialTextBox1.Location = new Point(14, 304);
-            materialTextBox1.MaxLength = 50;
-            materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox1.Multiline = false;
-            materialTextBox1.Name = "materialTextBox1";
-            materialTextBox1.Size = new Size(361, 50);
-            materialTextBox1.TabIndex = 38;
-            materialTextBox1.Text = "";
-            materialTextBox1.TrailingIcon = null;
+            txtLastNameMD.AnimateReadOnly = false;
+            txtLastNameMD.BorderStyle = BorderStyle.None;
+            txtLastNameMD.Depth = 0;
+            txtLastNameMD.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtLastNameMD.LeadingIcon = null;
+            txtLastNameMD.Location = new Point(14, 304);
+            txtLastNameMD.MaxLength = 50;
+            txtLastNameMD.MouseState = MaterialSkin.MouseState.OUT;
+            txtLastNameMD.Multiline = false;
+            txtLastNameMD.Name = "txtLastNameMD";
+            txtLastNameMD.Size = new Size(361, 50);
+            txtLastNameMD.TabIndex = 38;
+            txtLastNameMD.Text = "";
+            txtLastNameMD.TrailingIcon = null;
             // 
             // materialLabel29
             // 
@@ -1603,27 +1605,27 @@
             materialLabel29.TabIndex = 37;
             materialLabel29.Text = "Last Name:";
             // 
-            // materialComboBox1
+            // cmbTeamCNM
             // 
-            materialComboBox1.AutoResize = false;
-            materialComboBox1.BackColor = Color.FromArgb(255, 255, 255);
-            materialComboBox1.Depth = 0;
-            materialComboBox1.DrawMode = DrawMode.OwnerDrawVariable;
-            materialComboBox1.DropDownHeight = 174;
-            materialComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            materialComboBox1.DropDownWidth = 121;
-            materialComboBox1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialComboBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialComboBox1.FormattingEnabled = true;
-            materialComboBox1.IntegralHeight = false;
-            materialComboBox1.ItemHeight = 43;
-            materialComboBox1.Location = new Point(151, 392);
-            materialComboBox1.MaxDropDownItems = 4;
-            materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
-            materialComboBox1.Name = "materialComboBox1";
-            materialComboBox1.Size = new Size(224, 49);
-            materialComboBox1.StartIndex = 0;
-            materialComboBox1.TabIndex = 39;
+            cmbTeamCNM.AutoResize = false;
+            cmbTeamCNM.BackColor = Color.FromArgb(255, 255, 255);
+            cmbTeamCNM.Depth = 0;
+            cmbTeamCNM.DrawMode = DrawMode.OwnerDrawVariable;
+            cmbTeamCNM.DropDownHeight = 174;
+            cmbTeamCNM.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTeamCNM.DropDownWidth = 121;
+            cmbTeamCNM.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cmbTeamCNM.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cmbTeamCNM.FormattingEnabled = true;
+            cmbTeamCNM.IntegralHeight = false;
+            cmbTeamCNM.ItemHeight = 43;
+            cmbTeamCNM.Location = new Point(151, 392);
+            cmbTeamCNM.MaxDropDownItems = 4;
+            cmbTeamCNM.MouseState = MaterialSkin.MouseState.OUT;
+            cmbTeamCNM.Name = "cmbTeamCNM";
+            cmbTeamCNM.Size = new Size(224, 49);
+            cmbTeamCNM.StartIndex = 0;
+            cmbTeamCNM.TabIndex = 39;
             // 
             // pictureBox8
             // 
@@ -1636,39 +1638,39 @@
             pictureBox8.TabIndex = 13;
             pictureBox8.TabStop = false;
             // 
-            // materialTextBox4
+            // txtFirstNameMD
             // 
-            materialTextBox4.AnimateReadOnly = false;
-            materialTextBox4.BorderStyle = BorderStyle.None;
-            materialTextBox4.Depth = 0;
-            materialTextBox4.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox4.LeadingIcon = null;
-            materialTextBox4.Location = new Point(14, 210);
-            materialTextBox4.MaxLength = 50;
-            materialTextBox4.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox4.Multiline = false;
-            materialTextBox4.Name = "materialTextBox4";
-            materialTextBox4.Size = new Size(361, 50);
-            materialTextBox4.TabIndex = 36;
-            materialTextBox4.Text = "";
-            materialTextBox4.TrailingIcon = null;
+            txtFirstNameMD.AnimateReadOnly = false;
+            txtFirstNameMD.BorderStyle = BorderStyle.None;
+            txtFirstNameMD.Depth = 0;
+            txtFirstNameMD.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtFirstNameMD.LeadingIcon = null;
+            txtFirstNameMD.Location = new Point(14, 210);
+            txtFirstNameMD.MaxLength = 50;
+            txtFirstNameMD.MouseState = MaterialSkin.MouseState.OUT;
+            txtFirstNameMD.Multiline = false;
+            txtFirstNameMD.Name = "txtFirstNameMD";
+            txtFirstNameMD.Size = new Size(361, 50);
+            txtFirstNameMD.TabIndex = 36;
+            txtFirstNameMD.Text = "";
+            txtFirstNameMD.TrailingIcon = null;
             // 
-            // materialTextBox5
+            // txtUsernameMD
             // 
-            materialTextBox5.AnimateReadOnly = false;
-            materialTextBox5.BorderStyle = BorderStyle.None;
-            materialTextBox5.Depth = 0;
-            materialTextBox5.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox5.LeadingIcon = null;
-            materialTextBox5.Location = new Point(14, 116);
-            materialTextBox5.MaxLength = 50;
-            materialTextBox5.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox5.Multiline = false;
-            materialTextBox5.Name = "materialTextBox5";
-            materialTextBox5.Size = new Size(361, 50);
-            materialTextBox5.TabIndex = 35;
-            materialTextBox5.Text = "";
-            materialTextBox5.TrailingIcon = null;
+            txtUsernameMD.AnimateReadOnly = false;
+            txtUsernameMD.BorderStyle = BorderStyle.None;
+            txtUsernameMD.Depth = 0;
+            txtUsernameMD.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtUsernameMD.LeadingIcon = null;
+            txtUsernameMD.Location = new Point(14, 116);
+            txtUsernameMD.MaxLength = 50;
+            txtUsernameMD.MouseState = MaterialSkin.MouseState.OUT;
+            txtUsernameMD.Multiline = false;
+            txtUsernameMD.Name = "txtUsernameMD";
+            txtUsernameMD.Size = new Size(361, 50);
+            txtUsernameMD.TabIndex = 35;
+            txtUsernameMD.Text = "";
+            txtUsernameMD.TrailingIcon = null;
             // 
             // materialLabel33
             // 
@@ -1786,7 +1788,7 @@
             panel3.BackColor = Color.White;
             panel3.Controls.Add(pictureBox4);
             panel3.Controls.Add(materialLabel19);
-            panel3.Controls.Add(materialLabel20);
+            panel3.Controls.Add(lblEpt3);
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
@@ -1819,20 +1821,20 @@
             materialLabel19.TabIndex = 6;
             materialLabel19.Text = "Manager Portal";
             // 
-            // materialLabel20
+            // lblEpt3
             // 
-            materialLabel20.Depth = 0;
-            materialLabel20.FlatStyle = FlatStyle.System;
-            materialLabel20.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel20.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            materialLabel20.ForeColor = Color.Crimson;
-            materialLabel20.Location = new Point(95, 12);
-            materialLabel20.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel20.Name = "materialLabel20";
-            materialLabel20.Size = new Size(317, 25);
-            materialLabel20.TabIndex = 1;
-            materialLabel20.Text = "Employee Performance Tracker";
-            materialLabel20.UseAccent = true;
+            lblEpt3.Depth = 0;
+            lblEpt3.FlatStyle = FlatStyle.System;
+            lblEpt3.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblEpt3.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            lblEpt3.ForeColor = Color.Crimson;
+            lblEpt3.Location = new Point(95, 12);
+            lblEpt3.MouseState = MaterialSkin.MouseState.HOVER;
+            lblEpt3.Name = "lblEpt3";
+            lblEpt3.Size = new Size(317, 25);
+            lblEpt3.TabIndex = 1;
+            lblEpt3.Text = "Employee Performance Tracker";
+            lblEpt3.UseAccent = true;
             // 
             // imageList1
             // 
@@ -1923,7 +1925,7 @@
         private Panel panel5;
         private PictureBox pictureBox2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel lblEpt2;
         private Panel panel2;
         private PictureBox pictureBox3;
         private MaterialSkin.Controls.MaterialLabel materialLabel22;
@@ -1940,20 +1942,20 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
-        private MaterialSkin.Controls.MaterialLabel materialLabel10;
-        private MaterialSkin.Controls.MaterialLabel materialLabel24;
+        private MaterialSkin.Controls.MaterialLabel lblEpt;
+        private MaterialSkin.Controls.MaterialLabel lblManagerName2;
         private MaterialSkin.Controls.MaterialLabel materialLabel25;
         private MaterialSkin.Controls.MaterialLabel materialLabel23;
         private MaterialSkin.Controls.MaterialLabel materialLabel12;
         private MaterialSkin.Controls.MaterialDivider materialDivider8;
         private Panel panel8;
         private MaterialSkin.Controls.MaterialCard materialCard3;
-        private MaterialSkin.Controls.MaterialButton materialButton2;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialButton btnReject;
+        private MaterialSkin.Controls.MaterialButton btnApprovebtn;
+        private MaterialSkin.Controls.MaterialLabel lblEvaluationResult;
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel7;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialLabel lblEPercentage;
+        private MaterialSkin.Controls.MaterialLabel lblEvaluationlvl;
         private PictureBox pictureBox6;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
@@ -1963,7 +1965,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel17;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox3;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
-        private MaterialSkin.Controls.MaterialLabel materialLabel14;
+        private MaterialSkin.Controls.MaterialLabel lblManagerName;
         private MaterialSkin.Controls.MaterialLabel materialLabel15;
         private MaterialSkin.Controls.MaterialLabel materialLabel16;
         private ImageList imageList1;
@@ -1979,9 +1981,9 @@
         private Panel panel3;
         private PictureBox pictureBox4;
         private MaterialSkin.Controls.MaterialLabel materialLabel19;
-        private MaterialSkin.Controls.MaterialLabel materialLabel20;
+        private MaterialSkin.Controls.MaterialLabel lblEpt3;
         private MaterialSkin.Controls.MaterialLabel materialLabel27;
-        private MaterialSkin.Controls.MaterialLabel materialLabel18;
+        private MaterialSkin.Controls.MaterialLabel lblEmployeeName;
         private MaterialSkin.Controls.MaterialCard materialCard9;
         private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineTextBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel28;
@@ -1989,43 +1991,45 @@
         private PictureBox pictureBox5;
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private PictureBox pictureBox8;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox4;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox5;
+        private MaterialSkin.Controls.MaterialTextBox txtFirstNameMD;
+        private MaterialSkin.Controls.MaterialTextBox txtUsernameMD;
         private MaterialSkin.Controls.MaterialLabel materialLabel33;
         private MaterialSkin.Controls.MaterialLabel materialLabel34;
         private MaterialSkin.Controls.MaterialDivider materialDivider15;
         private MaterialSkin.Controls.MaterialDivider materialDivider16;
         private MaterialSkin.Controls.MaterialLabel materialLabel35;
         private MaterialSkin.Controls.MaterialLabel materialLabel36;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private MaterialSkin.Controls.MaterialTextBox txtLastNameMD;
         private MaterialSkin.Controls.MaterialLabel materialLabel29;
         private MaterialSkin.Controls.MaterialCard materialCard5;
         private PictureBox pictureBox9;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox6;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox7;
+        private MaterialSkin.Controls.MaterialTextBox txtConfirmPasswordCNM;
+        private MaterialSkin.Controls.MaterialTextBox txtPasswordCNM;
         private MaterialSkin.Controls.MaterialLabel materialLabel37;
         private MaterialSkin.Controls.MaterialLabel materialLabel38;
         private MaterialSkin.Controls.MaterialDivider materialDivider2;
         private MaterialSkin.Controls.MaterialDivider materialDivider11;
         private MaterialSkin.Controls.MaterialLabel materialLabel39;
         private MaterialSkin.Controls.MaterialLabel materialLabel30;
-        private MaterialSkin.Controls.MaterialComboBox materialComboBox1;
-        private MaterialSkin.Controls.MaterialButton materialButton3;
+        private MaterialSkin.Controls.MaterialComboBox cmbTeamCNM;
+        private MaterialSkin.Controls.MaterialButton btnCreateAccountCNM;
         private MaterialSkin.Controls.MaterialLabel materialLabel31;
         private PictureBox pictureBox10;
         private MaterialSkin.Controls.MaterialDivider materialDivider12;
-        private MaterialSkin.Controls.MaterialButton materialButton4;
+        private MaterialSkin.Controls.MaterialButton btnClearCNM;
         private MaterialSkin.Controls.MaterialCard materialCard6;
         private MaterialSkin.Controls.MaterialLabel materialLabel50;
-        private MaterialSkin.Controls.MaterialLabel materialLabel47;
+        private MaterialSkin.Controls.MaterialLabel lblPasswordCNM;
         private MaterialSkin.Controls.MaterialLabel materialLabel49;
-        private MaterialSkin.Controls.MaterialLabel materialLabel48;
-        private MaterialSkin.Controls.MaterialLabel materialLabel45;
-        private MaterialSkin.Controls.MaterialLabel materialLabel44;
-        private MaterialSkin.Controls.MaterialLabel materialLabel43;
+        private MaterialSkin.Controls.MaterialLabel lblTeamCNM;
+        private MaterialSkin.Controls.MaterialLabel lblUsernameCNM;
+        private MaterialSkin.Controls.MaterialLabel lblFirstNameCNM;
+        private MaterialSkin.Controls.MaterialLabel lblLastNameCNM;
         private MaterialSkin.Controls.MaterialLabel materialLabel41;
         private MaterialSkin.Controls.MaterialLabel materialLabel40;
         private MaterialSkin.Controls.MaterialLabel materialLabel32;
         private MaterialSkin.Controls.MaterialCard materialCard10;
+        private MaterialSkin.Controls.MaterialLabel lblNameEmployee;
+        private MaterialSkin.Controls.MaterialLabel lblSubmitDate;
     }
 }

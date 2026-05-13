@@ -120,7 +120,7 @@ namespace Evaluation_Management
             panel5 = new Panel();
             pictureBox2 = new PictureBox();
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            lblEpt2 = new MaterialSkin.Controls.MaterialLabel();
             imageList1 = new ImageList(components);
             materialTabControl1.SuspendLayout();
             tpSubmitReport.SuspendLayout();
@@ -1290,7 +1290,7 @@ namespace Evaluation_Management
             panel5.BackColor = Color.White;
             panel5.Controls.Add(pictureBox2);
             panel5.Controls.Add(materialLabel1);
-            panel5.Controls.Add(materialLabel2);
+            panel5.Controls.Add(lblEpt2);
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
@@ -1323,20 +1323,20 @@ namespace Evaluation_Management
             materialLabel1.TabIndex = 6;
             materialLabel1.Text = "Staff Portal";
             // 
-            // materialLabel2
+            // lblEpt2
             // 
-            materialLabel2.Depth = 0;
-            materialLabel2.FlatStyle = FlatStyle.System;
-            materialLabel2.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel2.FontType = MaterialSkinManager.fontType.H6;
-            materialLabel2.ForeColor = Color.Crimson;
-            materialLabel2.Location = new Point(95, 12);
-            materialLabel2.MouseState = MouseState.HOVER;
-            materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(317, 25);
-            materialLabel2.TabIndex = 1;
-            materialLabel2.Text = "Employee Performance Tracker";
-            materialLabel2.UseAccent = true;
+            lblEpt2.Depth = 0;
+            lblEpt2.FlatStyle = FlatStyle.System;
+            lblEpt2.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblEpt2.FontType = MaterialSkinManager.fontType.H6;
+            lblEpt2.ForeColor = Color.Crimson;
+            lblEpt2.Location = new Point(95, 12);
+            lblEpt2.MouseState = MouseState.HOVER;
+            lblEpt2.Name = "lblEpt2";
+            lblEpt2.Size = new Size(317, 25);
+            lblEpt2.TabIndex = 1;
+            lblEpt2.Text = "Employee Performance Tracker";
+            lblEpt2.UseAccent = true;
             // 
             // imageList1
             // 
@@ -1446,7 +1446,7 @@ namespace Evaluation_Management
         private MaterialSkin.Controls.MaterialDivider materialDivider3;
         private Panel panel5;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel lblEpt2;
         private Panel panel7;
         private MaterialSkin.Controls.MaterialCard materialCard3;
         private MaterialSkin.Controls.MaterialLabel materialLabel11;
