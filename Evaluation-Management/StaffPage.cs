@@ -2,16 +2,6 @@
 using EvaluationInfrastructure.Repositories;
 using MaterialSkin;
 using MaterialSkin.Controls;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 
 namespace Evaluation_Management
@@ -23,7 +13,7 @@ namespace Evaluation_Management
         private readonly KpmScoreRepository _kpmRepo = new KpmScoreRepository();
         private readonly EvaluationPeriodRepository _periodRepo = new EvaluationPeriodRepository();
         private readonly EmployeeRepository _employeeRepo = new EmployeeRepository();
-
+        private readonly SubmissionRepository _repo = new SubmissionRepository();
         public StaffPage(Employee employee)
         {
             InitializeComponent();
@@ -31,6 +21,13 @@ namespace Evaluation_Management
             Theme();
             BackColorAdjustments();
             ForeColorAdjustments();
+            InitializeComponent();
+            LoadHistory();
+        }
+
+        private void LoadHistory()
+        {
+
         }
 
         private void StaffPage_Load(object sender, EventArgs e)
@@ -41,7 +38,7 @@ namespace Evaluation_Management
 
         private void LoadEmployeeInfo()
         {
-
+            
         }
 
         private void LoadDashboardStats()
@@ -228,6 +225,22 @@ namespace Evaluation_Management
             Login_Form form = new Login_Form();
             form.Show();
             this.Hide();
+        }
+
+        private void materialButton4_Click(object sender, EventArgs e)
+        {
+            var sub = new Submission
+            {
+                EmployeeId = _loggedInEmployee .Id, // From BaseClass
+                GroupNumber = _loggedInEmployee.GroupNumber, // From Employee.cs
+                SubmissionDate = dtpDate.Value,
+                Comment = lblComment.Text,
+                Status = "Pending"
+            };
+
+            _repo.Add(sub);
+            MessageBox.Show("Successfully submitted!");
+            LoadHistory();
         }
     }
 

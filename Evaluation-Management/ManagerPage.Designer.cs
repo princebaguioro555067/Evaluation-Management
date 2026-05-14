@@ -68,7 +68,7 @@
             pictureBox7 = new PictureBox();
             materialCard3 = new MaterialSkin.Controls.MaterialCard();
             materialCard9 = new MaterialSkin.Controls.MaterialCard();
-            materialMultiLineTextBox1 = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            lblEmployeeComment = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             materialLabel28 = new MaterialSkin.Controls.MaterialLabel();
             lblDateOfSubmission = new MaterialSkin.Controls.MaterialLabel();
             lblEmployeeName = new MaterialSkin.Controls.MaterialLabel();
@@ -91,12 +91,7 @@
             materialLabel26 = new MaterialSkin.Controls.MaterialLabel();
             comboBox1 = new ComboBox();
             materialLabel21 = new MaterialSkin.Controls.MaterialLabel();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
+            dgvApprovals = new DataGridView();
             materialDivider4 = new MaterialSkin.Controls.MaterialDivider();
             panel6 = new Panel();
             btnLogout2 = new MaterialSkin.Controls.MaterialButton();
@@ -176,7 +171,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             materialCard4.SuspendLayout();
             materialCard7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvApprovals).BeginInit();
             panel6.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -683,7 +678,7 @@
             // materialCard9
             // 
             materialCard9.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard9.Controls.Add(materialMultiLineTextBox1);
+            materialCard9.Controls.Add(lblEmployeeComment);
             materialCard9.Depth = 0;
             materialCard9.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard9.Location = new Point(13, 153);
@@ -694,19 +689,20 @@
             materialCard9.Size = new Size(361, 141);
             materialCard9.TabIndex = 51;
             // 
-            // materialMultiLineTextBox1
+            // lblEmployeeComment
             // 
-            materialMultiLineTextBox1.BackColor = Color.FromArgb(255, 255, 255);
-            materialMultiLineTextBox1.BorderStyle = BorderStyle.None;
-            materialMultiLineTextBox1.Depth = 0;
-            materialMultiLineTextBox1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialMultiLineTextBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialMultiLineTextBox1.Location = new Point(17, 17);
-            materialMultiLineTextBox1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialMultiLineTextBox1.Name = "materialMultiLineTextBox1";
-            materialMultiLineTextBox1.Size = new Size(327, 107);
-            materialMultiLineTextBox1.TabIndex = 0;
-            materialMultiLineTextBox1.Text = "";
+            lblEmployeeComment.BackColor = Color.FromArgb(255, 255, 255);
+            lblEmployeeComment.BorderStyle = BorderStyle.None;
+            lblEmployeeComment.Depth = 0;
+            lblEmployeeComment.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lblEmployeeComment.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblEmployeeComment.Location = new Point(17, 17);
+            lblEmployeeComment.MouseState = MaterialSkin.MouseState.HOVER;
+            lblEmployeeComment.Name = "lblEmployeeComment";
+            lblEmployeeComment.ReadOnly = true;
+            lblEmployeeComment.Size = new Size(327, 107);
+            lblEmployeeComment.TabIndex = 0;
+            lblEmployeeComment.Text = "";
             // 
             // materialLabel28
             // 
@@ -789,6 +785,7 @@
             btnApprovebtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             btnApprovebtn.UseAccentColor = false;
             btnApprovebtn.UseVisualStyleBackColor = true;
+            btnApprovebtn.Click += btnApprovebtn_Click;
             // 
             // lblEvaluationResult
             // 
@@ -941,7 +938,7 @@
             // 
             materialCard4.BackColor = Color.FromArgb(255, 255, 255);
             materialCard4.Controls.Add(materialCard7);
-            materialCard4.Controls.Add(dataGridView1);
+            materialCard4.Controls.Add(dgvApprovals);
             materialCard4.Depth = 0;
             materialCard4.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard4.Location = new Point(35, 82);
@@ -1012,41 +1009,18 @@
             materialLabel21.TabIndex = 13;
             materialLabel21.Text = "Month:";
             // 
-            // dataGridView1
+            // dgvApprovals
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
-            dataGridView1.Dock = DockStyle.Bottom;
-            dataGridView1.Location = new Point(14, 67);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(629, 386);
-            dataGridView1.TabIndex = 10;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Column1";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Column2";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Column3";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Column4";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Column5";
-            Column5.Name = "Column5";
+            dgvApprovals.BackgroundColor = Color.White;
+            dgvApprovals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvApprovals.Dock = DockStyle.Bottom;
+            dgvApprovals.Location = new Point(14, 67);
+            dgvApprovals.Name = "dgvApprovals";
+            dgvApprovals.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvApprovals.Size = new Size(629, 386);
+            dgvApprovals.TabIndex = 10;
+            dgvApprovals.CellContentClick += dgvApprovals_CellContentClick;
+            dgvApprovals.SelectionChanged += dgvApprovals_SelectionChanged;
             // 
             // materialDivider4
             // 
@@ -1676,6 +1650,7 @@
             cmbTeamCNM.Size = new Size(224, 49);
             cmbTeamCNM.StartIndex = 0;
             cmbTeamCNM.TabIndex = 39;
+            cmbTeamCNM.SelectedIndexChanged += cmbTeamCNM_SelectedIndexChanged;
             // 
             // pictureBox8
             // 
@@ -1955,7 +1930,7 @@
             materialCard4.ResumeLayout(false);
             materialCard7.ResumeLayout(false);
             materialCard7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvApprovals).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             panel5.ResumeLayout(false);
@@ -1990,12 +1965,7 @@
         private PictureBox pictureBox7;
         private MaterialSkin.Controls.MaterialLabel materialLabel13;
         private MaterialSkin.Controls.MaterialCard materialCard4;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
+        private DataGridView dgvApprovals;
         private MaterialSkin.Controls.MaterialDivider materialDivider4;
         private Panel panel6;
         private MaterialSkin.Controls.MaterialDivider materialDivider3;
@@ -2062,7 +2032,7 @@
         private MaterialSkin.Controls.MaterialLabel lblDateOfSubmission;
         private MaterialSkin.Controls.MaterialLabel lblEmployeeName;
         private MaterialSkin.Controls.MaterialCard materialCard9;
-        private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineTextBox1;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox lblEmployeeComment;
         private MaterialSkin.Controls.MaterialLabel materialLabel28;
         private Panel panel10;
         private PictureBox pictureBox5;

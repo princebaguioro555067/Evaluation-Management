@@ -81,3 +81,17 @@ C:\Users\CpELaboratory 216\Source\Repos\Evaluation-Management\EvaluationDomain\o
 C:\Users\CpELaboratory 216\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.pdb
 C:\Users\CpELaboratory 216\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.genruntimeconfig.cache
 C:\Users\CpELaboratory 216\Source\Repos\Evaluation-Management\EvaluationDomain\obj\Debug\net9.0\ref\EvaluationDomain.dll
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\bin\Debug\net9.0\EvaluationDomain.deps.json
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\bin\Debug\net9.0\EvaluationDomain.runtimeconfig.json
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\bin\Debug\net9.0\EvaluationDomain.dll
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\bin\Debug\net9.0\EvaluationDomain.pdb
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.AssemblyInfo.cs
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.sourcelink.json
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.dll
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\obj\Debug\net9.0\refint\EvaluationDomain.dll
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.pdb
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\obj\Debug\net9.0\EvaluationDomain.genruntimeconfig.cache
+C:\Users\USER\source\repos\teagiusfd\EvaluationDomain\obj\Debug\net9.0\ref\EvaluationDomain.dll

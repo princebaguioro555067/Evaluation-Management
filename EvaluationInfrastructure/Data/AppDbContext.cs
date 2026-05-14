@@ -10,6 +10,7 @@ namespace EvaluationInfrastructure.Data
         public DbSet<KpmScore> KpmScores { get; set; }
         public DbSet<PaymentRecord> PaymentRecords { get; set; }
         public DbSet<ReconReport> ReconReports { get; set; }
+        public DbSet<Submission> Submissions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

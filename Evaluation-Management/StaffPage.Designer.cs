@@ -64,20 +64,21 @@ namespace Evaluation_Management
             labelM = new MaterialSkin.Controls.MaterialLabel();
             lblCom = new MaterialSkin.Controls.MaterialLabel();
             lblDos = new MaterialSkin.Controls.MaterialLabel();
-            dateTimePicker2 = new DateTimePicker();
+            dtpDate = new DateTimePicker();
             materialCard10 = new MaterialSkin.Controls.MaterialCard();
-            materialMultiLineTextBox2 = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            lblComment = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             materialDivider5 = new MaterialSkin.Controls.MaterialDivider();
             materialDivider6 = new MaterialSkin.Controls.MaterialDivider();
             panel10 = new Panel();
-            materialButton3 = new MaterialSkin.Controls.MaterialButton();
-            materialButton4 = new MaterialSkin.Controls.MaterialButton();
+            btnClear = new MaterialSkin.Controls.MaterialButton();
+            btnSendToManager = new MaterialSkin.Controls.MaterialButton();
             panel11 = new Panel();
             lblNpu = new MaterialSkin.Controls.MaterialLabel();
             lblNpuDes = new MaterialSkin.Controls.MaterialLabel();
             materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             panel3 = new Panel();
+            btnLogout1 = new MaterialSkin.Controls.MaterialButton();
             panel2 = new Panel();
             pictureBox1 = new PictureBox();
             lblSp = new MaterialSkin.Controls.MaterialLabel();
@@ -117,14 +118,13 @@ namespace Evaluation_Management
             materialDivider12 = new MaterialSkin.Controls.MaterialDivider();
             materialDivider4 = new MaterialSkin.Controls.MaterialDivider();
             panel6 = new Panel();
+            btnLogout2 = new MaterialSkin.Controls.MaterialButton();
             materialDivider3 = new MaterialSkin.Controls.MaterialDivider();
             panel5 = new Panel();
             pictureBox2 = new PictureBox();
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             lblEpt2 = new MaterialSkin.Controls.MaterialLabel();
             imageList1 = new ImageList(components);
-            btnLogout2 = new MaterialSkin.Controls.MaterialButton();
-            btnLogout1 = new MaterialSkin.Controls.MaterialButton();
             materialTabControl1.SuspendLayout();
             tpSubmitReport.SuspendLayout();
             panel1.SuspendLayout();
@@ -493,7 +493,7 @@ namespace Evaluation_Management
             panel9.Controls.Add(labelM);
             panel9.Controls.Add(lblCom);
             panel9.Controls.Add(lblDos);
-            panel9.Controls.Add(dateTimePicker2);
+            panel9.Controls.Add(dtpDate);
             panel9.Controls.Add(materialCard10);
             panel9.Dock = DockStyle.Fill;
             panel9.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -608,17 +608,17 @@ namespace Evaluation_Management
             lblDos.TabIndex = 11;
             lblDos.Text = "Date of Submission";
             // 
-            // dateTimePicker2
+            // dtpDate
             // 
-            dateTimePicker2.Location = new Point(16, 37);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(509, 21);
-            dateTimePicker2.TabIndex = 19;
+            dtpDate.Location = new Point(16, 37);
+            dtpDate.Name = "dtpDate";
+            dtpDate.Size = new Size(509, 21);
+            dtpDate.TabIndex = 19;
             // 
             // materialCard10
             // 
             materialCard10.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard10.Controls.Add(materialMultiLineTextBox2);
+            materialCard10.Controls.Add(lblComment);
             materialCard10.Depth = 0;
             materialCard10.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard10.Location = new Point(16, 97);
@@ -629,20 +629,20 @@ namespace Evaluation_Management
             materialCard10.Size = new Size(509, 108);
             materialCard10.TabIndex = 16;
             // 
-            // materialMultiLineTextBox2
+            // lblComment
             // 
-            materialMultiLineTextBox2.BackColor = Color.FromArgb(255, 255, 255);
-            materialMultiLineTextBox2.BorderStyle = BorderStyle.None;
-            materialMultiLineTextBox2.Depth = 0;
-            materialMultiLineTextBox2.Dock = DockStyle.Fill;
-            materialMultiLineTextBox2.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            materialMultiLineTextBox2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialMultiLineTextBox2.Location = new Point(14, 14);
-            materialMultiLineTextBox2.MouseState = MouseState.HOVER;
-            materialMultiLineTextBox2.Name = "materialMultiLineTextBox2";
-            materialMultiLineTextBox2.Size = new Size(481, 80);
-            materialMultiLineTextBox2.TabIndex = 12;
-            materialMultiLineTextBox2.Text = "";
+            lblComment.BackColor = Color.FromArgb(255, 255, 255);
+            lblComment.BorderStyle = BorderStyle.None;
+            lblComment.Depth = 0;
+            lblComment.Dock = DockStyle.Fill;
+            lblComment.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblComment.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblComment.Location = new Point(14, 14);
+            lblComment.MouseState = MouseState.HOVER;
+            lblComment.Name = "lblComment";
+            lblComment.Size = new Size(481, 80);
+            lblComment.TabIndex = 12;
+            lblComment.Text = "";
             // 
             // materialDivider5
             // 
@@ -670,57 +670,58 @@ namespace Evaluation_Management
             // 
             // panel10
             // 
-            panel10.Controls.Add(materialButton3);
-            panel10.Controls.Add(materialButton4);
+            panel10.Controls.Add(btnClear);
+            panel10.Controls.Add(btnSendToManager);
             panel10.Dock = DockStyle.Bottom;
             panel10.Location = new Point(14, 389);
             panel10.Name = "panel10";
             panel10.Size = new Size(544, 48);
             panel10.TabIndex = 7;
             // 
-            // materialButton3
+            // btnClear
             // 
-            materialButton3.AutoSize = false;
-            materialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton3.BackColor = Color.Crimson;
-            materialButton3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton3.Depth = 0;
-            materialButton3.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            materialButton3.HighEmphasis = true;
-            materialButton3.Icon = null;
-            materialButton3.Location = new Point(16, 10);
-            materialButton3.Margin = new Padding(4, 6, 4, 6);
-            materialButton3.MouseState = MouseState.HOVER;
-            materialButton3.Name = "materialButton3";
-            materialButton3.NoAccentTextColor = Color.Empty;
-            materialButton3.Size = new Size(91, 28);
-            materialButton3.TabIndex = 1;
-            materialButton3.Text = "Clear";
-            materialButton3.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
-            materialButton3.UseAccentColor = false;
-            materialButton3.UseVisualStyleBackColor = true;
+            btnClear.AutoSize = false;
+            btnClear.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnClear.BackColor = Color.Crimson;
+            btnClear.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnClear.Depth = 0;
+            btnClear.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClear.HighEmphasis = true;
+            btnClear.Icon = null;
+            btnClear.Location = new Point(16, 10);
+            btnClear.Margin = new Padding(4, 6, 4, 6);
+            btnClear.MouseState = MouseState.HOVER;
+            btnClear.Name = "btnClear";
+            btnClear.NoAccentTextColor = Color.Empty;
+            btnClear.Size = new Size(91, 28);
+            btnClear.TabIndex = 1;
+            btnClear.Text = "Clear";
+            btnClear.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            btnClear.UseAccentColor = false;
+            btnClear.UseVisualStyleBackColor = true;
             // 
-            // materialButton4
+            // btnSendToManager
             // 
-            materialButton4.AutoSize = false;
-            materialButton4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton4.BackColor = Color.Crimson;
-            materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton4.Depth = 0;
-            materialButton4.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            materialButton4.HighEmphasis = true;
-            materialButton4.Icon = null;
-            materialButton4.Location = new Point(353, 10);
-            materialButton4.Margin = new Padding(4, 6, 4, 6);
-            materialButton4.MouseState = MouseState.HOVER;
-            materialButton4.Name = "materialButton4";
-            materialButton4.NoAccentTextColor = Color.Empty;
-            materialButton4.Size = new Size(172, 28);
-            materialButton4.TabIndex = 0;
-            materialButton4.Text = "Send to Manager";
-            materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton4.UseAccentColor = false;
-            materialButton4.UseVisualStyleBackColor = true;
+            btnSendToManager.AutoSize = false;
+            btnSendToManager.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnSendToManager.BackColor = Color.Crimson;
+            btnSendToManager.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnSendToManager.Depth = 0;
+            btnSendToManager.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSendToManager.HighEmphasis = true;
+            btnSendToManager.Icon = null;
+            btnSendToManager.Location = new Point(353, 10);
+            btnSendToManager.Margin = new Padding(4, 6, 4, 6);
+            btnSendToManager.MouseState = MouseState.HOVER;
+            btnSendToManager.Name = "btnSendToManager";
+            btnSendToManager.NoAccentTextColor = Color.Empty;
+            btnSendToManager.Size = new Size(172, 28);
+            btnSendToManager.TabIndex = 0;
+            btnSendToManager.Text = "Send to Manager";
+            btnSendToManager.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnSendToManager.UseAccentColor = false;
+            btnSendToManager.UseVisualStyleBackColor = true;
+            btnSendToManager.Click += materialButton4_Click;
             // 
             // panel11
             // 
@@ -795,6 +796,26 @@ namespace Evaluation_Management
             panel3.Name = "panel3";
             panel3.Size = new Size(1199, 45);
             panel3.TabIndex = 1;
+            // 
+            // btnLogout1
+            // 
+            btnLogout1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnLogout1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnLogout1.Depth = 0;
+            btnLogout1.HighEmphasis = true;
+            btnLogout1.Icon = null;
+            btnLogout1.Location = new Point(1031, 4);
+            btnLogout1.Margin = new Padding(4, 6, 4, 6);
+            btnLogout1.MouseState = MouseState.HOVER;
+            btnLogout1.Name = "btnLogout1";
+            btnLogout1.NoAccentTextColor = Color.Empty;
+            btnLogout1.Size = new Size(78, 36);
+            btnLogout1.TabIndex = 3;
+            btnLogout1.Text = "Logout";
+            btnLogout1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnLogout1.UseAccentColor = false;
+            btnLogout1.UseVisualStyleBackColor = true;
+            btnLogout1.Click += btnLogout1_Click;
             // 
             // panel2
             // 
@@ -971,7 +992,7 @@ namespace Evaluation_Management
             materialLabel7.Name = "materialLabel7";
             materialLabel7.Size = new Size(155, 18);
             materialLabel7.TabIndex = 40;
-            materialLabel7.Text = "(Statuse goes Here)";
+            materialLabel7.Text = "(Status goes Here)";
             materialLabel7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // materialLabel5
@@ -1286,6 +1307,26 @@ namespace Evaluation_Management
             panel6.Size = new Size(1199, 45);
             panel6.TabIndex = 3;
             // 
+            // btnLogout2
+            // 
+            btnLogout2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnLogout2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnLogout2.Depth = 0;
+            btnLogout2.HighEmphasis = true;
+            btnLogout2.Icon = null;
+            btnLogout2.Location = new Point(1031, 4);
+            btnLogout2.Margin = new Padding(4, 6, 4, 6);
+            btnLogout2.MouseState = MouseState.HOVER;
+            btnLogout2.Name = "btnLogout2";
+            btnLogout2.NoAccentTextColor = Color.Empty;
+            btnLogout2.Size = new Size(78, 36);
+            btnLogout2.TabIndex = 2;
+            btnLogout2.Text = "Logout";
+            btnLogout2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnLogout2.UseAccentColor = false;
+            btnLogout2.UseVisualStyleBackColor = true;
+            btnLogout2.Click += btnLogout2_Click;
+            // 
             // materialDivider3
             // 
             materialDivider3.BackColor = Color.FromArgb(30, 0, 0, 0);
@@ -1358,46 +1399,6 @@ namespace Evaluation_Management
             imageList1.TransparentColor = Color.Transparent;
             imageList1.Images.SetKeyName(0, "3-removebg-preview (1).png");
             imageList1.Images.SetKeyName(1, "1-removebg-preview(1).png");
-            // 
-            // btnLogout2
-            // 
-            btnLogout2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnLogout2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnLogout2.Depth = 0;
-            btnLogout2.HighEmphasis = true;
-            btnLogout2.Icon = null;
-            btnLogout2.Location = new Point(1031, 4);
-            btnLogout2.Margin = new Padding(4, 6, 4, 6);
-            btnLogout2.MouseState = MouseState.HOVER;
-            btnLogout2.Name = "btnLogout2";
-            btnLogout2.NoAccentTextColor = Color.Empty;
-            btnLogout2.Size = new Size(78, 36);
-            btnLogout2.TabIndex = 2;
-            btnLogout2.Text = "Logout";
-            btnLogout2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnLogout2.UseAccentColor = false;
-            btnLogout2.UseVisualStyleBackColor = true;
-            btnLogout2.Click += btnLogout2_Click;
-            // 
-            // btnLogout1
-            // 
-            btnLogout1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnLogout1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnLogout1.Depth = 0;
-            btnLogout1.HighEmphasis = true;
-            btnLogout1.Icon = null;
-            btnLogout1.Location = new Point(1031, 4);
-            btnLogout1.Margin = new Padding(4, 6, 4, 6);
-            btnLogout1.MouseState = MouseState.HOVER;
-            btnLogout1.Name = "btnLogout1";
-            btnLogout1.NoAccentTextColor = Color.Empty;
-            btnLogout1.Size = new Size(78, 36);
-            btnLogout1.TabIndex = 3;
-            btnLogout1.Text = "Logout";
-            btnLogout1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnLogout1.UseAccentColor = false;
-            btnLogout1.UseVisualStyleBackColor = true;
-            btnLogout1.Click += btnLogout1_Click;
             // 
             // StaffPage
             // 
@@ -1487,14 +1488,14 @@ namespace Evaluation_Management
         private MaterialSkin.Controls.MaterialLabel labelM;
         private MaterialSkin.Controls.MaterialLabel lblCom;
         private MaterialSkin.Controls.MaterialLabel lblDos;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtpDate;
         private MaterialSkin.Controls.MaterialCard materialCard10;
-        private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineTextBox2;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox lblComment;
         private MaterialSkin.Controls.MaterialDivider materialDivider5;
         private MaterialSkin.Controls.MaterialDivider materialDivider6;
         private Panel panel10;
-        private MaterialSkin.Controls.MaterialButton materialButton3;
-        private MaterialSkin.Controls.MaterialButton materialButton4;
+        private MaterialSkin.Controls.MaterialButton btnClear;
+        private MaterialSkin.Controls.MaterialButton btnSendToManager;
         private Panel panel11;
         private MaterialSkin.Controls.MaterialLabel lblNpu;
         private MaterialSkin.Controls.MaterialLabel lblNpuDes;
