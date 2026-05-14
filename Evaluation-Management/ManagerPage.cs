@@ -87,7 +87,7 @@ namespace Evaluation_Management
             lblEpt.BackColor = Color.White;
             materialLabel9.BackColor = Color.White;
 
-            materialLabel27.BackColor = Color.White;
+            lblDateOfSubmission.BackColor = Color.White;
             materialLabel28.BackColor = Color.White;
             lblEpt3.BackColor = Color.White;
             materialLabel19.BackColor = Color.White;
@@ -118,6 +118,8 @@ namespace Evaluation_Management
             lblPasswordCNM.BackColor = Color.White;
             lblTeamCNM.BackColor = Color.White;
 
+            lblNameEmployee.BackColor = Color.White;
+            lblSubmitDate.BackColor = Color.White;
 
 
 
@@ -134,7 +136,11 @@ namespace Evaluation_Management
             lblManagerName2.ForeColor = Color.Gray;
             materialLabel12.ForeColor = Color.Gray;
             materialLabel23.ForeColor = Color.Gray;
-            materialLabel28.ForeColor = myDrakGray;
+
+            lblNameEmployee.ForeColor = myDrakGray;
+            lblSubmitDate.ForeColor = myDrakGray;
+            lblDateOfSubmission.ForeColor = myDrakGray;
+            lblEmployeeName.ForeColor = myDrakGray;
 
             lblEPercentage.ForeColor = myCrimson;
 
@@ -220,11 +226,33 @@ namespace Evaluation_Management
             cmbTeamCNM.SelectedIndex = -1;
 
             // Reset Summary Labels to placeholder state
-            lblUsernameCNM.Text = "Username";
-            lblFirstNameCNM.Text = "First Name";
-            lblLastNameCNM.Text = "Last Name";
-            lblPasswordCNM.Text = "Password";
-            lblTeamCNM.Text = "Team";
+            lblUsernameCNM.Text = "Enter a Username";
+            lblFirstNameCNM.Text = "Enter a First Name";
+            lblLastNameCNM.Text = "Enter a Last Name";
+            lblPasswordCNM.Text = "Create a Password";
+            lblTeamCNM.Text = "Choose a Team";
+        }
+
+        private void btnLogout3_Click(object sender, EventArgs e)
+        {
+            
+            Login_Form form = new Login_Form();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnLogout2_Click(object sender, EventArgs e)
+        {
+            Login_Form form = new Login_Form();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnLogout1_Click(object sender, EventArgs e)
+        {
+            Login_Form form = new Login_Form();
+            form.Show();
+            this.Hide();
         }
     }
 }

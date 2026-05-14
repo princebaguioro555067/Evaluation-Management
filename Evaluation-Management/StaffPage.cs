@@ -35,24 +35,13 @@ namespace Evaluation_Management
 
         private void StaffPage_Load(object sender, EventArgs e)
         {
-            lblEpt.Text = "Employee Performance Tracker";
-            lblEpt2.Text = "Employee Performance Tracker";
             LoadEmployeeInfo();
             LoadDashboardStats();
         }
 
         private void LoadEmployeeInfo()
         {
-            lblEpt.Text = _loggedInEmployee.Name;
-            lblSp.Text = "Staff Portal";
-            lblNpu.Text = _loggedInEmployee.RoleDisplay;
-            lblNpuDes.Text = _loggedInEmployee.Designation;
-            labelM.Text = _loggedInEmployee.GroupLabel;
-            lblDos.Text = $"As of {DateTime.Now:MMMM yyyy}";
-            lblCom.Text = "Payable Section";
 
-            if (_loggedInEmployee.Supervisor != null)
-                lblFdSg.Text = $"Supervisor: {_loggedInEmployee.Supervisor.Name}";
         }
 
         private void LoadDashboardStats()
@@ -184,12 +173,14 @@ namespace Evaluation_Management
             lblEpt2.BackColor = Color.White;
 
             materialLabel11.BackColor = Color.White;
-            
+            materialLabel9.BackColor = Color.White;
+            materialLabel2.BackColor = Color.White;
             materialLabel3.BackColor = Color.White;
             materialLabel6.BackColor = Color.White;
             materialLabel8.BackColor = Color.White;
             materialLabel4.BackColor = Color.White;
             materialLabel5.BackColor = Color.White;
+
 
         }
         private void ForeColorAdjustments()
@@ -216,14 +207,28 @@ namespace Evaluation_Management
 
             lblEpt2.ForeColor = myCrimson;
             materialLabel1.ForeColor = Color.Gray;
-
+            materialLabel5.ForeColor = myDrakGray;
+            materialLabel9.ForeColor = myDrakGray;
+            materialLabel2.ForeColor = myDrakGray;
             materialLabel3.ForeColor = myDrakGray;
             materialLabel6.ForeColor = myDrakGray;
             materialLabel8.ForeColor = myDrakGray;
-
-            
+            materialLabel12.ForeColor = Color.Gray;
         }
 
+        private void btnLogout1_Click(object sender, EventArgs e)
+        {
+            Login_Form form = new Login_Form();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnLogout2_Click(object sender, EventArgs e)
+        {
+            Login_Form form = new Login_Form();
+            form.Show();
+            this.Hide();
+        }
     }
 
 }

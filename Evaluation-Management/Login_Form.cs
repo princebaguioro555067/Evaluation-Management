@@ -11,12 +11,6 @@ namespace Evaluation_Management
             InitializeComponent();
         }
 
-
-        private void lblLoginClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsernameLogin.Text.Trim();
@@ -70,6 +64,11 @@ namespace Evaluation_Management
         private void Login_Form_Load(object sender, EventArgs e)
         {
             txtPasswordLogin.PasswordChar = '*';
+        }
+
+        private void lblLoginClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

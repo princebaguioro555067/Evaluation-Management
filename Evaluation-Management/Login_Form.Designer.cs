@@ -32,7 +32,7 @@
             panel1 = new Panel();
             panel7 = new Panel();
             panel6 = new Panel();
-            lblRegisterClose = new Label();
+            lblLoginClose = new Label();
             lblGoToSignUp = new LinkLabel();
             label5 = new Label();
             label4 = new Label();
@@ -77,7 +77,7 @@
             // panel6
             // 
             panel6.BackColor = Color.LavenderBlush;
-            panel6.Controls.Add(lblRegisterClose);
+            panel6.Controls.Add(lblLoginClose);
             panel6.Controls.Add(lblGoToSignUp);
             panel6.Controls.Add(label5);
             panel6.Controls.Add(label4);
@@ -91,16 +91,17 @@
             panel6.Size = new Size(405, 435);
             panel6.TabIndex = 13;
             // 
-            // lblRegisterClose
+            // lblLoginClose
             // 
-            lblRegisterClose.AutoSize = true;
-            lblRegisterClose.BackColor = Color.Transparent;
-            lblRegisterClose.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblRegisterClose.Location = new Point(373, 9);
-            lblRegisterClose.Name = "lblRegisterClose";
-            lblRegisterClose.Size = new Size(20, 20);
-            lblRegisterClose.TabIndex = 12;
-            lblRegisterClose.Text = "X";
+            lblLoginClose.AutoSize = true;
+            lblLoginClose.BackColor = Color.Transparent;
+            lblLoginClose.Font = new Font("Microsoft JhengHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLoginClose.Location = new Point(373, 9);
+            lblLoginClose.Name = "lblLoginClose";
+            lblLoginClose.Size = new Size(20, 20);
+            lblLoginClose.TabIndex = 12;
+            lblLoginClose.Text = "X";
+            lblLoginClose.Click += lblLoginClose_Click;
             // 
             // lblGoToSignUp
             // 
@@ -269,7 +270,7 @@
 
         private Panel panel1;
         private Panel panel7;
-        private Label lblRegisterClose;
+        private Label lblLoginClose;
         private Panel panel6;
         private LinkLabel lblGoToSignUp;
         private Label label5;

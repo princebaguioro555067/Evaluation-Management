@@ -56,6 +56,8 @@ namespace Evaluation_Management
             lbMs = new MaterialSkin.Controls.MaterialLabel();
             materialCard9 = new MaterialSkin.Controls.MaterialCard();
             panel9 = new Panel();
+            materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             lblFdSg = new MaterialSkin.Controls.MaterialLabel();
@@ -65,7 +67,6 @@ namespace Evaluation_Management
             dateTimePicker2 = new DateTimePicker();
             materialCard10 = new MaterialSkin.Controls.MaterialCard();
             materialMultiLineTextBox2 = new MaterialSkin.Controls.MaterialMultiLineTextBox();
-            materialComboBox2 = new MaterialSkin.Controls.MaterialComboBox();
             materialDivider5 = new MaterialSkin.Controls.MaterialDivider();
             materialDivider6 = new MaterialSkin.Controls.MaterialDivider();
             panel10 = new Panel();
@@ -122,6 +123,8 @@ namespace Evaluation_Management
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             lblEpt2 = new MaterialSkin.Controls.MaterialLabel();
             imageList1 = new ImageList(components);
+            btnLogout2 = new MaterialSkin.Controls.MaterialButton();
+            btnLogout1 = new MaterialSkin.Controls.MaterialButton();
             materialTabControl1.SuspendLayout();
             tpSubmitReport.SuspendLayout();
             panel1.SuspendLayout();
@@ -137,6 +140,7 @@ namespace Evaluation_Management
             materialCard10.SuspendLayout();
             panel10.SuspendLayout();
             panel11.SuspendLayout();
+            panel3.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tpHistory.SuspendLayout();
@@ -150,6 +154,7 @@ namespace Evaluation_Management
             materialCard1.SuspendLayout();
             materialCard4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel6.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -480,6 +485,8 @@ namespace Evaluation_Management
             // 
             // panel9
             // 
+            panel9.Controls.Add(materialLabel9);
+            panel9.Controls.Add(materialLabel2);
             panel9.Controls.Add(pictureBox4);
             panel9.Controls.Add(pictureBox3);
             panel9.Controls.Add(lblFdSg);
@@ -488,13 +495,40 @@ namespace Evaluation_Management
             panel9.Controls.Add(lblDos);
             panel9.Controls.Add(dateTimePicker2);
             panel9.Controls.Add(materialCard10);
-            panel9.Controls.Add(materialComboBox2);
             panel9.Dock = DockStyle.Fill;
             panel9.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             panel9.Location = new Point(14, 68);
             panel9.Name = "panel9";
             panel9.Size = new Size(544, 318);
             panel9.TabIndex = 10;
+            // 
+            // materialLabel9
+            // 
+            materialLabel9.Depth = 0;
+            materialLabel9.FlatStyle = FlatStyle.System;
+            materialLabel9.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel9.FontType = MaterialSkinManager.fontType.Button;
+            materialLabel9.ForeColor = Color.Black;
+            materialLabel9.Location = new Point(308, 275);
+            materialLabel9.MouseState = MouseState.HOVER;
+            materialLabel9.Name = "materialLabel9";
+            materialLabel9.Size = new Size(217, 20);
+            materialLabel9.TabIndex = 25;
+            materialLabel9.Text = "Team:";
+            // 
+            // materialLabel2
+            // 
+            materialLabel2.Depth = 0;
+            materialLabel2.FlatStyle = FlatStyle.System;
+            materialLabel2.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel2.FontType = MaterialSkinManager.fontType.Button;
+            materialLabel2.ForeColor = Color.Black;
+            materialLabel2.Location = new Point(16, 275);
+            materialLabel2.MouseState = MouseState.HOVER;
+            materialLabel2.Name = "materialLabel2";
+            materialLabel2.Size = new Size(286, 20);
+            materialLabel2.TabIndex = 24;
+            materialLabel2.Text = "(Name of Manager)";
             // 
             // pictureBox4
             // 
@@ -539,12 +573,12 @@ namespace Evaluation_Management
             labelM.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             labelM.FontType = MaterialSkinManager.fontType.Button;
             labelM.ForeColor = Color.Black;
-            labelM.Location = new Point(16, 233);
+            labelM.Location = new Point(16, 245);
             labelM.MouseState = MouseState.HOVER;
             labelM.Name = "labelM";
             labelM.Size = new Size(509, 20);
             labelM.TabIndex = 21;
-            labelM.Text = "Manager";
+            labelM.Text = "Submited to:";
             // 
             // lblCom
             // 
@@ -609,29 +643,6 @@ namespace Evaluation_Management
             materialMultiLineTextBox2.Size = new Size(481, 80);
             materialMultiLineTextBox2.TabIndex = 12;
             materialMultiLineTextBox2.Text = "";
-            // 
-            // materialComboBox2
-            // 
-            materialComboBox2.AutoResize = false;
-            materialComboBox2.BackColor = Color.FromArgb(255, 255, 255);
-            materialComboBox2.Depth = 0;
-            materialComboBox2.DrawMode = DrawMode.OwnerDrawVariable;
-            materialComboBox2.DropDownHeight = 174;
-            materialComboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            materialComboBox2.DropDownWidth = 121;
-            materialComboBox2.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialComboBox2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialComboBox2.FormattingEnabled = true;
-            materialComboBox2.IntegralHeight = false;
-            materialComboBox2.ItemHeight = 43;
-            materialComboBox2.Items.AddRange(new object[] { "admin1", "admin2" });
-            materialComboBox2.Location = new Point(16, 256);
-            materialComboBox2.MaxDropDownItems = 4;
-            materialComboBox2.MouseState = MouseState.OUT;
-            materialComboBox2.Name = "materialComboBox2";
-            materialComboBox2.Size = new Size(509, 49);
-            materialComboBox2.StartIndex = 0;
-            materialComboBox2.TabIndex = 8;
             // 
             // materialDivider5
             // 
@@ -778,6 +789,7 @@ namespace Evaluation_Management
             // panel3
             // 
             panel3.BackColor = Color.White;
+            panel3.Controls.Add(btnLogout1);
             panel3.Dock = DockStyle.Bottom;
             panel3.Location = new Point(0, 620);
             panel3.Name = "panel3";
@@ -1267,6 +1279,7 @@ namespace Evaluation_Management
             // panel6
             // 
             panel6.BackColor = Color.White;
+            panel6.Controls.Add(btnLogout2);
             panel6.Dock = DockStyle.Bottom;
             panel6.Location = new Point(0, 620);
             panel6.Name = "panel6";
@@ -1346,6 +1359,46 @@ namespace Evaluation_Management
             imageList1.Images.SetKeyName(0, "3-removebg-preview (1).png");
             imageList1.Images.SetKeyName(1, "1-removebg-preview(1).png");
             // 
+            // btnLogout2
+            // 
+            btnLogout2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnLogout2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnLogout2.Depth = 0;
+            btnLogout2.HighEmphasis = true;
+            btnLogout2.Icon = null;
+            btnLogout2.Location = new Point(1031, 4);
+            btnLogout2.Margin = new Padding(4, 6, 4, 6);
+            btnLogout2.MouseState = MouseState.HOVER;
+            btnLogout2.Name = "btnLogout2";
+            btnLogout2.NoAccentTextColor = Color.Empty;
+            btnLogout2.Size = new Size(78, 36);
+            btnLogout2.TabIndex = 2;
+            btnLogout2.Text = "Logout";
+            btnLogout2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnLogout2.UseAccentColor = false;
+            btnLogout2.UseVisualStyleBackColor = true;
+            btnLogout2.Click += btnLogout2_Click;
+            // 
+            // btnLogout1
+            // 
+            btnLogout1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnLogout1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnLogout1.Depth = 0;
+            btnLogout1.HighEmphasis = true;
+            btnLogout1.Icon = null;
+            btnLogout1.Location = new Point(1031, 4);
+            btnLogout1.Margin = new Padding(4, 6, 4, 6);
+            btnLogout1.MouseState = MouseState.HOVER;
+            btnLogout1.Name = "btnLogout1";
+            btnLogout1.NoAccentTextColor = Color.Empty;
+            btnLogout1.Size = new Size(78, 36);
+            btnLogout1.TabIndex = 3;
+            btnLogout1.Text = "Logout";
+            btnLogout1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnLogout1.UseAccentColor = false;
+            btnLogout1.UseVisualStyleBackColor = true;
+            btnLogout1.Click += btnLogout1_Click;
+            // 
             // StaffPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1376,6 +1429,8 @@ namespace Evaluation_Management
             materialCard10.ResumeLayout(false);
             panel10.ResumeLayout(false);
             panel11.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -1390,6 +1445,8 @@ namespace Evaluation_Management
             materialCard1.ResumeLayout(false);
             materialCard4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -1433,7 +1490,6 @@ namespace Evaluation_Management
         private DateTimePicker dateTimePicker2;
         private MaterialSkin.Controls.MaterialCard materialCard10;
         private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineTextBox2;
-        private MaterialSkin.Controls.MaterialComboBox materialComboBox2;
         private MaterialSkin.Controls.MaterialDivider materialDivider5;
         private MaterialSkin.Controls.MaterialDivider materialDivider6;
         private Panel panel10;
@@ -1487,5 +1543,9 @@ namespace Evaluation_Management
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
         private ImageList imageList1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel9;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialButton btnLogout2;
+        private MaterialSkin.Controls.MaterialButton btnLogout1;
     }
 }

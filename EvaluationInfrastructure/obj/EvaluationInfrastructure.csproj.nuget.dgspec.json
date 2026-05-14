@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\source\\repos\\Test\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj": {}
+    "C:\\Users\\CpELaboratory 216\\Source\\Repos\\Evaluation-Management\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\source\\repos\\Test\\EvaluationDomain\\EvaluationDomain.csproj": {
+    "C:\\Users\\CpELaboratory 216\\Source\\Repos\\Evaluation-Management\\EvaluationDomain\\EvaluationDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\Test\\EvaluationDomain\\EvaluationDomain.csproj",
+        "projectUniqueName": "C:\\Users\\CpELaboratory 216\\Source\\Repos\\Evaluation-Management\\EvaluationDomain\\EvaluationDomain.csproj",
         "projectName": "EvaluationDomain",
-        "projectPath": "C:\\Users\\USER\\source\\repos\\Test\\EvaluationDomain\\EvaluationDomain.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\source\\repos\\Test\\EvaluationDomain\\obj\\",
+        "projectPath": "C:\\Users\\CpELaboratory 216\\Source\\Repos\\Evaluation-Management\\EvaluationDomain\\EvaluationDomain.csproj",
+        "packagesPath": "C:\\Users\\CpELaboratory 216\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CpELaboratory 216\\Source\\Repos\\Evaluation-Management\\EvaluationDomain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\CpELaboratory 216\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -73,21 +78,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\USER\\source\\repos\\Test\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj": {
+    "C:\\Users\\CpELaboratory 216\\Source\\Repos\\Evaluation-Management\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\Test\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\CpELaboratory 216\\Source\\Repos\\Evaluation-Management\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj",
         "projectName": "EvaluationInfrastructure",
-        "projectPath": "C:\\Users\\USER\\source\\repos\\Test\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\source\\repos\\Test\\EvaluationInfrastructure\\obj\\",
+        "projectPath": "C:\\Users\\CpELaboratory 216\\Source\\Repos\\Evaluation-Management\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj",
+        "packagesPath": "C:\\Users\\CpELaboratory 216\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CpELaboratory 216\\Source\\Repos\\Evaluation-Management\\EvaluationInfrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\CpELaboratory 216\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,14 +104,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\USER\\source\\repos\\Test\\EvaluationDomain\\EvaluationDomain.csproj": {
-                "projectPath": "C:\\Users\\USER\\source\\repos\\Test\\EvaluationDomain\\EvaluationDomain.csproj"
+              "C:\\Users\\CpELaboratory 216\\Source\\Repos\\Evaluation-Management\\EvaluationDomain\\EvaluationDomain.csproj": {
+                "projectPath": "C:\\Users\\CpELaboratory 216\\Source\\Repos\\Evaluation-Management\\EvaluationDomain\\EvaluationDomain.csproj"
               }
             }
           }
@@ -117,7 +127,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -164,7 +174,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
