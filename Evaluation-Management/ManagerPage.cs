@@ -337,7 +337,6 @@ namespace Evaluation_Management
             lblEmployeeName.Text = "Name goes Here";
             lblDateOfSubmission.Text = "Date goes Here";
             lblEmployeeComment.Text = string.Empty;
-            lblEvaluationResult.Text = "0%";
 
             // Removes the blue highlight from the grid
             dgvApprovals.ClearSelection();

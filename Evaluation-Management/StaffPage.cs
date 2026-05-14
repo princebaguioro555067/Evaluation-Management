@@ -229,17 +229,19 @@ namespace Evaluation_Management
 
         private void materialButton4_Click(object sender, EventArgs e)
         {
+            this.Validate();
             var sub = new Submission
             {
                 EmployeeId = _loggedInEmployee .Id, // From BaseClass
                 GroupNumber = _loggedInEmployee.GroupNumber, // From Employee.cs
                 SubmissionDate = dtpDate.Value,
-                Comment = lblComment.Text,
+                Comment = lblComment.Text.Trim(),
                 Status = "Pending"
             };
 
             _repo.Add(sub);
             MessageBox.Show("Successfully submitted!");
+            lblComment.Clear();
             LoadHistory();
         }
     }
