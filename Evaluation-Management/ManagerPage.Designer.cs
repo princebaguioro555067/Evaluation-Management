@@ -982,11 +982,12 @@
             // 
             materialLabel26.AutoSize = true;
             materialLabel26.Depth = 0;
-            materialLabel26.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel26.Location = new Point(326, 12);
+            materialLabel26.Font = new Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel26.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            materialLabel26.Location = new Point(328, 12);
             materialLabel26.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel26.Name = "materialLabel26";
-            materialLabel26.Size = new Size(37, 19);
+            materialLabel26.Size = new Size(35, 17);
             materialLabel26.TabIndex = 14;
             materialLabel26.Text = "Year:";
             // 
@@ -1002,11 +1003,12 @@
             // 
             materialLabel21.AutoSize = true;
             materialLabel21.Depth = 0;
-            materialLabel21.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel21.Location = new Point(139, 12);
+            materialLabel21.Font = new Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            materialLabel21.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            materialLabel21.Location = new Point(144, 12);
             materialLabel21.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel21.Name = "materialLabel21";
-            materialLabel21.Size = new Size(51, 19);
+            materialLabel21.Size = new Size(46, 17);
             materialLabel21.TabIndex = 13;
             materialLabel21.Text = "Month:";
             // 
