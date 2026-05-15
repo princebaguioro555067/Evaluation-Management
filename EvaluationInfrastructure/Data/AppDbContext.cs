@@ -7,9 +7,6 @@ namespace EvaluationInfrastructure.Data
     {
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EvaluationPeriod> EvaluationPeriods { get; set; }
-        public DbSet<KpmScore> KpmScores { get; set; }
-        public DbSet<PaymentRecord> PaymentRecords { get; set; }
-        public DbSet<ReconReport> ReconReports { get; set; }
         public DbSet<Submission> Submissions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
