@@ -1,14 +1,24 @@
 using EvaluationInfrastructure.Repositories;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Evaluation_Management
 {
     public partial class Login_Form : Form
     {
         private readonly EmployeeRepository _employeeRepo = new EmployeeRepository();
+
         public Login_Form()
         {
             InitializeComponent();
+        }
+
+        private void Login_Form_Load(object sender, EventArgs e)
+        {
+            txtPasswordLogin.PasswordChar = '*';
+        }
+
+        private void lblLoginClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -33,42 +43,30 @@ namespace Evaluation_Management
                 return;
             }
 
-            // Route to the correct dashboard based on role
             if (employee.IsManager)
             {
-                ManagerPage managerPage = new ManagerPage(employee);
+                var managerPage = new ManagerPage(employee);
                 managerPage.Show();
             }
             else
             {
-                StaffPage staffPage = new StaffPage(employee);
+                var staffPage = new StaffPage(employee);
                 staffPage.Show();
             }
 
             this.Hide();
         }
+
         private void CheckBoxRegisterShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            txtPasswordLogin.PasswordChar = CheckBoxRegisterShowPass.Checked ? '\0' : '•';
+            txtPasswordLogin.PasswordChar = CheckBoxRegisterShowPass.Checked ? '\0' : '*';
         }
 
         private void lblGoToSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-            RegisterForm registerForm = new RegisterForm();
+            var registerForm = new RegisterForm();
             registerForm.Show();
             this.Hide();
-
-        }
-
-        private void Login_Form_Load(object sender, EventArgs e)
-        {
-            txtPasswordLogin.PasswordChar = '*';
-        }
-
-        private void lblLoginClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using EvaluationDomain.Models;
+﻿using BCrypt.Net;
+using EvaluationDomain.Models;
 using EvaluationInfrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -42,9 +43,8 @@ namespace EvaluationInfrastructure.Repositories
 
             if (employee == null) return null;
 
-            bool passwordMatches = BCrypt.Net.BCrypt.Verify(password, employee.Password);
-
-            return passwordMatches ? employee : null;
+            return BCrypt.Net.BCrypt.Verify(password, employee.Password)
+                ? employee : null;
         }
 
         public List<Employee> GetByRole(EmployeeRole role)
@@ -79,7 +79,8 @@ namespace EvaluationInfrastructure.Repositories
         {
             return _context.Employees
                 .Include(e => e.Subordinates)
-                .FirstOrDefault(e => e.GroupNumber == groupNumber && e.Role == EmployeeRole.Supervisor);
+                .FirstOrDefault(e => e.GroupNumber == groupNumber
+                    && e.Role == EmployeeRole.Supervisor);
         }
 
         public Employee? GetAam()
@@ -94,16 +95,10 @@ namespace EvaluationInfrastructure.Repositories
                 .Any(e => e.Username == username && e.Id != excludeId);
         }
 
-        public bool NameExists(string name, int? excludeId = null)
-        {
-            return _context.Employees
-                .Any(e => e.Name == name && e.Id != excludeId);
-        }
-
         public void Add(Employee employee)
         {
             if (string.IsNullOrWhiteSpace(employee.Name))
-                throw new ArgumentException("Employee name is required.");
+                throw new ArgumentException("Name is required.");
 
             if (string.IsNullOrWhiteSpace(employee.Username))
                 throw new ArgumentException("Username is required.");
@@ -111,18 +106,13 @@ namespace EvaluationInfrastructure.Repositories
             if (UsernameExists(employee.Username))
                 throw new ArgumentException($"Username '{employee.Username}' is already taken.");
 
-            // Hash the password before saving
             employee.Password = BCrypt.Net.BCrypt.HashPassword(employee.Password);
-
             _context.Employees.Add(employee);
             _context.SaveChanges();
         }
 
         public void Update(Employee employee)
         {
-            if (string.IsNullOrWhiteSpace(employee.Name))
-                throw new ArgumentException("Employee name is required.");
-
             if (UsernameExists(employee.Username, employee.Id))
                 throw new ArgumentException($"Username '{employee.Username}' is already taken.");
 

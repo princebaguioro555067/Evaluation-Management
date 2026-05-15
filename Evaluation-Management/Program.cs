@@ -7,9 +7,6 @@ namespace Evaluation_Management
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
@@ -19,27 +16,26 @@ namespace Evaluation_Management
             }
 
             SeedAdminAccount();
+
             ApplicationConfiguration.Initialize();
             Application.Run(new Login_Form());
         }
+
         private static void SeedAdminAccount()
         {
             var repo = new EmployeeRepository();
 
-            // Only creates the AAM account if it doesn't exist yet
             if (!repo.UsernameExists("admin"))
             {
-                var admin = new Employee
+                repo.Add(new Employee
                 {
                     Username = "admin",
-                    Password = "admin123",   // will be hashed by repo.Add()
+                    Password = "admin123",
                     Name = "Administrator",
                     Designation = "Assist Accounting Manager",
                     Role = EmployeeRole.AAM,
-                    GroupNumber = 0
-                };
-
-                repo.Add(admin);
+                    GroupNumber = 1
+                });
             }
         }
     }

@@ -5,9 +5,9 @@ namespace EvaluationDomain.Models
 {
     public enum EmployeeRole
     {
-        AAM,        // Assist Accounting Manager — top-level reviewer
-        Supervisor, // Payable Supervisor — manages a group of staff
-        Staff       // Regular staff member under a supervisor
+        AAM,
+        Supervisor,
+        Staff
     }
 
     public class Employee : BaseClass
@@ -20,34 +20,21 @@ namespace EvaluationDomain.Models
 
         public EmployeeRole Role { get; set; }
 
-        // Group number (1–5) 
         public int GroupNumber { get; set; }
 
-        //Login Credentials
         [Required]
         public string Username { get; set; } = string.Empty;
 
         [Required]
         public string Password { get; set; } = string.Empty;
 
-
-        // ForeignKey to the supervisor
         public int? SupervisorId { get; set; }
 
         [ForeignKey(nameof(SupervisorId))]
         public virtual Employee? Supervisor { get; set; }
 
-        // Staff members under this employee (only populated for Supervisors)
         public virtual ICollection<Employee> Subordinates { get; set; } = new List<Employee>();
-
-        // All KPM scores recorded for this employee
-        public virtual ICollection<KpmScore> KpmScores { get; set; } = new List<KpmScore>();
-
-        // All payment records for this employee
-        public virtual ICollection<PaymentRecord> PaymentRecords { get; set; } = new List<PaymentRecord>();
-
-        // All recon & report submissions for this employee
-        public virtual ICollection<ReconReport> ReconReports { get; set; } = new List<ReconReport>();
+        public virtual ICollection<EvaluationSubmission> Submissions { get; set; } = new List<EvaluationSubmission>();
 
         [NotMapped]
         public string RoleDisplay => Role switch

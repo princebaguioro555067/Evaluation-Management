@@ -86,38 +86,35 @@ namespace Evaluation_Management
 
             try
             {
-                int groupNumber = cmbTeamNumber.SelectedIndex; // index 1 = Team 1, etc.
-
+                int groupNumber = cmbTeamNumber.SelectedIndex;
                 var supervisor = _supervisors.FirstOrDefault(s => s.GroupNumber == groupNumber);
 
-                var newEmployee = new Employee
+                _employeeRepo.Add(new Employee
                 {
                     Username = username,
-                    Password = password,       // hashed inside repo.Add()
+                    Password = password,
                     Name = username,
                     Designation = "Staff",
                     Role = EmployeeRole.Staff,
                     GroupNumber = groupNumber,
                     SupervisorId = supervisor?.Id
-                };
-
-                _employeeRepo.Add(newEmployee);
+                });
 
                 string teamInfo = supervisor != null
-                    ? $"You have been assigned to Team {groupNumber} under {supervisor.Name}."
-                    : $"You have been assigned to Team {groupNumber}. A supervisor will be assigned later.";
+                    ? $"Assigned to Team {groupNumber} under {supervisor.Name}."
+                    : $"Assigned to Team {groupNumber}. Supervisor will be assigned later.";
 
                 MessageBox.Show(
                     $"Account created successfully!\n\n{teamInfo}\n\nYou can now log in.",
                     "Sign Up", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                Login_Form loginForm = new Login_Form();
+                var loginForm = new Login_Form();
                 loginForm.Show();
                 this.Hide();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error creating account: {ex.Message}", "Sign Up",
+                MessageBox.Show($"Error: {ex.Message}", "Sign Up",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -129,7 +126,7 @@ namespace Evaluation_Management
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Login_Form loginForm = new Login_Form();
+            var loginForm = new Login_Form();
             loginForm.Show();
             this.Hide();
         }

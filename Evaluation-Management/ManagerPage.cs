@@ -11,8 +11,6 @@ namespace Evaluation_Management
     public partial class ManagerPage : MaterialForm
     {
         private readonly Employee _loggedInEmployee;
-        private readonly KpmScoreRepository _kpmRepo = new KpmScoreRepository();
-        private readonly EvaluationPeriodRepository _periodRepo = new EvaluationPeriodRepository();
         private readonly EmployeeRepository _employeeRepo = new EmployeeRepository();
         private readonly SubmissionRepository _repo = new SubmissionRepository();
         private readonly AppDbContext _context = new AppDbContext();
@@ -61,7 +59,8 @@ namespace Evaluation_Management
         private void LoadManagerStats()
         {
             var now = DateTime.Now;
-            var period = _periodRepo.GetByMonthYear(now.Month, now.Year);
+            var period = _context.EvaluationPeriods
+                .FirstOrDefault(p => p.Month == now.Month && p.Year == now.Year);
 
             var manager = _loggedInEmployee; // The logged-in manager passed from Login_Form
 

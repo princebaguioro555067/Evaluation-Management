@@ -56,8 +56,8 @@ namespace Evaluation_Management
             lbMs = new MaterialSkin.Controls.MaterialLabel();
             materialCard9 = new MaterialSkin.Controls.MaterialCard();
             panel9 = new Panel();
-            materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
-            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            lblTeam = new MaterialSkin.Controls.MaterialLabel();
+            lblNameofManager = new MaterialSkin.Controls.MaterialLabel();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             lblFdSg = new MaterialSkin.Controls.MaterialLabel();
@@ -435,7 +435,7 @@ namespace Evaluation_Management
             lblST.Name = "lblST";
             lblST.Size = new Size(328, 40);
             lblST.TabIndex = 24;
-            lblST.Text = "Submission Tips";
+            lblST.Text = "Deadline Details";
             // 
             // lblMsDes
             // 
@@ -485,8 +485,8 @@ namespace Evaluation_Management
             // 
             // panel9
             // 
-            panel9.Controls.Add(materialLabel9);
-            panel9.Controls.Add(materialLabel2);
+            panel9.Controls.Add(lblTeam);
+            panel9.Controls.Add(lblNameofManager);
             panel9.Controls.Add(pictureBox4);
             panel9.Controls.Add(pictureBox3);
             panel9.Controls.Add(lblFdSg);
@@ -502,33 +502,33 @@ namespace Evaluation_Management
             panel9.Size = new Size(544, 318);
             panel9.TabIndex = 10;
             // 
-            // materialLabel9
+            // lblTeam
             // 
-            materialLabel9.Depth = 0;
-            materialLabel9.FlatStyle = FlatStyle.System;
-            materialLabel9.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel9.FontType = MaterialSkinManager.fontType.Button;
-            materialLabel9.ForeColor = Color.Black;
-            materialLabel9.Location = new Point(308, 275);
-            materialLabel9.MouseState = MouseState.HOVER;
-            materialLabel9.Name = "materialLabel9";
-            materialLabel9.Size = new Size(217, 20);
-            materialLabel9.TabIndex = 25;
-            materialLabel9.Text = "Team:";
+            lblTeam.Depth = 0;
+            lblTeam.FlatStyle = FlatStyle.System;
+            lblTeam.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblTeam.FontType = MaterialSkinManager.fontType.Button;
+            lblTeam.ForeColor = Color.Black;
+            lblTeam.Location = new Point(308, 275);
+            lblTeam.MouseState = MouseState.HOVER;
+            lblTeam.Name = "lblTeam";
+            lblTeam.Size = new Size(217, 20);
+            lblTeam.TabIndex = 25;
+            lblTeam.Text = "Team:";
             // 
-            // materialLabel2
+            // lblNameofManager
             // 
-            materialLabel2.Depth = 0;
-            materialLabel2.FlatStyle = FlatStyle.System;
-            materialLabel2.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialLabel2.FontType = MaterialSkinManager.fontType.Button;
-            materialLabel2.ForeColor = Color.Black;
-            materialLabel2.Location = new Point(16, 275);
-            materialLabel2.MouseState = MouseState.HOVER;
-            materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(286, 20);
-            materialLabel2.TabIndex = 24;
-            materialLabel2.Text = "(Name of Manager)";
+            lblNameofManager.Depth = 0;
+            lblNameofManager.FlatStyle = FlatStyle.System;
+            lblNameofManager.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblNameofManager.FontType = MaterialSkinManager.fontType.Button;
+            lblNameofManager.ForeColor = Color.Black;
+            lblNameofManager.Location = new Point(16, 275);
+            lblNameofManager.MouseState = MouseState.HOVER;
+            lblNameofManager.Name = "lblNameofManager";
+            lblNameofManager.Size = new Size(286, 20);
+            lblNameofManager.TabIndex = 24;
+            lblNameofManager.Text = "(Name of Manager)";
             // 
             // pictureBox4
             // 
@@ -578,7 +578,7 @@ namespace Evaluation_Management
             labelM.Name = "labelM";
             labelM.Size = new Size(509, 20);
             labelM.TabIndex = 21;
-            labelM.Text = "Submited to:";
+            labelM.Text = "Submitted to:";
             // 
             // lblCom
             // 
@@ -721,7 +721,7 @@ namespace Evaluation_Management
             btnSendToManager.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             btnSendToManager.UseAccentColor = false;
             btnSendToManager.UseVisualStyleBackColor = true;
-            btnSendToManager.Click += materialButton4_Click;
+            btnSendToManager.Click += btnSendToManager_Click_1;
             // 
             // panel11
             // 
@@ -1499,54 +1499,54 @@ namespace Evaluation_Management
         private Panel panel11;
         private MaterialSkin.Controls.MaterialLabel lblNpu;
         private MaterialSkin.Controls.MaterialLabel lblNpuDes;
+        private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox5;
+        private ImageList imageList1;
+        private MaterialSkin.Controls.MaterialLabel lblTeam;
+        private MaterialSkin.Controls.MaterialLabel lblNameofManager;
+        private MaterialSkin.Controls.MaterialButton btnLogout1;
         private Panel panel4;
-        private MaterialSkin.Controls.MaterialDivider materialDivider3;
-        private Panel panel5;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel lblEpt2;
         private Panel panel7;
+        private PictureBox pictureBox7;
         private MaterialSkin.Controls.MaterialCard materialCard3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel11;
-        private MaterialSkin.Controls.MaterialLabel materialLabel12;
-        private MaterialSkin.Controls.MaterialLabel materialLabel13;
-        private MaterialSkin.Controls.MaterialCard materialCard4;
-        private DataGridView dataGridView1;
-        private MaterialSkin.Controls.MaterialDivider materialDivider11;
-        private MaterialSkin.Controls.MaterialDivider materialDivider12;
-        private MaterialSkin.Controls.MaterialDivider materialDivider4;
-        private Panel panel6;
-        private MaterialSkin.Controls.MaterialDivider materialDivider9;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private MaterialSkin.Controls.MaterialCard materialCard1;
-        private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineTextBox1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialDivider materialDivider10;
+        private PictureBox pictureBox6;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private Panel panel12;
+        private MaterialSkin.Controls.MaterialLabel materialLabel7;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox3;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private MaterialSkin.Controls.MaterialDivider materialDivider1;
-        private MaterialSkin.Controls.MaterialCard materialCard2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private MaterialSkin.Controls.MaterialLabel materialLabel7;
-        private Panel panel12;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox6;
-        private ImageList imageList1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel9;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialDivider materialDivider10;
+        private MaterialSkin.Controls.MaterialCard materialCard1;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox materialMultiLineTextBox1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialDivider materialDivider9;
+        private MaterialSkin.Controls.MaterialLabel materialLabel11;
+        private MaterialSkin.Controls.MaterialLabel materialLabel12;
+        private MaterialSkin.Controls.MaterialLabel materialLabel13;
+        private MaterialSkin.Controls.MaterialCard materialCard4;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private MaterialSkin.Controls.MaterialDivider materialDivider11;
+        private MaterialSkin.Controls.MaterialDivider materialDivider12;
+        private MaterialSkin.Controls.MaterialDivider materialDivider4;
+        private Panel panel6;
         private MaterialSkin.Controls.MaterialButton btnLogout2;
-        private MaterialSkin.Controls.MaterialButton btnLogout1;
+        private MaterialSkin.Controls.MaterialDivider materialDivider3;
+        private Panel panel5;
+        private PictureBox pictureBox2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel lblEpt2;
     }
 }
