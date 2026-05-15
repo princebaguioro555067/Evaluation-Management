@@ -68,17 +68,16 @@ namespace EvaluationInfrastructure.Repositories
         // ---------------------------------------------------------------
 
         public async Task SubmitAsync(int employeeId, int month, int year,
-            DateTime submissionDate, string comment)
+    DateTime submissionDate, string comment)
         {
-            await _semaphore.WaitAsync();
+            await _semaphore.WaitAsync().ConfigureAwait(false);
             try
             {
-                // Check if already submitted this month
                 var existing = await _context.EvaluationSubmissions
                     .FirstOrDefaultAsync(s => s.EmployeeId == employeeId
-                        && s.Month == month && s.Year == year);
+                        && s.Month == month && s.Year == year)
+                    .ConfigureAwait(false);
 
-                // Compute score based on the 28th deadline rule
                 decimal score = ScoreCalculator.Compute(submissionDate, month, year);
 
                 if (existing == null)
@@ -96,7 +95,6 @@ namespace EvaluationInfrastructure.Repositories
                 }
                 else
                 {
-                    // Allow resubmission if rejected
                     if (existing.Status == SubmissionStatus.Approved)
                         throw new InvalidOperationException(
                             "This month's evaluation has already been approved.");
@@ -110,7 +108,7 @@ namespace EvaluationInfrastructure.Repositories
                     existing.ReviewedByManagerId = null;
                 }
 
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync().ConfigureAwait(false);
             }
             finally
             {

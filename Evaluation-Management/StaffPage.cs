@@ -100,7 +100,7 @@ namespace Evaluation_Management
         // ---------------------------------------------------------------
         // SEND TO MANAGER button — materialButton4
         // ---------------------------------------------------------------
-        private void btnSendToManager_Click_1(object sender, EventArgs e)
+        private async void btnSendToManager_Click_1(object sender, EventArgs e)
         {
 
             if (_loggedInEmployee.Supervisor == null)
@@ -146,12 +146,13 @@ namespace Evaluation_Management
 
             try
             {
-                _submissionRepo.SubmitAsync(
+                // ← this is the only real change, .Wait() → await
+                await _submissionRepo.SubmitAsync(
                     _loggedInEmployee.Id,
                     submissionDate.Month,
                     submissionDate.Year,
                     submissionDate,
-                    comment).Wait();
+                    comment);
 
                 MessageBox.Show(
                     $"Evaluation submitted successfully!\n\nScore: {score:F0} — {level}",
