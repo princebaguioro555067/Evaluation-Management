@@ -11,6 +11,7 @@ namespace Evaluation_Management
         private readonly Employee _loggedInEmployee;
         private readonly EmployeeRepository _employeeRepo = new EmployeeRepository();
         private readonly EvaluationSubmissionRepository _repo = new EvaluationSubmissionRepository();
+        private List<PerformanceListItem> _allPerformanceItems = new();
 
         public ManagerPage(Employee employee)
         {
@@ -29,20 +30,146 @@ namespace Evaluation_Management
         }
 
         // ---------------------------------------------------------------
+        // PERFORMANCE LIST TAB — dataGridView2
+        // ---------------------------------------------------------------
+
+        // Model for the performance list rows
+        private class PerformanceListItem
+        {
+            public string EmployeeName { get; set; } = string.Empty;
+            public string Team { get; set; } = string.Empty;
+            public string SubmittedOn { get; set; } = string.Empty;
+            public string Score { get; set; } = string.Empty;
+            public string Status { get; set; } = string.Empty;
+        }
+
+        private void LoadPerformanceList()
+        {
+            var now = DateTime.Now;
+
+            // Set column headers
+            dgvTPL.Columns["dataGridViewTextBoxColumn1"].HeaderText = "Employee Name";
+            dgvTPL.Columns["dataGridViewTextBoxColumn2"].HeaderText = "Team";
+            dgvTPL.Columns["dataGridViewTextBoxColumn3"].HeaderText = "Submitted On";
+            dgvTPL.Columns["dataGridViewTextBoxColumn4"].HeaderText = "Score";
+            dgvTPL.Columns["dataGridViewTextBoxColumn5"].HeaderText = "Status";
+            dgvTPL.ReadOnly = true;
+            dgvTPL.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTPL.MultiSelect = false;
+            dgvTPL.AllowUserToAddRows = false;
+
+            // Get all staff under this manager
+            List<Employee> staffList;
+
+            if (_loggedInEmployee.Role == EmployeeRole.AAM)
+                staffList = _employeeRepo.GetByRole(EmployeeRole.Staff);
+            else
+                staffList = _employeeRepo.GetStaffUnderSupervisor(_loggedInEmployee.Id);
+
+            _allPerformanceItems.Clear();
+
+            foreach (var staff in staffList)
+            {
+                // Check if they submitted this month
+                var submission = _repo.GetForEmployeeAndPeriod(
+                    staff.Id, now.Month, now.Year);
+
+                _allPerformanceItems.Add(new PerformanceListItem
+                {
+                    EmployeeName = staff.Name,
+                    Team = $"Group {staff.GroupNumber}",
+                    SubmittedOn = submission != null
+                        ? submission.SubmissionDate.ToString("MMM dd, yyyy")
+                        : "Not Submitted",
+                    Score = submission != null
+                        ? $"{submission.Score:F0} — {submission.EvaluationLevel}"
+                        : "—",
+                    Status = submission != null
+                        ? submission.StatusDisplay
+                        : "Not Submitted"
+                });
+            }
+
+            PopulatePerformanceGrid(_allPerformanceItems);
+        }
+
+        private void PopulatePerformanceGrid(List<PerformanceListItem> items)
+        {
+            dgvTPL.Rows.Clear();
+
+            foreach (var item in items)
+            {
+                int rowIndex = dgvTPL.Rows.Add(
+                    item.EmployeeName,
+                    item.Team,
+                    item.SubmittedOn,
+                    item.Score,
+                    item.Status
+                );
+
+                // Color code rows by status
+                var row = dgvTPL.Rows[rowIndex];
+                row.DefaultCellStyle.ForeColor = item.Status switch
+                {
+                    "Approved" => Color.FromArgb(0, 150, 80),
+                    "Rejected" => Color.FromArgb(200, 30, 30),
+                    "Pending" => Color.FromArgb(30, 130, 200),
+                    "Not Submitted" => Color.FromArgb(150, 150, 150),
+                    _ => Color.FromArgb(64, 64, 64)
+                };
+            }
+
+            // Show summary count at the bottom
+            UpdatePerformanceSummary(items);
+        }
+
+        private void UpdatePerformanceSummary(List<PerformanceListItem> items)
+        {
+            int total = items.Count;
+            int submitted = items.Count(i => i.Status != "Not Submitted");
+            int notSubmitted = total - submitted;
+
+            // Update the team/period label with summary
+            lblTeamTPL.Text =
+                $"As of {DateTime.Now:MMMM yyyy}  |  " +
+                $"{submitted}/{total} Submitted  |  " +
+                $"{notSubmitted} Pending Submission";
+        }
+
+        private void txtSearchTPL_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtSearchTPL.Text.Trim().ToLower();
+
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                PopulatePerformanceGrid(_allPerformanceItems);
+                return;
+            }
+
+            var filtered = _allPerformanceItems
+                .Where(i => i.EmployeeName.ToLower().Contains(searchText))
+                .ToList();
+
+            PopulatePerformanceGrid(filtered);
+        }
+
+        // ---------------------------------------------------------------
         // Loads pending submissions for this manager's group
         // ---------------------------------------------------------------
         private void LoadTeamRequests()
         {
-            var now = DateTime.Now;
+            if (comboBox2.SelectedIndex < 0 || comboBox1.SelectedItem == null) return;
+
+            int month = comboBox2.SelectedIndex + 1;             // comboBox2 = Month
+            int year = int.Parse(comboBox1.SelectedItem.ToString()!);  // comboBox1 = Year
 
             List<EvaluationSubmission> submissions;
 
             if (_loggedInEmployee.Role == EmployeeRole.AAM)
-                submissions = _repo.GetAllForPeriod(now.Month, now.Year);
+                submissions = _repo.GetAllForPeriod(month, year);
             else
-                submissions = _repo.GetForGroup(_loggedInEmployee.GroupNumber, now.Month, now.Year);
+                submissions = _repo.GetForGroup(_loggedInEmployee.GroupNumber, month, year);
 
-            // Build a display list for the DataGridView
             var displayList = submissions
                 .Where(s => s.Status == SubmissionStatus.Pending)
                 .Select(s => new
@@ -61,7 +188,6 @@ namespace Evaluation_Management
 
             dgvApprovals.DataSource = displayList;
 
-            // Hide columns not needed in the grid
             if (dgvApprovals.Columns["Id"] != null)
                 dgvApprovals.Columns["Id"].Visible = false;
             if (dgvApprovals.Columns["Comment"] != null)
@@ -75,21 +201,52 @@ namespace Evaluation_Management
                 ClearDetails();
             }
         }
-
-        private void LoadManagerInfo()
+       private void LoadManagerInfo()
         {
+            // Performance List tab
+            lblManagerName.Text = _loggedInEmployee.Name;
+
+            // Team Evaluation tab
             lblEpt.Text = "Employee Performance Tracker";
             lblEpt2.Text = "Employee Performance Tracker";
             lblEpt3.Text = "Employee Performance Tracker";
-            lblManagerName.Text = _loggedInEmployee.Name;
             lblManagerName2.Text = _loggedInEmployee.Name;
 
+            // Team label on evaluation tab
+            materialLabel23.Text = _loggedInEmployee.Role == EmployeeRole.AAM
+                ? "All Teams"
+                : $"Group {_loggedInEmployee.GroupNumber}";
+
+            // comboBox2 = Month (it's in the Month position in the UI)
+            comboBox2.Items.Clear();
+            for (int m = 1; m <= 12; m++)
+                comboBox2.Items.Add(new DateTime(2000, m, 1).ToString("MMMM"));
+            comboBox2.SelectedIndex = DateTime.Now.Month - 1;
+
+            // comboBox1 = Year (it's in the Year position in the UI)
+            comboBox1.Items.Clear();
+            int currentYear = DateTime.Now.Year;
+            for (int y = currentYear - 2; y <= currentYear + 1; y++)
+                comboBox1.Items.Add(y.ToString());
+            comboBox1.SelectedItem = currentYear.ToString();
+
+            // Wire up combo box events to reload grid when month/year changes
+            comboBox1.SelectedIndexChanged -= ComboBox_SelectedIndexChanged;
+            comboBox2.SelectedIndexChanged -= ComboBox_SelectedIndexChanged;
+            comboBox1.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
+            comboBox2.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
+
+            // New Manager tab
             cmbTeamCNM.Items.Clear();
             for (int i = 1; i <= 5; i++)
                 cmbTeamCNM.Items.Add($"Team {i}");
-
             if (cmbTeamCNM.Items.Count > 0)
                 cmbTeamCNM.SelectedIndex = 0;
+        }
+
+        private void ComboBox_SelectedIndexChanged(object? sender, EventArgs e)
+        {
+            LoadTeamRequests();
         }
 
         private void LoadManagerStats()
@@ -423,7 +580,7 @@ namespace Evaluation_Management
             lblEvaluationResult.ForeColor = myCrimson;
             lblEpt.ForeColor = myCrimson;
             materialLabel9.ForeColor = Color.Gray;
-            materialLabel8.ForeColor = Color.Gray;
+            lblTeamTPL.ForeColor = Color.Gray;
             lblManagerName.ForeColor = Color.Gray;
             materialLabel15.ForeColor = Color.Gray;
             materialLabel16.ForeColor = Color.Gray;
@@ -442,5 +599,7 @@ namespace Evaluation_Management
             materialLabel49.ForeColor = myDarkGray;
             materialLabel50.ForeColor = myDarkGray;
         }
+
+     
     }
 }

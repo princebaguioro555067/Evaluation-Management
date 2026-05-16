@@ -37,15 +37,15 @@
             btnLogout1 = new MaterialSkin.Controls.MaterialButton();
             panel2 = new Panel();
             materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
-            materialTextBox3 = new MaterialSkin.Controls.MaterialTextBox();
-            materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
+            txtSearchTPL = new MaterialSkin.Controls.MaterialTextBox();
+            lblTeamTPL = new MaterialSkin.Controls.MaterialLabel();
             lblManagerName = new MaterialSkin.Controls.MaterialLabel();
             pictureBox3 = new PictureBox();
             materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel22 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
             materialCard8 = new MaterialSkin.Controls.MaterialCard();
-            dataGridView2 = new DataGridView();
+            dgvTPL = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
@@ -158,7 +158,7 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             materialCard8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTPL).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tpEvaluation.SuspendLayout();
@@ -267,8 +267,8 @@
             // 
             panel2.BackColor = Color.White;
             panel2.Controls.Add(materialLabel17);
-            panel2.Controls.Add(materialTextBox3);
-            panel2.Controls.Add(materialLabel8);
+            panel2.Controls.Add(txtSearchTPL);
+            panel2.Controls.Add(lblTeamTPL);
             panel2.Controls.Add(lblManagerName);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(materialLabel15);
@@ -296,36 +296,37 @@
             materialLabel17.Text = "Search:";
             materialLabel17.UseMnemonic = false;
             // 
-            // materialTextBox3
+            // txtSearchTPL
             // 
-            materialTextBox3.AnimateReadOnly = false;
-            materialTextBox3.BorderStyle = BorderStyle.None;
-            materialTextBox3.Depth = 0;
-            materialTextBox3.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox3.LeadingIcon = null;
-            materialTextBox3.Location = new Point(762, 30);
-            materialTextBox3.MaxLength = 50;
-            materialTextBox3.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox3.Multiline = false;
-            materialTextBox3.Name = "materialTextBox3";
-            materialTextBox3.Size = new Size(299, 50);
-            materialTextBox3.TabIndex = 48;
-            materialTextBox3.Text = "";
-            materialTextBox3.TrailingIcon = null;
+            txtSearchTPL.AnimateReadOnly = false;
+            txtSearchTPL.BorderStyle = BorderStyle.None;
+            txtSearchTPL.Depth = 0;
+            txtSearchTPL.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtSearchTPL.LeadingIcon = null;
+            txtSearchTPL.Location = new Point(762, 30);
+            txtSearchTPL.MaxLength = 50;
+            txtSearchTPL.MouseState = MaterialSkin.MouseState.OUT;
+            txtSearchTPL.Multiline = false;
+            txtSearchTPL.Name = "txtSearchTPL";
+            txtSearchTPL.Size = new Size(299, 50);
+            txtSearchTPL.TabIndex = 48;
+            txtSearchTPL.Text = "";
+            txtSearchTPL.TrailingIcon = null;
+            txtSearchTPL.TextChanged += txtSearchTPL_TextChanged;
             // 
-            // materialLabel8
+            // lblTeamTPL
             // 
-            materialLabel8.Depth = 0;
-            materialLabel8.FlatStyle = FlatStyle.System;
-            materialLabel8.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel8.ForeColor = Color.Gray;
-            materialLabel8.Location = new Point(432, 54);
-            materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel8.Name = "materialLabel8";
-            materialLabel8.Size = new Size(256, 19);
-            materialLabel8.TabIndex = 45;
-            materialLabel8.Text = "Name of Team";
-            materialLabel8.UseMnemonic = false;
+            lblTeamTPL.Depth = 0;
+            lblTeamTPL.FlatStyle = FlatStyle.System;
+            lblTeamTPL.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lblTeamTPL.ForeColor = Color.Gray;
+            lblTeamTPL.Location = new Point(432, 54);
+            lblTeamTPL.MouseState = MaterialSkin.MouseState.HOVER;
+            lblTeamTPL.Name = "lblTeamTPL";
+            lblTeamTPL.Size = new Size(256, 19);
+            lblTeamTPL.TabIndex = 45;
+            lblTeamTPL.Text = "Name of Team";
+            lblTeamTPL.UseMnemonic = false;
             // 
             // lblManagerName
             // 
@@ -399,7 +400,7 @@
             // materialCard8
             // 
             materialCard8.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard8.Controls.Add(dataGridView2);
+            materialCard8.Controls.Add(dgvTPL);
             materialCard8.Controls.Add(materialDivider6);
             materialCard8.Controls.Add(materialDivider7);
             materialCard8.Depth = 0;
@@ -412,16 +413,16 @@
             materialCard8.Size = new Size(1026, 462);
             materialCard8.TabIndex = 0;
             // 
-            // dataGridView2
+            // dgvTPL
             // 
-            dataGridView2.BackgroundColor = Color.White;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5 });
-            dataGridView2.Dock = DockStyle.Fill;
-            dataGridView2.Location = new Point(14, 17);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(998, 428);
-            dataGridView2.TabIndex = 10;
+            dgvTPL.BackgroundColor = Color.White;
+            dgvTPL.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTPL.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5 });
+            dgvTPL.Dock = DockStyle.Fill;
+            dgvTPL.Location = new Point(14, 17);
+            dgvTPL.Name = "dgvTPL";
+            dgvTPL.Size = new Size(998, 428);
+            dgvTPL.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1914,7 +1915,7 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             materialCard8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTPL).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -1977,7 +1978,7 @@
         private PictureBox pictureBox3;
         private MaterialSkin.Controls.MaterialLabel materialLabel22;
         private MaterialSkin.Controls.MaterialCard materialCard8;
-        private DataGridView dataGridView2;
+        private DataGridView dgvTPL;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -2010,8 +2011,8 @@
         private MaterialSkin.Controls.MaterialDivider materialDivider9;
         private MaterialSkin.Controls.MaterialLabel materialLabel11;
         private MaterialSkin.Controls.MaterialLabel materialLabel17;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel8;
+        private MaterialSkin.Controls.MaterialTextBox txtSearchTPL;
+        private MaterialSkin.Controls.MaterialLabel lblTeamTPL;
         private MaterialSkin.Controls.MaterialLabel lblManagerName;
         private MaterialSkin.Controls.MaterialLabel materialLabel15;
         private MaterialSkin.Controls.MaterialLabel materialLabel16;
