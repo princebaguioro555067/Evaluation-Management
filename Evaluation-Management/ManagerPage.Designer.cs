@@ -36,6 +36,8 @@
             panel8 = new Panel();
             btnLogout1 = new MaterialSkin.Controls.MaterialButton();
             panel2 = new Panel();
+            lblSummaryTPL = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
             txtSearchTPL = new MaterialSkin.Controls.MaterialTextBox();
             lblTeamTPL = new MaterialSkin.Controls.MaterialLabel();
@@ -266,6 +268,8 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(lblSummaryTPL);
+            panel2.Controls.Add(materialLabel2);
             panel2.Controls.Add(materialLabel17);
             panel2.Controls.Add(txtSearchTPL);
             panel2.Controls.Add(lblTeamTPL);
@@ -282,13 +286,42 @@
             panel2.Size = new Size(1199, 617);
             panel2.TabIndex = 14;
             // 
+            // lblSummaryTPL
+            // 
+            lblSummaryTPL.Depth = 0;
+            lblSummaryTPL.FlatStyle = FlatStyle.System;
+            lblSummaryTPL.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lblSummaryTPL.ForeColor = Color.Gray;
+            lblSummaryTPL.Location = new Point(537, 54);
+            lblSummaryTPL.MouseState = MaterialSkin.MouseState.HOVER;
+            lblSummaryTPL.Name = "lblSummaryTPL";
+            lblSummaryTPL.Size = new Size(124, 19);
+            lblSummaryTPL.TabIndex = 51;
+            lblSummaryTPL.Text = "Summary";
+            lblSummaryTPL.UseMnemonic = false;
+            // 
+            // materialLabel2
+            // 
+            materialLabel2.AutoSize = true;
+            materialLabel2.Depth = 0;
+            materialLabel2.FlatStyle = FlatStyle.System;
+            materialLabel2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel2.ForeColor = Color.Gray;
+            materialLabel2.Location = new Point(457, 54);
+            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel2.Name = "materialLabel2";
+            materialLabel2.Size = new Size(74, 19);
+            materialLabel2.TabIndex = 50;
+            materialLabel2.Text = "Summary:";
+            materialLabel2.UseMnemonic = false;
+            // 
             // materialLabel17
             // 
             materialLabel17.Depth = 0;
             materialLabel17.FlatStyle = FlatStyle.System;
             materialLabel17.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             materialLabel17.ForeColor = Color.Gray;
-            materialLabel17.Location = new Point(705, 54);
+            materialLabel17.Location = new Point(752, 54);
             materialLabel17.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel17.Name = "materialLabel17";
             materialLabel17.Size = new Size(51, 19);
@@ -303,12 +336,12 @@
             txtSearchTPL.Depth = 0;
             txtSearchTPL.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtSearchTPL.LeadingIcon = null;
-            txtSearchTPL.Location = new Point(762, 30);
+            txtSearchTPL.Location = new Point(809, 30);
             txtSearchTPL.MaxLength = 50;
             txtSearchTPL.MouseState = MaterialSkin.MouseState.OUT;
             txtSearchTPL.Multiline = false;
             txtSearchTPL.Name = "txtSearchTPL";
-            txtSearchTPL.Size = new Size(299, 50);
+            txtSearchTPL.Size = new Size(252, 50);
             txtSearchTPL.TabIndex = 48;
             txtSearchTPL.Text = "";
             txtSearchTPL.TrailingIcon = null;
@@ -320,10 +353,10 @@
             lblTeamTPL.FlatStyle = FlatStyle.System;
             lblTeamTPL.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             lblTeamTPL.ForeColor = Color.Gray;
-            lblTeamTPL.Location = new Point(432, 54);
+            lblTeamTPL.Location = new Point(327, 54);
             lblTeamTPL.MouseState = MaterialSkin.MouseState.HOVER;
             lblTeamTPL.Name = "lblTeamTPL";
-            lblTeamTPL.Size = new Size(256, 19);
+            lblTeamTPL.Size = new Size(124, 19);
             lblTeamTPL.TabIndex = 45;
             lblTeamTPL.Text = "Name of Team";
             lblTeamTPL.UseMnemonic = false;
@@ -337,7 +370,7 @@
             lblManagerName.Location = new Point(109, 54);
             lblManagerName.MouseState = MaterialSkin.MouseState.HOVER;
             lblManagerName.Name = "lblManagerName";
-            lblManagerName.Size = new Size(238, 19);
+            lblManagerName.Size = new Size(160, 19);
             lblManagerName.TabIndex = 47;
             lblManagerName.Text = "Name of Manager";
             lblManagerName.UseMnemonic = false;
@@ -389,7 +422,7 @@
             materialLabel16.FlatStyle = FlatStyle.System;
             materialLabel16.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
             materialLabel16.ForeColor = Color.Gray;
-            materialLabel16.Location = new Point(380, 54);
+            materialLabel16.Location = new Point(275, 54);
             materialLabel16.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel16.Name = "materialLabel16";
             materialLabel16.Size = new Size(46, 19);
@@ -2006,7 +2039,7 @@
         private MaterialSkin.Controls.MaterialLabel lblEvaluationlvl;
         private PictureBox pictureBox6;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialLabel lblSummaryTPL;
         private MaterialSkin.Controls.MaterialDivider materialDivider10;
         private MaterialSkin.Controls.MaterialDivider materialDivider9;
         private MaterialSkin.Controls.MaterialLabel materialLabel11;
@@ -2082,5 +2115,6 @@
         private MaterialSkin.Controls.MaterialButton btnLogout2;
         private MaterialSkin.Controls.MaterialButton btnLogout1;
         private MaterialSkin.Controls.MaterialButton btnLogout3;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
     }
 }

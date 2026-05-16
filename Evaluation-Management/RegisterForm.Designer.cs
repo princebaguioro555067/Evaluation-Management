@@ -32,6 +32,12 @@
             panel1 = new Panel();
             panel7 = new Panel();
             panel6 = new Panel();
+            panel8 = new Panel();
+            label7 = new Label();
+            textBox2 = new TextBox();
+            panel2 = new Panel();
+            label6 = new Label();
+            txtLastNameRF = new TextBox();
             lblRegisterClose = new Label();
             linkLabel1 = new LinkLabel();
             label5 = new Label();
@@ -48,21 +54,15 @@
             txtPasswordRegister = new TextBox();
             btnSignUp = new Button();
             pictureBox1 = new PictureBox();
-            panel2 = new Panel();
-            label6 = new Label();
-            textBox1 = new TextBox();
-            panel8 = new Panel();
-            label7 = new Label();
-            textBox2 = new TextBox();
             panel1.SuspendLayout();
             panel7.SuspendLayout();
             panel6.SuspendLayout();
+            panel8.SuspendLayout();
+            panel2.SuspendLayout();
             panel5.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
-            panel8.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -105,6 +105,72 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(405, 435);
             panel6.TabIndex = 13;
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.LavenderBlush;
+            panel8.BorderStyle = BorderStyle.FixedSingle;
+            panel8.Controls.Add(label7);
+            panel8.Controls.Add(textBox2);
+            panel8.Location = new Point(53, 139);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(299, 42);
+            panel8.TabIndex = 14;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.LavenderBlush;
+            label7.Dock = DockStyle.Top;
+            label7.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = SystemColors.WindowFrame;
+            label7.Location = new Point(0, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(297, 17);
+            label7.TabIndex = 2;
+            label7.Text = "First Name:";
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.LavenderBlush;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.ForeColor = SystemColors.ControlText;
+            textBox2.Location = new Point(8, 20);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(280, 16);
+            textBox2.TabIndex = 12;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.LavenderBlush;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(label6);
+            panel2.Controls.Add(txtLastNameRF);
+            panel2.Location = new Point(53, 189);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(299, 42);
+            panel2.TabIndex = 14;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.LavenderBlush;
+            label6.Dock = DockStyle.Top;
+            label6.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.WindowFrame;
+            label6.Location = new Point(0, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(297, 17);
+            label6.TabIndex = 2;
+            label6.Text = "Last Name:";
+            // 
+            // txtLastNameRF
+            // 
+            txtLastNameRF.BackColor = Color.LavenderBlush;
+            txtLastNameRF.BorderStyle = BorderStyle.None;
+            txtLastNameRF.ForeColor = SystemColors.ControlText;
+            txtLastNameRF.Location = new Point(8, 20);
+            txtLastNameRF.Name = "txtLastNameRF";
+            txtLastNameRF.Size = new Size(280, 16);
+            txtLastNameRF.TabIndex = 12;
             // 
             // lblRegisterClose
             // 
@@ -290,72 +356,6 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.LavenderBlush;
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(label6);
-            panel2.Controls.Add(textBox1);
-            panel2.Location = new Point(53, 189);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(299, 42);
-            panel2.TabIndex = 14;
-            // 
-            // label6
-            // 
-            label6.BackColor = Color.LavenderBlush;
-            label6.Dock = DockStyle.Top;
-            label6.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = SystemColors.WindowFrame;
-            label6.Location = new Point(0, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(297, 17);
-            label6.TabIndex = 2;
-            label6.Text = "Last Name:";
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.LavenderBlush;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.ForeColor = SystemColors.ControlText;
-            textBox1.Location = new Point(8, 20);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(280, 16);
-            textBox1.TabIndex = 12;
-            // 
-            // panel8
-            // 
-            panel8.BackColor = Color.LavenderBlush;
-            panel8.BorderStyle = BorderStyle.FixedSingle;
-            panel8.Controls.Add(label7);
-            panel8.Controls.Add(textBox2);
-            panel8.Location = new Point(53, 139);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(299, 42);
-            panel8.TabIndex = 14;
-            // 
-            // label7
-            // 
-            label7.BackColor = Color.LavenderBlush;
-            label7.Dock = DockStyle.Top;
-            label7.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = SystemColors.WindowFrame;
-            label7.Location = new Point(0, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(297, 17);
-            label7.TabIndex = 2;
-            label7.Text = "First Name:";
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.LavenderBlush;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.ForeColor = SystemColors.ControlText;
-            textBox2.Location = new Point(8, 20);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(280, 16);
-            textBox2.TabIndex = 12;
-            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -371,16 +371,16 @@
             panel7.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             panel5.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -409,6 +409,6 @@
         private TextBox textBox2;
         private Panel panel2;
         private Label label6;
-        private TextBox textBox1;
+        private TextBox txtLastNameRF;
     }
 }

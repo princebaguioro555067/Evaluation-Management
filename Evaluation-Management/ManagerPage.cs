@@ -27,13 +27,13 @@ namespace Evaluation_Management
             LoadManagerInfo();
             LoadManagerStats();
             LoadTeamRequests();
+            LoadPerformanceList();
         }
 
         // ---------------------------------------------------------------
-        // PERFORMANCE LIST TAB — dataGridView2
+        // PERFORMANCE LIST TAB
         // ---------------------------------------------------------------
 
-        // Model for the performance list rows
         private class PerformanceListItem
         {
             public string EmployeeName { get; set; } = string.Empty;
@@ -47,7 +47,6 @@ namespace Evaluation_Management
         {
             var now = DateTime.Now;
 
-            // Set column headers
             dgvTPL.Columns["dataGridViewTextBoxColumn1"].HeaderText = "Employee Name";
             dgvTPL.Columns["dataGridViewTextBoxColumn2"].HeaderText = "Team";
             dgvTPL.Columns["dataGridViewTextBoxColumn3"].HeaderText = "Submitted On";
@@ -58,7 +57,6 @@ namespace Evaluation_Management
             dgvTPL.MultiSelect = false;
             dgvTPL.AllowUserToAddRows = false;
 
-            // Get all staff under this manager
             List<Employee> staffList;
 
             if (_loggedInEmployee.Role == EmployeeRole.AAM)
@@ -70,7 +68,6 @@ namespace Evaluation_Management
 
             foreach (var staff in staffList)
             {
-                // Check if they submitted this month
                 var submission = _repo.GetForEmployeeAndPeriod(
                     staff.Id, now.Month, now.Year);
 
@@ -107,7 +104,6 @@ namespace Evaluation_Management
                     item.Status
                 );
 
-                // Color code rows by status
                 var row = dgvTPL.Rows[rowIndex];
                 row.DefaultCellStyle.ForeColor = item.Status switch
                 {
@@ -119,7 +115,6 @@ namespace Evaluation_Management
                 };
             }
 
-            // Show summary count at the bottom
             UpdatePerformanceSummary(items);
         }
 
@@ -129,8 +124,7 @@ namespace Evaluation_Management
             int submitted = items.Count(i => i.Status != "Not Submitted");
             int notSubmitted = total - submitted;
 
-            // Update the team/period label with summary
-            lblTeamTPL.Text =
+            lblSummaryTPL.Text =
                 $"As of {DateTime.Now:MMMM yyyy}  |  " +
                 $"{submitted}/{total} Submitted  |  " +
                 $"{notSubmitted} Pending Submission";
@@ -147,21 +141,25 @@ namespace Evaluation_Management
             }
 
             var filtered = _allPerformanceItems
-                .Where(i => i.EmployeeName.ToLower().Contains(searchText))
+                .Where(i =>
+                    i.EmployeeName.ToLower().Contains(searchText) ||
+                    i.Team.ToLower().Contains(searchText) ||
+                    i.Status.ToLower().Contains(searchText))
                 .ToList();
 
             PopulatePerformanceGrid(filtered);
         }
 
         // ---------------------------------------------------------------
-        // Loads pending submissions for this manager's group
+        // TEAM EVALUATION TAB
         // ---------------------------------------------------------------
+
         private void LoadTeamRequests()
         {
             if (comboBox2.SelectedIndex < 0 || comboBox1.SelectedItem == null) return;
 
-            int month = comboBox2.SelectedIndex + 1;             // comboBox2 = Month
-            int year = int.Parse(comboBox1.SelectedItem.ToString()!);  // comboBox1 = Year
+            int month = comboBox2.SelectedIndex + 1;
+            int year = int.Parse(comboBox1.SelectedItem.ToString()!);
 
             List<EvaluationSubmission> submissions;
 
@@ -201,42 +199,39 @@ namespace Evaluation_Management
                 ClearDetails();
             }
         }
-       private void LoadManagerInfo()
-        {
-            // Performance List tab
-            lblManagerName.Text = _loggedInEmployee.Name;
 
-            // Team Evaluation tab
+        private void LoadManagerInfo()
+        {
+            lblManagerName.Text = _loggedInEmployee.Name;
+            lblTeamTPL.Text = _loggedInEmployee.Role == EmployeeRole.AAM
+                ? "All Teams"
+                : $"Group {_loggedInEmployee.GroupNumber}";
+
             lblEpt.Text = "Employee Performance Tracker";
             lblEpt2.Text = "Employee Performance Tracker";
             lblEpt3.Text = "Employee Performance Tracker";
             lblManagerName2.Text = _loggedInEmployee.Name;
 
-            // Team label on evaluation tab
             materialLabel23.Text = _loggedInEmployee.Role == EmployeeRole.AAM
                 ? "All Teams"
                 : $"Group {_loggedInEmployee.GroupNumber}";
 
-            // comboBox2 = Month (it's in the Month position in the UI)
             comboBox2.Items.Clear();
             for (int m = 1; m <= 12; m++)
                 comboBox2.Items.Add(new DateTime(2000, m, 1).ToString("MMMM"));
             comboBox2.SelectedIndex = DateTime.Now.Month - 1;
 
-            // comboBox1 = Year (it's in the Year position in the UI)
             comboBox1.Items.Clear();
             int currentYear = DateTime.Now.Year;
             for (int y = currentYear - 2; y <= currentYear + 1; y++)
                 comboBox1.Items.Add(y.ToString());
             comboBox1.SelectedItem = currentYear.ToString();
 
-            // Wire up combo box events to reload grid when month/year changes
             comboBox1.SelectedIndexChanged -= ComboBox_SelectedIndexChanged;
             comboBox2.SelectedIndexChanged -= ComboBox_SelectedIndexChanged;
             comboBox1.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
             comboBox2.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
 
-            // New Manager tab
             cmbTeamCNM.Items.Clear();
             for (int i = 1; i <= 5; i++)
                 cmbTeamCNM.Items.Add($"Team {i}");
@@ -271,6 +266,7 @@ namespace Evaluation_Management
         // ---------------------------------------------------------------
         // APPROVE button
         // ---------------------------------------------------------------
+
         private async void btnApprovebtn_Click(object sender, EventArgs e)
         {
             if (dgvApprovals.SelectedRows.Count == 0) return;
@@ -278,7 +274,7 @@ namespace Evaluation_Management
             dynamic selected = dgvApprovals.SelectedRows[0].DataBoundItem;
             int submissionId = selected.Id;
 
-            string? managerComment = lblEmployeeComment.Text.Trim();
+            string? managerComment = null; // manager view-only, no feedback input
 
             try
             {
@@ -288,6 +284,7 @@ namespace Evaluation_Management
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LoadTeamRequests();
+                LoadPerformanceList();
                 ClearDetails();
             }
             catch (Exception ex)
@@ -300,6 +297,7 @@ namespace Evaluation_Management
         // ---------------------------------------------------------------
         // REJECT button
         // ---------------------------------------------------------------
+
         private async void btnRejectbtn_Click(object sender, EventArgs e)
         {
             if (dgvApprovals.SelectedRows.Count == 0) return;
@@ -307,7 +305,7 @@ namespace Evaluation_Management
             dynamic selected = dgvApprovals.SelectedRows[0].DataBoundItem;
             int submissionId = selected.Id;
 
-            string? managerComment = lblEmployeeComment.Text.Trim();
+            string? managerComment = null; // manager view-only, no feedback input
 
             try
             {
@@ -317,6 +315,7 @@ namespace Evaluation_Management
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LoadTeamRequests();
+                LoadPerformanceList();
                 ClearDetails();
             }
             catch (Exception ex)
@@ -327,8 +326,9 @@ namespace Evaluation_Management
         }
 
         // ---------------------------------------------------------------
-        // DataGridView row selected — show submission details on right
+        // SELECTION CHANGED
         // ---------------------------------------------------------------
+
         private void dgvApprovals_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvApprovals.SelectedRows.Count == 0)
@@ -351,7 +351,6 @@ namespace Evaluation_Management
                 lblDateOfSubmission.Text = selected.Date.ToShortDateString();
                 lblEmployeeComment.Text = selected.Comment ?? "No comment provided.";
 
-                // Show score and evaluation level
                 lblEPercentage.Text = $"{selected.Score}%";
                 lblEvaluationResult.Text = selected.Level;
                 lblEvaluationlvl.Text = selected.Timeliness;
@@ -381,6 +380,7 @@ namespace Evaluation_Management
         // ---------------------------------------------------------------
         // CREATE NEW MANAGER tab
         // ---------------------------------------------------------------
+
         private void btnCreateAccountCNM_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtUsernameMD.Text))
@@ -434,7 +434,7 @@ namespace Evaluation_Management
                 var newManager = new Employee
                 {
                     Username = txtUsernameMD.Text.Trim(),
-                    Password = txtPasswordCNM.Text,   // hashed inside repo.Add()
+                    Password = txtPasswordCNM.Text,
                     Name = $"{txtFirstNameMD.Text.Trim()} {txtLastNameMD.Text.Trim()}",
                     Designation = "Payable Supervisor",
                     Role = EmployeeRole.Supervisor,
@@ -443,7 +443,6 @@ namespace Evaluation_Management
 
                 _employeeRepo.Add(newManager);
 
-                // Update the Final Details summary labels
                 lblUsernameCNM.Text = newManager.Username;
                 lblFirstNameCNM.Text = txtFirstNameMD.Text.Trim();
                 lblLastNameCNM.Text = txtLastNameMD.Text.Trim();
@@ -489,6 +488,7 @@ namespace Evaluation_Management
         // ---------------------------------------------------------------
         // LOGOUT buttons
         // ---------------------------------------------------------------
+
         private void btnLogout1_Click(object sender, EventArgs e)
         {
             new Login_Form().Show();
@@ -506,6 +506,10 @@ namespace Evaluation_Management
             new Login_Form().Show();
             this.Hide();
         }
+
+        // ---------------------------------------------------------------
+        // THEME / STYLING
+        // ---------------------------------------------------------------
 
         private void Theme()
         {
@@ -581,6 +585,7 @@ namespace Evaluation_Management
             lblEpt.ForeColor = myCrimson;
             materialLabel9.ForeColor = Color.Gray;
             lblTeamTPL.ForeColor = Color.Gray;
+            lblSummaryTPL.ForeColor = Color.Gray;
             lblManagerName.ForeColor = Color.Gray;
             materialLabel15.ForeColor = Color.Gray;
             materialLabel16.ForeColor = Color.Gray;
@@ -599,7 +604,5 @@ namespace Evaluation_Management
             materialLabel49.ForeColor = myDarkGray;
             materialLabel50.ForeColor = myDarkGray;
         }
-
-     
     }
 }
