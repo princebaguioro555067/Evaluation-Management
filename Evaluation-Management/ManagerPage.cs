@@ -12,6 +12,7 @@ namespace Evaluation_Management
         private readonly EmployeeRepository _employeeRepo = new EmployeeRepository();
         private readonly EvaluationSubmissionRepository _repo = new EvaluationSubmissionRepository();
         private List<PerformanceListItem> _allPerformanceItems = new();
+        private List<EvaluationSubmission> _allPendingSubmissions = new();
 
         public ManagerPage(Employee employee)
         {
@@ -24,6 +25,7 @@ namespace Evaluation_Management
 
         private void ManagerPage_Load(object sender, EventArgs e)
         {
+            btnReject.Click += btnRejectbtn_Click;
             LoadManagerInfo();
             LoadManagerStats();
             LoadTeamRequests();
@@ -45,7 +47,10 @@ namespace Evaluation_Management
 
         private void LoadPerformanceList()
         {
-            var now = DateTime.Now;
+            if (cmbMonthTPL.SelectedIndex < 0 || cmbYearTPL.SelectedItem == null) return;
+
+            int month = cmbMonthTPL.SelectedIndex + 1;
+            int year = int.Parse(cmbYearTPL.SelectedItem.ToString()!);
 
             dgvTPL.Columns["dataGridViewTextBoxColumn1"].HeaderText = "Employee Name";
             dgvTPL.Columns["dataGridViewTextBoxColumn2"].HeaderText = "Team";
@@ -68,8 +73,7 @@ namespace Evaluation_Management
 
             foreach (var staff in staffList)
             {
-                var submission = _repo.GetForEmployeeAndPeriod(
-                    staff.Id, now.Month, now.Year);
+                var submission = _repo.GetForEmployeeAndPeriod(staff.Id, month, year);
 
                 _allPerformanceItems.Add(new PerformanceListItem
                 {
@@ -114,8 +118,6 @@ namespace Evaluation_Management
                     _ => Color.FromArgb(64, 64, 64)
                 };
             }
-
-            UpdatePerformanceSummary(items);
         }
 
         private void UpdatePerformanceSummary(List<PerformanceListItem> items)
@@ -123,11 +125,6 @@ namespace Evaluation_Management
             int total = items.Count;
             int submitted = items.Count(i => i.Status != "Not Submitted");
             int notSubmitted = total - submitted;
-
-            lblSummaryTPL.Text =
-                $"As of {DateTime.Now:MMMM yyyy}  |  " +
-                $"{submitted}/{total} Submitted  |  " +
-                $"{notSubmitted} Pending Submission";
         }
 
         private void txtSearchTPL_TextChanged(object sender, EventArgs e)
@@ -156,10 +153,10 @@ namespace Evaluation_Management
 
         private void LoadTeamRequests()
         {
-            if (comboBox2.SelectedIndex < 0 || comboBox1.SelectedItem == null) return;
+            if (cmbMonthTPE.SelectedIndex < 0 || cmbYearTPE.SelectedItem == null) return;
 
-            int month = comboBox2.SelectedIndex + 1;
-            int year = int.Parse(comboBox1.SelectedItem.ToString()!);
+            int month = cmbMonthTPE.SelectedIndex + 1;
+            int year = int.Parse(cmbYearTPE.SelectedItem.ToString()!);
 
             List<EvaluationSubmission> submissions;
 
@@ -168,21 +165,27 @@ namespace Evaluation_Management
             else
                 submissions = _repo.GetForGroup(_loggedInEmployee.GroupNumber, month, year);
 
-            var displayList = submissions
+            _allPendingSubmissions = submissions
                 .Where(s => s.Status == SubmissionStatus.Pending)
-                .Select(s => new
-                {
-                    s.Id,
-                    StaffName = s.Employee?.Name ?? "Unknown",
-                    Date = s.SubmissionDate,
-                    Period = s.PeriodDisplay,
-                    Score = $"{s.Score:F0}",
-                    Level = s.EvaluationLevel,
-                    Timeliness = s.TimelinessDisplay,
-                    s.Comment,
-                    s.Status
-                })
                 .ToList();
+
+            PopulateApprovalsGrid(_allPendingSubmissions);
+        }
+
+        private void PopulateApprovalsGrid(List<EvaluationSubmission> items)
+        {
+            var displayList = items.Select(s => new
+            {
+                s.Id,
+                StaffName = s.Employee?.Name ?? "Unknown",
+                Date = s.SubmissionDate,
+                Period = s.PeriodDisplay,
+                Score = $"{s.Score:F0}",
+                Level = s.EvaluationLevel,
+                Timeliness = s.TimelinessDisplay,
+                s.Comment,
+                s.Status
+            }).ToList();
 
             dgvApprovals.DataSource = displayList;
 
@@ -192,12 +195,11 @@ namespace Evaluation_Management
                 dgvApprovals.Columns["Comment"].Visible = false;
             if (dgvApprovals.Columns["Status"] != null)
                 dgvApprovals.Columns["Status"].Visible = false;
+            if (dgvApprovals.Columns["StaffName"] != null)
+                dgvApprovals.Columns["StaffName"].HeaderText = "Employee Name";
 
             if (displayList.Count == 0)
-            {
-                dgvApprovals.DataSource = null;
                 ClearDetails();
-            }
         }
 
         private void LoadManagerInfo()
@@ -216,32 +218,61 @@ namespace Evaluation_Management
                 ? "All Teams"
                 : $"Group {_loggedInEmployee.GroupNumber}";
 
-            comboBox2.Items.Clear();
+            // TPL comboboxes
+            cmbMonthTPL.Items.Clear();
             for (int m = 1; m <= 12; m++)
-                comboBox2.Items.Add(new DateTime(2000, m, 1).ToString("MMMM"));
-            comboBox2.SelectedIndex = DateTime.Now.Month - 1;
+                cmbMonthTPL.Items.Add(new DateTime(2000, m, 1).ToString("MMMM"));
+            cmbMonthTPL.SelectedIndex = DateTime.Now.Month - 1;
 
-            comboBox1.Items.Clear();
+            cmbYearTPL.Items.Clear();
             int currentYear = DateTime.Now.Year;
             for (int y = currentYear - 2; y <= currentYear + 1; y++)
-                comboBox1.Items.Add(y.ToString());
-            comboBox1.SelectedItem = currentYear.ToString();
+                cmbYearTPL.Items.Add(y.ToString());
+            cmbYearTPL.SelectedItem = currentYear.ToString();
 
-            comboBox1.SelectedIndexChanged -= ComboBox_SelectedIndexChanged;
-            comboBox2.SelectedIndexChanged -= ComboBox_SelectedIndexChanged;
-            comboBox1.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
-            comboBox2.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
+            // TPE comboboxes
+            cmbMonthTPE.Items.Clear();
+            for (int m = 1; m <= 12; m++)
+                cmbMonthTPE.Items.Add(new DateTime(2000, m, 1).ToString("MMMM"));
+            cmbMonthTPE.SelectedIndex = DateTime.Now.Month - 1;
+
+            cmbYearTPE.Items.Clear();
+            for (int y = currentYear - 2; y <= currentYear + 1; y++)
+                cmbYearTPE.Items.Add(y.ToString());
+            cmbYearTPE.SelectedItem = currentYear.ToString();
+
+            // Wire TPL
+            cmbMonthTPL.SelectedIndexChanged -= ComboBox_SelectedIndexChanged;
+            cmbYearTPL.SelectedIndexChanged -= ComboBox_SelectedIndexChanged;
+            cmbMonthTPL.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
+            cmbYearTPL.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
+
+            // Wire TPE
+            cmbMonthTPE.SelectedIndexChanged -= ComboBox_SelectedIndexChanged;
+            cmbYearTPE.SelectedIndexChanged -= ComboBox_SelectedIndexChanged;
+            cmbMonthTPE.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
+            cmbYearTPE.SelectedIndexChanged += ComboBox_SelectedIndexChanged;
 
             cmbTeamCNM.Items.Clear();
             for (int i = 1; i <= 5; i++)
                 cmbTeamCNM.Items.Add($"Team {i}");
             if (cmbTeamCNM.Items.Count > 0)
                 cmbTeamCNM.SelectedIndex = 0;
+
+            txtPasswordCNM.Password = true;
+            txtConfirmPasswordCNM.Password = true;
+        }
+
+        private void cbShowPasswordEPT_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPasswordCNM.Password = !cbShowPasswordEPT.Checked;
+            txtConfirmPasswordCNM.Password = !cbShowPasswordEPT.Checked;
         }
 
         private void ComboBox_SelectedIndexChanged(object? sender, EventArgs e)
         {
             LoadTeamRequests();
+            LoadPerformanceList();
         }
 
         private void LoadManagerStats()
@@ -325,10 +356,10 @@ namespace Evaluation_Management
             }
         }
 
+
         // ---------------------------------------------------------------
         // SELECTION CHANGED
         // ---------------------------------------------------------------
-
         private void dgvApprovals_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvApprovals.SelectedRows.Count == 0)
@@ -352,8 +383,7 @@ namespace Evaluation_Management
                 lblEmployeeComment.Text = selected.Comment ?? "No comment provided.";
 
                 lblEPercentage.Text = $"{selected.Score}%";
-                lblEvaluationResult.Text = selected.Level;
-                lblEvaluationlvl.Text = selected.Timeliness;
+                lblEvaluationlvl.Text = $"Evaluation Level: {selected.Timeliness}  |  {selected.Level}";
             }
             catch
             {
@@ -368,12 +398,11 @@ namespace Evaluation_Management
 
         private void ClearDetails()
         {
-            lblEmployeeName.Text = "Name goes Here";
-            lblDateOfSubmission.Text = "Date goes Here";
+            lblEmployeeName.Text = "Name ";
+            lblDateOfSubmission.Text = "Date ";
             lblEmployeeComment.Text = string.Empty;
             lblEPercentage.Text = "0%";
-            lblEvaluationResult.Text = "—";
-            lblEvaluationlvl.Text = "—";
+            lblEvaluationlvl.Text = "Evaluation Level:";
             dgvApprovals.ClearSelection();
         }
 
@@ -585,7 +614,6 @@ namespace Evaluation_Management
             lblEpt.ForeColor = myCrimson;
             materialLabel9.ForeColor = Color.Gray;
             lblTeamTPL.ForeColor = Color.Gray;
-            lblSummaryTPL.ForeColor = Color.Gray;
             lblManagerName.ForeColor = Color.Gray;
             materialLabel15.ForeColor = Color.Gray;
             materialLabel16.ForeColor = Color.Gray;
@@ -604,5 +632,6 @@ namespace Evaluation_Management
             materialLabel49.ForeColor = myDarkGray;
             materialLabel50.ForeColor = myDarkGray;
         }
+
     }
 }

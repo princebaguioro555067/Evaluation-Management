@@ -34,7 +34,7 @@
             panel6 = new Panel();
             panel8 = new Panel();
             label7 = new Label();
-            textBox2 = new TextBox();
+            txtFirstNameRF = new TextBox();
             panel2 = new Panel();
             label6 = new Label();
             txtLastNameRF = new TextBox();
@@ -111,7 +111,7 @@
             panel8.BackColor = Color.LavenderBlush;
             panel8.BorderStyle = BorderStyle.FixedSingle;
             panel8.Controls.Add(label7);
-            panel8.Controls.Add(textBox2);
+            panel8.Controls.Add(txtFirstNameRF);
             panel8.Location = new Point(53, 139);
             panel8.Name = "panel8";
             panel8.Size = new Size(299, 42);
@@ -129,15 +129,15 @@
             label7.TabIndex = 2;
             label7.Text = "First Name:";
             // 
-            // textBox2
+            // txtFirstNameRF
             // 
-            textBox2.BackColor = Color.LavenderBlush;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.ForeColor = SystemColors.ControlText;
-            textBox2.Location = new Point(8, 20);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(280, 16);
-            textBox2.TabIndex = 12;
+            txtFirstNameRF.BackColor = Color.LavenderBlush;
+            txtFirstNameRF.BorderStyle = BorderStyle.None;
+            txtFirstNameRF.ForeColor = SystemColors.ControlText;
+            txtFirstNameRF.Location = new Point(8, 20);
+            txtFirstNameRF.Name = "txtFirstNameRF";
+            txtFirstNameRF.Size = new Size(280, 16);
+            txtFirstNameRF.TabIndex = 12;
             // 
             // panel2
             // 
@@ -406,7 +406,7 @@
         private ComboBox cmbTeamNumber;
         private Panel panel8;
         private Label label7;
-        private TextBox textBox2;
+        private TextBox txtFirstNameRF;
         private Panel panel2;
         private Label label6;
         private TextBox txtLastNameRF;

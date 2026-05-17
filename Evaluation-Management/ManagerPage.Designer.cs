@@ -36,7 +36,10 @@
             panel8 = new Panel();
             btnLogout1 = new MaterialSkin.Controls.MaterialButton();
             panel2 = new Panel();
-            lblSummaryTPL = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            cmbYearTPL = new ComboBox();
+            cmbMonthTPL = new ComboBox();
             materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
             txtSearchTPL = new MaterialSkin.Controls.MaterialTextBox();
@@ -89,9 +92,9 @@
             materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
             materialCard4 = new MaterialSkin.Controls.MaterialCard();
             materialCard7 = new MaterialSkin.Controls.MaterialCard();
-            comboBox2 = new ComboBox();
+            cmbMonthTPE = new ComboBox();
             materialLabel26 = new MaterialSkin.Controls.MaterialLabel();
-            comboBox1 = new ComboBox();
+            cmbYearTPE = new ComboBox();
             materialLabel21 = new MaterialSkin.Controls.MaterialLabel();
             dgvApprovals = new DataGridView();
             materialDivider4 = new MaterialSkin.Controls.MaterialDivider();
@@ -105,6 +108,7 @@
             taNewManager = new TabPage();
             panel10 = new Panel();
             materialCard5 = new MaterialSkin.Controls.MaterialCard();
+            cbShowPasswordEPT = new CheckBox();
             materialCard10 = new MaterialSkin.Controls.MaterialCard();
             materialLabel32 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel40 = new MaterialSkin.Controls.MaterialLabel();
@@ -268,7 +272,10 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(lblSummaryTPL);
+            panel2.Controls.Add(materialLabel4);
+            panel2.Controls.Add(materialLabel3);
+            panel2.Controls.Add(cmbYearTPL);
+            panel2.Controls.Add(cmbMonthTPL);
             panel2.Controls.Add(materialLabel2);
             panel2.Controls.Add(materialLabel17);
             panel2.Controls.Add(txtSearchTPL);
@@ -286,19 +293,51 @@
             panel2.Size = new Size(1199, 617);
             panel2.TabIndex = 14;
             // 
-            // lblSummaryTPL
+            // materialLabel4
             // 
-            lblSummaryTPL.Depth = 0;
-            lblSummaryTPL.FlatStyle = FlatStyle.System;
-            lblSummaryTPL.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lblSummaryTPL.ForeColor = Color.Gray;
-            lblSummaryTPL.Location = new Point(537, 54);
-            lblSummaryTPL.MouseState = MaterialSkin.MouseState.HOVER;
-            lblSummaryTPL.Name = "lblSummaryTPL";
-            lblSummaryTPL.Size = new Size(124, 19);
-            lblSummaryTPL.TabIndex = 51;
-            lblSummaryTPL.Text = "Summary";
-            lblSummaryTPL.UseMnemonic = false;
+            materialLabel4.AutoSize = true;
+            materialLabel4.Depth = 0;
+            materialLabel4.FlatStyle = FlatStyle.System;
+            materialLabel4.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel4.ForeColor = Color.Gray;
+            materialLabel4.Location = new Point(644, 27);
+            materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel4.Name = "materialLabel4";
+            materialLabel4.Size = new Size(37, 19);
+            materialLabel4.TabIndex = 55;
+            materialLabel4.Text = "Year:";
+            materialLabel4.UseMnemonic = false;
+            // 
+            // materialLabel3
+            // 
+            materialLabel3.AutoSize = true;
+            materialLabel3.Depth = 0;
+            materialLabel3.FlatStyle = FlatStyle.System;
+            materialLabel3.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel3.ForeColor = Color.Gray;
+            materialLabel3.Location = new Point(517, 27);
+            materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel3.Name = "materialLabel3";
+            materialLabel3.Size = new Size(51, 19);
+            materialLabel3.TabIndex = 54;
+            materialLabel3.Text = "Month:";
+            materialLabel3.UseMnemonic = false;
+            // 
+            // cmbYearTPL
+            // 
+            cmbYearTPL.FormattingEnabled = true;
+            cmbYearTPL.Location = new Point(644, 49);
+            cmbYearTPL.Name = "cmbYearTPL";
+            cmbYearTPL.Size = new Size(102, 26);
+            cmbYearTPL.TabIndex = 53;
+            // 
+            // cmbMonthTPL
+            // 
+            cmbMonthTPL.FormattingEnabled = true;
+            cmbMonthTPL.Location = new Point(517, 49);
+            cmbMonthTPL.Name = "cmbMonthTPL";
+            cmbMonthTPL.Size = new Size(121, 26);
+            cmbMonthTPL.TabIndex = 52;
             // 
             // materialLabel2
             // 
@@ -310,9 +349,9 @@
             materialLabel2.Location = new Point(457, 54);
             materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(74, 19);
+            materialLabel2.Size = new Size(54, 19);
             materialLabel2.TabIndex = 50;
-            materialLabel2.Text = "Summary:";
+            materialLabel2.Text = "Search:";
             materialLabel2.UseMnemonic = false;
             // 
             // materialLabel17
@@ -986,9 +1025,9 @@
             // materialCard7
             // 
             materialCard7.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard7.Controls.Add(comboBox2);
+            materialCard7.Controls.Add(cmbMonthTPE);
             materialCard7.Controls.Add(materialLabel26);
-            materialCard7.Controls.Add(comboBox1);
+            materialCard7.Controls.Add(cmbYearTPE);
             materialCard7.Controls.Add(materialLabel21);
             materialCard7.Depth = 0;
             materialCard7.Dock = DockStyle.Top;
@@ -1001,13 +1040,13 @@
             materialCard7.Size = new Size(629, 41);
             materialCard7.TabIndex = 15;
             // 
-            // comboBox2
+            // cmbMonthTPE
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(196, 7);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 26);
-            comboBox2.TabIndex = 12;
+            cmbMonthTPE.FormattingEnabled = true;
+            cmbMonthTPE.Location = new Point(196, 7);
+            cmbMonthTPE.Name = "cmbMonthTPE";
+            cmbMonthTPE.Size = new Size(121, 26);
+            cmbMonthTPE.TabIndex = 12;
             // 
             // materialLabel26
             // 
@@ -1022,13 +1061,13 @@
             materialLabel26.TabIndex = 14;
             materialLabel26.Text = "Year:";
             // 
-            // comboBox1
+            // cmbYearTPE
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(369, 7);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 26);
-            comboBox1.TabIndex = 11;
+            cmbYearTPE.FormattingEnabled = true;
+            cmbYearTPE.Location = new Point(369, 7);
+            cmbYearTPE.Name = "cmbYearTPE";
+            cmbYearTPE.Size = new Size(121, 26);
+            cmbYearTPE.TabIndex = 11;
             // 
             // materialLabel21
             // 
@@ -1194,6 +1233,7 @@
             // materialCard5
             // 
             materialCard5.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard5.Controls.Add(cbShowPasswordEPT);
             materialCard5.Controls.Add(materialCard10);
             materialCard5.Controls.Add(materialCard6);
             materialCard5.Controls.Add(materialLabel31);
@@ -1218,6 +1258,19 @@
             materialCard5.Padding = new Padding(14);
             materialCard5.Size = new Size(590, 484);
             materialCard5.TabIndex = 41;
+            // 
+            // cbShowPasswordEPT
+            // 
+            cbShowPasswordEPT.AutoSize = true;
+            cbShowPasswordEPT.BackColor = Color.Transparent;
+            cbShowPasswordEPT.Font = new Font("Microsoft JhengHei UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbShowPasswordEPT.Location = new Point(452, 172);
+            cbShowPasswordEPT.Name = "cbShowPasswordEPT";
+            cbShowPasswordEPT.Size = new Size(121, 21);
+            cbShowPasswordEPT.TabIndex = 50;
+            cbShowPasswordEPT.Text = "Show password";
+            cbShowPasswordEPT.UseVisualStyleBackColor = false;
+            cbShowPasswordEPT.CheckedChanged += cbShowPasswordEPT_CheckedChanged;
             // 
             // materialCard10
             // 
@@ -2038,8 +2091,6 @@
         private MaterialSkin.Controls.MaterialLabel lblEPercentage;
         private MaterialSkin.Controls.MaterialLabel lblEvaluationlvl;
         private PictureBox pictureBox6;
-        private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private MaterialSkin.Controls.MaterialLabel lblSummaryTPL;
         private MaterialSkin.Controls.MaterialDivider materialDivider10;
         private MaterialSkin.Controls.MaterialDivider materialDivider9;
         private MaterialSkin.Controls.MaterialLabel materialLabel11;
@@ -2052,9 +2103,9 @@
         private ImageList imageList1;
         private TabPage taNewManager;
         private MaterialSkin.Controls.MaterialCard materialCard7;
-        private ComboBox comboBox2;
+        private ComboBox cmbMonthTPE;
         private MaterialSkin.Controls.MaterialLabel materialLabel26;
-        private ComboBox comboBox1;
+        private ComboBox cmbYearTPE;
         private MaterialSkin.Controls.MaterialLabel materialLabel21;
         private MaterialSkin.Controls.MaterialDivider materialDivider13;
         private Panel panel9;
@@ -2116,5 +2167,10 @@
         private MaterialSkin.Controls.MaterialButton btnLogout1;
         private MaterialSkin.Controls.MaterialButton btnLogout3;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private ComboBox cmbYearTPL;
+        private ComboBox cmbMonthTPL;
+        private CheckBox cbShowPasswordEPT;
     }
 }

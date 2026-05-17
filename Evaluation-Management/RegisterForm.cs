@@ -77,6 +77,16 @@ namespace Evaluation_Management
                 return;
             }
 
+            string firstName = txtFirstNameRF.Text.Trim();
+            string lastName = txtLastNameRF.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName))
+            {
+                MessageBox.Show("First Name and Last Name are required.", "Sign Up",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (_employeeRepo.UsernameExists(username))
             {
                 MessageBox.Show($"Username '{username}' is already taken.", "Sign Up",
@@ -93,7 +103,7 @@ namespace Evaluation_Management
                 {
                     Username = username,
                     Password = password,
-                    Name = username,
+                    Name = $"{firstName} {lastName}",
                     Designation = "Staff",
                     Role = EmployeeRole.Staff,
                     GroupNumber = groupNumber,
