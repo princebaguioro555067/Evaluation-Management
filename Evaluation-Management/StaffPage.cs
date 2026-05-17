@@ -259,6 +259,7 @@ namespace Evaluation_Management
             panel12.BackColor = sub.Status switch
             {
                 SubmissionStatus.Approved => Color.FromArgb(0, 150, 80),
+                SubmissionStatus.Pending => Color.FromArgb(246, 190, 0),
                 SubmissionStatus.Rejected => Color.FromArgb(200, 30, 30),
                 _ => levelColor
             };
@@ -337,6 +338,8 @@ namespace Evaluation_Management
             panel12.BackColor = Color.LightCoral;
             materialLabel7.BackColor = Color.LightCoral;
             materialLabel5.BackColor = Color.White;
+            lblTeam.BackColor = Color.White;
+            lblEpt2.BackColor = Color.White;
         }
 
         private void ForeColorAdjustments()
@@ -362,6 +365,8 @@ namespace Evaluation_Management
             materialLabel6.ForeColor = myDarkGray;
             materialLabel8.ForeColor = myDarkGray;
             materialLabel7.ForeColor = Color.White;
+            lblEpt2.ForeColor = myCrimson;
+            materialLabel12.ForeColor = Color.Gray;
         }
 
         private void btnLogout1_Click(object sender, EventArgs e)

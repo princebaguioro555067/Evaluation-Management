@@ -40,7 +40,6 @@
             materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             cmbYearTPL = new ComboBox();
             cmbMonthTPL = new ComboBox();
-            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
             txtSearchTPL = new MaterialSkin.Controls.MaterialTextBox();
             lblTeamTPL = new MaterialSkin.Controls.MaterialLabel();
@@ -158,6 +157,7 @@
             materialLabel19 = new MaterialSkin.Controls.MaterialLabel();
             lblEpt3 = new MaterialSkin.Controls.MaterialLabel();
             imageList1 = new ImageList(components);
+            materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             materialTabControl1.SuspendLayout();
             tpPerformanceList.SuspendLayout();
             panel8.SuspendLayout();
@@ -325,6 +325,7 @@
             // 
             // cmbYearTPL
             // 
+            cmbYearTPL.BackColor = Color.White;
             cmbYearTPL.FormattingEnabled = true;
             cmbYearTPL.Location = new Point(644, 49);
             cmbYearTPL.Name = "cmbYearTPL";
@@ -333,26 +334,12 @@
             // 
             // cmbMonthTPL
             // 
+            cmbMonthTPL.BackColor = Color.White;
             cmbMonthTPL.FormattingEnabled = true;
             cmbMonthTPL.Location = new Point(517, 49);
             cmbMonthTPL.Name = "cmbMonthTPL";
             cmbMonthTPL.Size = new Size(121, 26);
             cmbMonthTPL.TabIndex = 52;
-            // 
-            // materialLabel2
-            // 
-            materialLabel2.AutoSize = true;
-            materialLabel2.Depth = 0;
-            materialLabel2.FlatStyle = FlatStyle.System;
-            materialLabel2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel2.ForeColor = Color.Gray;
-            materialLabel2.Location = new Point(457, 54);
-            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialLabel2.Name = "materialLabel2";
-            materialLabel2.Size = new Size(54, 19);
-            materialLabel2.TabIndex = 50;
-            materialLabel2.Text = "Search:";
-            materialLabel2.UseMnemonic = false;
             // 
             // materialLabel17
             // 
@@ -487,6 +474,8 @@
             // 
             // dgvTPL
             // 
+            dgvTPL.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTPL.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvTPL.BackgroundColor = Color.White;
             dgvTPL.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTPL.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5 });
@@ -1084,6 +1073,8 @@
             // 
             // dgvApprovals
             // 
+            dgvApprovals.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvApprovals.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvApprovals.BackgroundColor = Color.White;
             dgvApprovals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvApprovals.Dock = DockStyle.Bottom;
@@ -1209,6 +1200,7 @@
             taNewManager.Controls.Add(panel9);
             taNewManager.Controls.Add(materialDivider5);
             taNewManager.Controls.Add(panel3);
+            taNewManager.ImageKey = "performace-removebg-preview (1).png";
             taNewManager.Location = new Point(4, 24);
             taNewManager.Name = "taNewManager";
             taNewManager.Size = new Size(1199, 665);
@@ -1976,6 +1968,22 @@
             imageList1.TransparentColor = Color.Transparent;
             imageList1.Images.SetKeyName(0, "1-removebg-preview(1).png");
             imageList1.Images.SetKeyName(1, "3-removebg-preview (1).png");
+            imageList1.Images.SetKeyName(2, "performace-removebg-preview (1).png");
+            // 
+            // materialLabel2
+            // 
+            materialLabel2.AutoSize = true;
+            materialLabel2.Depth = 0;
+            materialLabel2.FlatStyle = FlatStyle.System;
+            materialLabel2.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel2.ForeColor = Color.Gray;
+            materialLabel2.Location = new Point(457, 54);
+            materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel2.Name = "materialLabel2";
+            materialLabel2.Size = new Size(54, 19);
+            materialLabel2.TabIndex = 50;
+            materialLabel2.Text = "Search:";
+            materialLabel2.UseMnemonic = false;
             // 
             // ManagerPage
             // 
@@ -2166,11 +2174,11 @@
         private MaterialSkin.Controls.MaterialButton btnLogout2;
         private MaterialSkin.Controls.MaterialButton btnLogout1;
         private MaterialSkin.Controls.MaterialButton btnLogout3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private ComboBox cmbYearTPL;
         private ComboBox cmbMonthTPL;
         private CheckBox cbShowPasswordEPT;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\source\\repos\\teagiusfd\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj": {}
+    "G:\\vs code projects\\FINAL_PROJECT\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\source\\repos\\teagiusfd\\EvaluationDomain\\EvaluationDomain.csproj": {
+    "G:\\vs code projects\\FINAL_PROJECT\\EvaluationDomain\\EvaluationDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\teagiusfd\\EvaluationDomain\\EvaluationDomain.csproj",
+        "projectUniqueName": "G:\\vs code projects\\FINAL_PROJECT\\EvaluationDomain\\EvaluationDomain.csproj",
         "projectName": "EvaluationDomain",
-        "projectPath": "C:\\Users\\USER\\source\\repos\\teagiusfd\\EvaluationDomain\\EvaluationDomain.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\source\\repos\\teagiusfd\\EvaluationDomain\\obj\\",
+        "projectPath": "G:\\vs code projects\\FINAL_PROJECT\\EvaluationDomain\\EvaluationDomain.csproj",
+        "packagesPath": "C:\\Users\\Emman\\.nuget\\packages\\",
+        "outputPath": "G:\\vs code projects\\FINAL_PROJECT\\EvaluationDomain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Emman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,7 +40,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -73,21 +73,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\USER\\source\\repos\\teagiusfd\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj": {
+    "G:\\vs code projects\\FINAL_PROJECT\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\teagiusfd\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj",
+        "projectUniqueName": "G:\\vs code projects\\FINAL_PROJECT\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj",
         "projectName": "EvaluationInfrastructure",
-        "projectPath": "C:\\Users\\USER\\source\\repos\\teagiusfd\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\source\\repos\\teagiusfd\\EvaluationInfrastructure\\obj\\",
+        "projectPath": "G:\\vs code projects\\FINAL_PROJECT\\EvaluationInfrastructure\\EvaluationInfrastructure.csproj",
+        "packagesPath": "C:\\Users\\Emman\\.nuget\\packages\\",
+        "outputPath": "G:\\vs code projects\\FINAL_PROJECT\\EvaluationInfrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Emman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,8 +101,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\USER\\source\\repos\\teagiusfd\\EvaluationDomain\\EvaluationDomain.csproj": {
-                "projectPath": "C:\\Users\\USER\\source\\repos\\teagiusfd\\EvaluationDomain\\EvaluationDomain.csproj"
+              "G:\\vs code projects\\FINAL_PROJECT\\EvaluationDomain\\EvaluationDomain.csproj": {
+                "projectPath": "G:\\vs code projects\\FINAL_PROJECT\\EvaluationDomain\\EvaluationDomain.csproj"
               }
             }
           }
@@ -117,7 +117,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -164,7 +164,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
