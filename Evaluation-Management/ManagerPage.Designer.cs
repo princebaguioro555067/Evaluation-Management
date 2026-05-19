@@ -248,6 +248,7 @@
             // 
             // btnLogout1
             // 
+            btnLogout1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             btnLogout1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnLogout1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             btnLogout1.Depth = 0;
@@ -1127,6 +1128,7 @@
             // 
             // btnLogout2
             // 
+            btnLogout2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             btnLogout2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnLogout2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             btnLogout2.Depth = 0;
@@ -1835,7 +1837,8 @@
             // 
             materialDivider15.BackColor = Color.FromArgb(30, 0, 0, 0);
             materialDivider15.Depth = 0;
-            materialDivider15.Location = new Point(14, 464);
+            materialDivider15.Dock = DockStyle.Bottom;
+            materialDivider15.Location = new Point(14, 467);
             materialDivider15.MouseState = MaterialSkin.MouseState.HOVER;
             materialDivider15.Name = "materialDivider15";
             materialDivider15.Size = new Size(361, 3);
@@ -1905,6 +1908,7 @@
             // 
             // btnLogout3
             // 
+            btnLogout3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             btnLogout3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnLogout3.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             btnLogout3.Depth = 0;
