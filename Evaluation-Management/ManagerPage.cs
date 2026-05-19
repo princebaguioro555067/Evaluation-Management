@@ -594,6 +594,8 @@ namespace Evaluation_Management
             lblSubmitDate.BackColor = Color.White;
             cmbMonthTPL.BackColor = Color.White;
             cmbYearTPL.BackColor = Color.White;
+            cmbMonthTPE.BackColor = Color.White;
+            cmbYearTPE.BackColor = Color.White;
         }
 
         private void ForeColorAdjustments()
@@ -636,8 +638,9 @@ namespace Evaluation_Management
             materialLabel4.ForeColor = Color.Gray;
             materialLabel3.ForeColor = Color.Gray;
             materialLabel2.ForeColor = Color.Gray;
-            
+
         }
 
+        
     }
 }

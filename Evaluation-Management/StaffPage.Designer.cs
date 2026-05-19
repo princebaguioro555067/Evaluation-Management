@@ -203,6 +203,7 @@ namespace Evaluation_Management
             // 
             // panel8
             // 
+            panel8.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel8.BackColor = Color.White;
             panel8.Controls.Add(materialCard7);
             panel8.Controls.Add(materialCard6);
@@ -219,18 +220,20 @@ namespace Evaluation_Management
             // 
             // materialCard7
             // 
+            materialCard7.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            materialCard7.AutoSize = true;
             materialCard7.BackColor = Color.FromArgb(255, 255, 255);
             materialCard7.Controls.Add(materialDivider8);
             materialCard7.Controls.Add(lblApprovalRateNum);
             materialCard7.Controls.Add(lblAr);
             materialCard7.Depth = 0;
             materialCard7.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard7.Location = new Point(720, 459);
+            materialCard7.Location = new Point(727, 452);
             materialCard7.Margin = new Padding(14);
             materialCard7.MouseState = MouseState.HOVER;
             materialCard7.Name = "materialCard7";
             materialCard7.Padding = new Padding(14);
-            materialCard7.Size = new Size(389, 90);
+            materialCard7.Size = new Size(389, 96);
             materialCard7.TabIndex = 11;
             // 
             // materialDivider8
@@ -238,7 +241,7 @@ namespace Evaluation_Management
             materialDivider8.BackColor = Color.FromArgb(30, 0, 0, 0);
             materialDivider8.Depth = 0;
             materialDivider8.Dock = DockStyle.Bottom;
-            materialDivider8.Location = new Point(14, 73);
+            materialDivider8.Location = new Point(14, 79);
             materialDivider8.MouseState = MouseState.HOVER;
             materialDivider8.Name = "materialDivider8";
             materialDivider8.Size = new Size(361, 3);
@@ -279,18 +282,20 @@ namespace Evaluation_Management
             // 
             // materialCard6
             // 
+            materialCard6.Anchor = AnchorStyles.Right;
+            materialCard6.AutoSize = true;
             materialCard6.BackColor = Color.FromArgb(255, 255, 255);
             materialCard6.Controls.Add(materialDivider7);
             materialCard6.Controls.Add(lblTotalSubmissionNum);
             materialCard6.Controls.Add(lblTs);
             materialCard6.Depth = 0;
             materialCard6.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard6.Location = new Point(720, 341);
+            materialCard6.Location = new Point(727, 333);
             materialCard6.Margin = new Padding(14);
             materialCard6.MouseState = MouseState.HOVER;
             materialCard6.Name = "materialCard6";
             materialCard6.Padding = new Padding(14);
-            materialCard6.Size = new Size(389, 90);
+            materialCard6.Size = new Size(389, 99);
             materialCard6.TabIndex = 10;
             // 
             // materialDivider7
@@ -298,7 +303,7 @@ namespace Evaluation_Management
             materialDivider7.BackColor = Color.FromArgb(30, 0, 0, 0);
             materialDivider7.Depth = 0;
             materialDivider7.Dock = DockStyle.Bottom;
-            materialDivider7.Location = new Point(14, 73);
+            materialDivider7.Location = new Point(14, 82);
             materialDivider7.MouseState = MouseState.HOVER;
             materialDivider7.Name = "materialDivider7";
             materialDivider7.Size = new Size(361, 3);
@@ -339,6 +344,8 @@ namespace Evaluation_Management
             // 
             // materialCard8
             // 
+            materialCard8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            materialCard8.AutoSize = true;
             materialCard8.BackColor = Color.FromArgb(255, 255, 255);
             materialCard8.Controls.Add(pictureBox5);
             materialCard8.Controls.Add(lblSa);
@@ -348,7 +355,7 @@ namespace Evaluation_Management
             materialCard8.Controls.Add(lblST);
             materialCard8.Depth = 0;
             materialCard8.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard8.Location = new Point(720, 98);
+            materialCard8.Location = new Point(727, 98);
             materialCard8.Margin = new Padding(14);
             materialCard8.MouseState = MouseState.HOVER;
             materialCard8.Name = "materialCard8";
@@ -467,6 +474,8 @@ namespace Evaluation_Management
             // 
             // materialCard9
             // 
+            materialCard9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            materialCard9.AutoSize = true;
             materialCard9.BackColor = Color.FromArgb(255, 255, 255);
             materialCard9.Controls.Add(panel9);
             materialCard9.Controls.Add(materialDivider5);
@@ -480,7 +489,7 @@ namespace Evaluation_Management
             materialCard9.MouseState = MouseState.HOVER;
             materialCard9.Name = "materialCard9";
             materialCard9.Padding = new Padding(14);
-            materialCard9.Size = new Size(572, 451);
+            materialCard9.Size = new Size(616, 451);
             materialCard9.TabIndex = 0;
             // 
             // panel9
@@ -499,17 +508,18 @@ namespace Evaluation_Management
             panel9.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             panel9.Location = new Point(14, 68);
             panel9.Name = "panel9";
-            panel9.Size = new Size(544, 318);
+            panel9.Size = new Size(588, 318);
             panel9.TabIndex = 10;
             // 
             // lblTeam
             // 
+            lblTeam.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             lblTeam.Depth = 0;
             lblTeam.FlatStyle = FlatStyle.System;
             lblTeam.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             lblTeam.FontType = MaterialSkinManager.fontType.Button;
             lblTeam.ForeColor = Color.Black;
-            lblTeam.Location = new Point(308, 275);
+            lblTeam.Location = new Point(352, 275);
             lblTeam.MouseState = MouseState.HOVER;
             lblTeam.Name = "lblTeam";
             lblTeam.Size = new Size(217, 20);
@@ -518,6 +528,7 @@ namespace Evaluation_Management
             // 
             // lblNameofManager
             // 
+            lblNameofManager.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblNameofManager.Depth = 0;
             lblNameofManager.FlatStyle = FlatStyle.System;
             lblNameofManager.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
@@ -554,20 +565,22 @@ namespace Evaluation_Management
             // 
             // lblFdSg
             // 
+            lblFdSg.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblFdSg.Depth = 0;
             lblFdSg.FlatStyle = FlatStyle.System;
             lblFdSg.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Pixel);
             lblFdSg.FontType = MaterialSkinManager.fontType.Overline;
             lblFdSg.ForeColor = Color.Gray;
-            lblFdSg.Location = new Point(16, 211);
+            lblFdSg.Location = new Point(16, 219);
             lblFdSg.MouseState = MouseState.HOVER;
             lblFdSg.Name = "lblFdSg";
-            lblFdSg.Size = new Size(509, 22);
+            lblFdSg.Size = new Size(553, 22);
             lblFdSg.TabIndex = 23;
             lblFdSg.Text = "Type your Feedback/Suggestions Here";
             // 
             // labelM
             // 
+            labelM.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             labelM.Depth = 0;
             labelM.FlatStyle = FlatStyle.System;
             labelM.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
@@ -610,13 +623,16 @@ namespace Evaluation_Management
             // 
             // dtpDate
             // 
-            dtpDate.Location = new Point(16, 37);
+            dtpDate.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dtpDate.Location = new Point(16, 44);
             dtpDate.Name = "dtpDate";
-            dtpDate.Size = new Size(509, 21);
+            dtpDate.Size = new Size(552, 21);
             dtpDate.TabIndex = 19;
             // 
             // materialCard10
             // 
+            materialCard10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            materialCard10.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             materialCard10.BackColor = Color.FromArgb(255, 255, 255);
             materialCard10.Controls.Add(lblComment);
             materialCard10.Depth = 0;
@@ -626,7 +642,7 @@ namespace Evaluation_Management
             materialCard10.MouseState = MouseState.HOVER;
             materialCard10.Name = "materialCard10";
             materialCard10.Padding = new Padding(14);
-            materialCard10.Size = new Size(509, 108);
+            materialCard10.Size = new Size(553, 108);
             materialCard10.TabIndex = 16;
             // 
             // lblComment
@@ -640,7 +656,7 @@ namespace Evaluation_Management
             lblComment.Location = new Point(14, 14);
             lblComment.MouseState = MouseState.HOVER;
             lblComment.Name = "lblComment";
-            lblComment.Size = new Size(481, 80);
+            lblComment.Size = new Size(525, 80);
             lblComment.TabIndex = 12;
             lblComment.Text = "";
             // 
@@ -652,7 +668,7 @@ namespace Evaluation_Management
             materialDivider5.Location = new Point(14, 386);
             materialDivider5.MouseState = MouseState.HOVER;
             materialDivider5.Name = "materialDivider5";
-            materialDivider5.Size = new Size(544, 3);
+            materialDivider5.Size = new Size(588, 3);
             materialDivider5.TabIndex = 9;
             materialDivider5.Text = "materialDivider4";
             // 
@@ -664,7 +680,7 @@ namespace Evaluation_Management
             materialDivider6.Location = new Point(14, 65);
             materialDivider6.MouseState = MouseState.HOVER;
             materialDivider6.Name = "materialDivider6";
-            materialDivider6.Size = new Size(544, 3);
+            materialDivider6.Size = new Size(588, 3);
             materialDivider6.TabIndex = 8;
             materialDivider6.Text = "materialDivider3";
             // 
@@ -675,11 +691,12 @@ namespace Evaluation_Management
             panel10.Dock = DockStyle.Bottom;
             panel10.Location = new Point(14, 389);
             panel10.Name = "panel10";
-            panel10.Size = new Size(544, 48);
+            panel10.Size = new Size(588, 48);
             panel10.TabIndex = 7;
             // 
             // btnClear
             // 
+            btnClear.Anchor = AnchorStyles.Left;
             btnClear.AutoSize = false;
             btnClear.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnClear.BackColor = Color.Crimson;
@@ -702,6 +719,7 @@ namespace Evaluation_Management
             // 
             // btnSendToManager
             // 
+            btnSendToManager.Anchor = AnchorStyles.Right;
             btnSendToManager.AutoSize = false;
             btnSendToManager.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnSendToManager.BackColor = Color.Crimson;
@@ -710,7 +728,7 @@ namespace Evaluation_Management
             btnSendToManager.Font = new Font("Century Gothic", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSendToManager.HighEmphasis = true;
             btnSendToManager.Icon = null;
-            btnSendToManager.Location = new Point(353, 10);
+            btnSendToManager.Location = new Point(397, 10);
             btnSendToManager.Margin = new Padding(4, 6, 4, 6);
             btnSendToManager.MouseState = MouseState.HOVER;
             btnSendToManager.Name = "btnSendToManager";
@@ -730,7 +748,7 @@ namespace Evaluation_Management
             panel11.Dock = DockStyle.Top;
             panel11.Location = new Point(14, 14);
             panel11.Name = "panel11";
-            panel11.Size = new Size(544, 51);
+            panel11.Size = new Size(588, 51);
             panel11.TabIndex = 6;
             // 
             // lblNpu
@@ -745,7 +763,7 @@ namespace Evaluation_Management
             lblNpu.Location = new Point(0, 0);
             lblNpu.MouseState = MouseState.HOVER;
             lblNpu.Name = "lblNpu";
-            lblNpu.Size = new Size(544, 28);
+            lblNpu.Size = new Size(588, 28);
             lblNpu.TabIndex = 10;
             lblNpu.Text = "New Performance Update";
             // 
@@ -799,6 +817,7 @@ namespace Evaluation_Management
             // 
             // btnLogout1
             // 
+            btnLogout1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             btnLogout1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnLogout1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             btnLogout1.Depth = 0;
@@ -921,6 +940,8 @@ namespace Evaluation_Management
             // 
             // materialCard3
             // 
+            materialCard3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            materialCard3.AutoSize = true;
             materialCard3.BackColor = Color.FromArgb(255, 255, 255);
             materialCard3.Controls.Add(pictureBox6);
             materialCard3.Controls.Add(materialCard2);
@@ -938,19 +959,19 @@ namespace Evaluation_Management
             materialCard3.Controls.Add(materialLabel11);
             materialCard3.Depth = 0;
             materialCard3.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard3.Location = new Point(720, 13);
+            materialCard3.Location = new Point(762, 15);
             materialCard3.Margin = new Padding(14);
             materialCard3.MouseState = MouseState.HOVER;
             materialCard3.Name = "materialCard3";
             materialCard3.Padding = new Padding(14);
-            materialCard3.Size = new Size(389, 536);
+            materialCard3.Size = new Size(406, 538);
             materialCard3.TabIndex = 9;
             // 
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.Transparent;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(17, 17);
+            pictureBox6.Location = new Point(23, 25);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(24, 24);
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
@@ -963,7 +984,7 @@ namespace Evaluation_Management
             materialCard2.Controls.Add(panel12);
             materialCard2.Depth = 0;
             materialCard2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard2.Location = new Point(186, 302);
+            materialCard2.Location = new Point(192, 310);
             materialCard2.Margin = new Padding(14);
             materialCard2.MouseState = MouseState.HOVER;
             materialCard2.Name = "materialCard2";
@@ -1002,7 +1023,7 @@ namespace Evaluation_Management
             materialLabel5.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel5.FontType = MaterialSkinManager.fontType.Button;
             materialLabel5.ForeColor = Color.Black;
-            materialLabel5.Location = new Point(80, 311);
+            materialLabel5.Location = new Point(86, 319);
             materialLabel5.MouseState = MouseState.HOVER;
             materialLabel5.Name = "materialLabel5";
             materialLabel5.Size = new Size(101, 17);
@@ -1016,7 +1037,7 @@ namespace Evaluation_Management
             materialTextBox3.Depth = 0;
             materialTextBox3.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             materialTextBox3.LeadingIcon = null;
-            materialTextBox3.Location = new Point(14, 244);
+            materialTextBox3.Location = new Point(20, 252);
             materialTextBox3.MaxLength = 50;
             materialTextBox3.MouseState = MouseState.OUT;
             materialTextBox3.Multiline = false;
@@ -1033,7 +1054,7 @@ namespace Evaluation_Management
             materialTextBox2.Depth = 0;
             materialTextBox2.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             materialTextBox2.LeadingIcon = null;
-            materialTextBox2.Location = new Point(14, 168);
+            materialTextBox2.Location = new Point(20, 176);
             materialTextBox2.MaxLength = 50;
             materialTextBox2.MouseState = MouseState.OUT;
             materialTextBox2.Multiline = false;
@@ -1050,7 +1071,7 @@ namespace Evaluation_Management
             materialTextBox1.Depth = 0;
             materialTextBox1.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             materialTextBox1.LeadingIcon = null;
-            materialTextBox1.Location = new Point(14, 92);
+            materialTextBox1.Location = new Point(20, 100);
             materialTextBox1.MaxLength = 50;
             materialTextBox1.MouseState = MouseState.OUT;
             materialTextBox1.Multiline = false;
@@ -1067,7 +1088,7 @@ namespace Evaluation_Management
             materialLabel8.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel8.FontType = MaterialSkinManager.fontType.Button;
             materialLabel8.ForeColor = Color.FromArgb(64, 64, 64);
-            materialLabel8.Location = new Point(14, 221);
+            materialLabel8.Location = new Point(20, 229);
             materialLabel8.MouseState = MouseState.HOVER;
             materialLabel8.Name = "materialLabel8";
             materialLabel8.Size = new Size(358, 20);
@@ -1081,7 +1102,7 @@ namespace Evaluation_Management
             materialLabel6.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel6.FontType = MaterialSkinManager.fontType.Button;
             materialLabel6.ForeColor = Color.FromArgb(64, 64, 64);
-            materialLabel6.Location = new Point(14, 145);
+            materialLabel6.Location = new Point(20, 153);
             materialLabel6.MouseState = MouseState.HOVER;
             materialLabel6.Name = "materialLabel6";
             materialLabel6.Size = new Size(358, 20);
@@ -1095,7 +1116,7 @@ namespace Evaluation_Management
             materialLabel3.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel3.FontType = MaterialSkinManager.fontType.Button;
             materialLabel3.ForeColor = Color.FromArgb(64, 64, 64);
-            materialLabel3.Location = new Point(14, 69);
+            materialLabel3.Location = new Point(20, 77);
             materialLabel3.MouseState = MouseState.HOVER;
             materialLabel3.Name = "materialLabel3";
             materialLabel3.Size = new Size(358, 20);
@@ -1106,7 +1127,7 @@ namespace Evaluation_Management
             // 
             materialDivider10.BackColor = Color.FromArgb(30, 0, 0, 0);
             materialDivider10.Depth = 0;
-            materialDivider10.Location = new Point(14, 363);
+            materialDivider10.Location = new Point(20, 371);
             materialDivider10.MouseState = MouseState.HOVER;
             materialDivider10.Name = "materialDivider10";
             materialDivider10.Size = new Size(361, 3);
@@ -1115,17 +1136,18 @@ namespace Evaluation_Management
             // 
             // materialCard1
             // 
+            materialCard1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            materialCard1.AutoSize = true;
             materialCard1.BackColor = Color.FromArgb(255, 255, 255);
             materialCard1.Controls.Add(materialMultiLineTextBox1);
             materialCard1.Depth = 0;
-            materialCard1.Dock = DockStyle.Bottom;
             materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard1.Location = new Point(14, 389);
+            materialCard1.Location = new Point(20, 397);
             materialCard1.Margin = new Padding(14);
             materialCard1.MouseState = MouseState.HOVER;
             materialCard1.Name = "materialCard1";
             materialCard1.Padding = new Padding(14);
-            materialCard1.Size = new Size(361, 133);
+            materialCard1.Size = new Size(367, 113);
             materialCard1.TabIndex = 28;
             // 
             // materialMultiLineTextBox1
@@ -1138,7 +1160,7 @@ namespace Evaluation_Management
             materialMultiLineTextBox1.Location = new Point(17, 17);
             materialMultiLineTextBox1.MouseState = MouseState.HOVER;
             materialMultiLineTextBox1.Name = "materialMultiLineTextBox1";
-            materialMultiLineTextBox1.Size = new Size(327, 99);
+            materialMultiLineTextBox1.Size = new Size(327, 69);
             materialMultiLineTextBox1.TabIndex = 0;
             materialMultiLineTextBox1.Text = "";
             // 
@@ -1149,7 +1171,7 @@ namespace Evaluation_Management
             materialLabel4.Font = new Font("Roboto", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel4.FontType = MaterialSkinManager.fontType.Button;
             materialLabel4.ForeColor = Color.Black;
-            materialLabel4.Location = new Point(14, 369);
+            materialLabel4.Location = new Point(20, 377);
             materialLabel4.MouseState = MouseState.HOVER;
             materialLabel4.Name = "materialLabel4";
             materialLabel4.Size = new Size(361, 18);
@@ -1160,7 +1182,7 @@ namespace Evaluation_Management
             // 
             materialDivider9.BackColor = Color.FromArgb(30, 0, 0, 0);
             materialDivider9.Depth = 0;
-            materialDivider9.Location = new Point(14, 54);
+            materialDivider9.Location = new Point(20, 62);
             materialDivider9.MouseState = MouseState.HOVER;
             materialDivider9.Name = "materialDivider9";
             materialDivider9.Size = new Size(361, 3);
@@ -1174,7 +1196,7 @@ namespace Evaluation_Management
             materialLabel11.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
             materialLabel11.FontType = MaterialSkinManager.fontType.H5;
             materialLabel11.ForeColor = Color.Black;
-            materialLabel11.Location = new Point(47, 14);
+            materialLabel11.Location = new Point(53, 22);
             materialLabel11.MouseState = MouseState.HOVER;
             materialLabel11.Name = "materialLabel11";
             materialLabel11.Size = new Size(328, 40);
@@ -1211,6 +1233,8 @@ namespace Evaluation_Management
             // 
             // materialCard4
             // 
+            materialCard4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            materialCard4.AutoSize = true;
             materialCard4.BackColor = Color.FromArgb(255, 255, 255);
             materialCard4.Controls.Add(dataGridView1);
             materialCard4.Controls.Add(materialDivider11);
@@ -1311,6 +1335,7 @@ namespace Evaluation_Management
             // 
             // btnLogout2
             // 
+            btnLogout2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             btnLogout2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnLogout2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             btnLogout2.Depth = 0;
@@ -1421,6 +1446,7 @@ namespace Evaluation_Management
             tpSubmitReport.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel8.ResumeLayout(false);
+            panel8.PerformLayout();
             materialCard7.ResumeLayout(false);
             materialCard6.ResumeLayout(false);
             materialCard8.ResumeLayout(false);
@@ -1440,8 +1466,10 @@ namespace Evaluation_Management
             tpHistory.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             materialCard3.ResumeLayout(false);
+            materialCard3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             materialCard2.ResumeLayout(false);
             panel12.ResumeLayout(false);

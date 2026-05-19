@@ -45,12 +45,14 @@
             txtPasswordLogin = new TextBox();
             btnLogin = new Button();
             pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             panel7.SuspendLayout();
             panel6.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -77,6 +79,7 @@
             // panel6
             // 
             panel6.BackColor = Color.LavenderBlush;
+            panel6.Controls.Add(pictureBox1);
             panel6.Controls.Add(lblLoginClose);
             panel6.Controls.Add(lblGoToSignUp);
             panel6.Controls.Add(label5);
@@ -117,14 +120,14 @@
             // 
             // label5
             // 
-            label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(53, 77);
+            label5.Location = new Point(98, 74);
             label5.Name = "label5";
-            label5.Size = new Size(98, 23);
+            label5.Size = new Size(126, 32);
             label5.TabIndex = 16;
-            label5.Text = "TITLE HERE";
+            label5.Text = "StaffTrack";
+            label5.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
@@ -243,6 +246,16 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(54, 74);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(38, 32);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 18;
+            pictureBox1.TabStop = false;
+            // 
             // Login_Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -263,6 +276,7 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -284,5 +298,6 @@
         private TextBox txtPasswordLogin;
         private Button btnLogin;
         private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
     }
 }

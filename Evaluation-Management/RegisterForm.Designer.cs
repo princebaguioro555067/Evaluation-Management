@@ -54,6 +54,7 @@
             txtPasswordRegister = new TextBox();
             btnSignUp = new Button();
             pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
             panel7.SuspendLayout();
             panel6.SuspendLayout();
@@ -63,6 +64,7 @@
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -89,6 +91,7 @@
             // panel6
             // 
             panel6.BackColor = Color.LavenderBlush;
+            panel6.Controls.Add(pictureBox2);
             panel6.Controls.Add(panel8);
             panel6.Controls.Add(panel2);
             panel6.Controls.Add(lblRegisterClose);
@@ -198,21 +201,21 @@
             // 
             // label5
             // 
-            label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(53, 41);
+            label5.Location = new Point(97, 29);
             label5.Name = "label5";
-            label5.Size = new Size(98, 23);
+            label5.Size = new Size(144, 35);
             label5.TabIndex = 16;
-            label5.Text = "TITLE HERE";
+            label5.Text = "StaffTrack";
+            label5.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(53, 64);
+            label4.Location = new Point(54, 64);
             label4.Name = "label4";
             label4.Size = new Size(167, 20);
             label4.TabIndex = 15;
@@ -356,6 +359,16 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(53, 29);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(38, 32);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 19;
+            pictureBox2.TabStop = false;
+            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -381,6 +394,7 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -410,5 +424,6 @@
         private Panel panel2;
         private Label label6;
         private TextBox txtLastNameRF;
+        private PictureBox pictureBox2;
     }
 }

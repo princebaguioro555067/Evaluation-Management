@@ -7,7 +7,12 @@
 		<Nullable>enable</Nullable>
 		<UseWindowsForms>true</UseWindowsForms>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<ApplicationIcon>Properties\icons\LOGO.ico</ApplicationIcon>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="Properties\icons\LOGO.ico" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="MaterialSkin.2" Version="2.3.1" />
