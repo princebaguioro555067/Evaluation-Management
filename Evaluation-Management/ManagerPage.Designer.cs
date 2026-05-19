@@ -1092,7 +1092,7 @@
             // 
             dgvApprovals.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvApprovals.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvApprovals.BackgroundColor = Color.IndianRed;
+            dgvApprovals.BackgroundColor = Color.White;
             dgvApprovals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvApprovals.Dock = DockStyle.Fill;
             dgvApprovals.Location = new Point(14, 14);
